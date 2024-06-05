@@ -1,5 +1,6 @@
 # Digitalni-dvojcek
-
+## Posodovitev Ubuntu sistema in nadgradnja
+     sudo apt update && sudo apt upgrade
 ## Namestitev docker
       **# Add Docker's official GPG key:
       sudo apt-get update
