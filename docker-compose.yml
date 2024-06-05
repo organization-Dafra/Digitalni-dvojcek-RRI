@@ -1,27 +1,14 @@
-version: "3"
+version: '3.8'
+
 services:
-  nodered: 
-    #build: ./nodered
-    image: localbuild/nodered:april2021
-    container_name: nodered
-    restart: unless-stopped
-    ports: 
+  node-red:
+    image: nodered/node-red
+    container_name: node-red
+    ports:
       - "1880:1880"
     volumes:
-      - noderedData:/data
-    networks:
-      - edge
-  grafana:
-    #build: ./grafana
-    image: localbuild/grafana:april2021
-    container_name: grafana
-    restart: unless-stopped
-    ports:
-      - "3000:3000"
-    volumes: 
-      - grafanaData:/var/lib/grafana
-    networks:
-      - edge
+      - node_red_data:/data
+
   influxdb:
     image: influxdb:latest
     container_name: influxdb
@@ -34,14 +21,57 @@ services:
       - INFLUXDB_HTTP_AUTH_ENABLED=true
       - INFLUXDB_ADMIN_USER=admin
       - INFLUXDB_ADMIN_PASSWORD=adminpassword
-#Create internal link network for Containers
-networks:
-  edge:
 
-#Create Volumes for persistent Storage
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=adminpassword
+
+  homeassistant:
+    image: homeassistant/home-assistant:stable
+    container_name: homeassistant
+    volumes:
+      - homeassistant_data:/config
+    environment:
+      - TZ=Europe/Ljubljana
+    restart: unless-stopped
+    network_mode: host
+
+  mosquitto:
+    image: eclipse-mosquitto
+    container_name: mosquitto
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - mosquitto_data:/mosquitto/data
+      - mosquitto_config:/mosquitto/config
+      - mosquitto_logs:/mosquitto/log
+
+  zigbee2mqtt:
+    image: koenkk/zigbee2mqtt
+    container_name: zigbee2mqtt
+    volumes:
+      - zigbee2mqtt_data:/app/data
+    environment:
+      - TZ=Europe/Ljubljana
+    devices:
+      - "/dev/ttyUSB0:/dev/ttyUSB0"
+    depends_on:
+      - mosquitto
+
 volumes:
-  grafanaData:
-  noderedData:
-  influxData:
-  #mosquittoLog:
-  #mosquittoData:
+  node_red_data:
+  influxdb_data:
+  grafana_data:
+  homeassistant_data:
+  mosquitto_data:
+  mosquitto_config:
+  mosquitto_logs:
+  zigbee2mqtt_data:
