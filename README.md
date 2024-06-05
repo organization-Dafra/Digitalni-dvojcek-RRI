@@ -1,6 +1,14 @@
 # Digitalni-dvojcek
 ## Posodovitev Ubuntu sistema in nadgradnja
      sudo apt update && sudo apt upgrade
+## Namestitev SSH serverja
+     sudo apt-get install openssh-server
+## Omogoči SSH
+     sudo systemctl enable ssh
+     ## OR enable and start the ssh service immediately ##
+     sudo systemctl enable ssh --now
+## Start ssh
+     sudo systemctl start ssh
 ## Namestitev docker
       **# Add Docker's official GPG key:
       sudo apt-get update
