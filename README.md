@@ -35,3 +35,9 @@
      newgrp docker
 ### Test docker brez sudo
      docker run hello-world
+
+## Namestitev Docker paketov
+run command in the same folder as docker-compose.yml file
+
+     docker compose up -d
+     
