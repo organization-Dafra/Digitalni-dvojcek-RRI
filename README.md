@@ -19,3 +19,10 @@
 
 ## Testiraj docker instanco
      sudo docker run hello-world
+
+### Uporabi docker brez su
+     sudo groupadd docker
+     sudo usermod -aG docker $USER
+     newgrp docker
+### Test docker brez sudo
+     docker run hello-world
