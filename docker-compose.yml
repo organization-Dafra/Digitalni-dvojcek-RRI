@@ -33,45 +33,8 @@ services:
       - GF_SECURITY_ADMIN_USER=admin
       - GF_SECURITY_ADMIN_PASSWORD=adminpassword
 
-  homeassistant:
-    image: homeassistant/home-assistant:stable
-    container_name: homeassistant
-    volumes:
-      - homeassistant_data:/config
-    environment:
-      - TZ=Europe/Ljubljana
-    restart: unless-stopped
-    network_mode: host
-
-  mosquitto:
-    image: eclipse-mosquitto
-    container_name: mosquitto
-    ports:
-      - "1883:1883"
-      - "9001:9001"
-    volumes:
-      - mosquitto_data:/mosquitto/data
-      - mosquitto_config:/mosquitto/config
-      - mosquitto_logs:/mosquitto/log
-
-  zigbee2mqtt:
-    image: koenkk/zigbee2mqtt
-    container_name: zigbee2mqtt
-    volumes:
-      - zigbee2mqtt_data:/app/data
-    environment:
-      - TZ=Europe/Ljubljana
-    devices:
-      - "/dev/ttyUSB0:/dev/ttyUSB0"
-    depends_on:
-      - mosquitto
 
 volumes:
   node_red_data:
   influxdb_data:
   grafana_data:
-  homeassistant_data:
-  mosquitto_data:
-  mosquitto_config:
-  mosquitto_logs:
-  zigbee2mqtt_data:
