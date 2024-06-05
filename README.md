@@ -16,3 +16,6 @@
       sudo apt-get update
 ## Namestitev docker
      sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+## Testiraj docker instanco
+     sudo docker run hello-world
