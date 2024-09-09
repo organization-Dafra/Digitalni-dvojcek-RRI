@@ -1,0 +1,5 @@
+pyads==3.4.0
+influxdb-client==1.36.0
+asyncio==3.4.3
+
+#pip install -r requirements.txt
