@@ -22,7 +22,7 @@ This project contains MQTT broker configuration and topic structure for industri
 ```
 #### Machine Status Topic
 ```
-/haulick-32t/
+/haulick-32t
 ```
 **Payload Format:**
 ```json
@@ -38,15 +38,15 @@ This project contains MQTT broker configuration and topic structure for industri
 #### Actuator Topics
 Base pattern:
 ```
-/machine/tool-nr/type-of-sensor_#number/
+/machine/tool-nr/type-of-sensor_#number
 ```
 
 Implemented topics:
 ```
-/haulick-32t/32777/actuator_1/
-/haulick-32t/32777/actuator_2/
-/haulick-32t/32777/actuator_3/
-/haulick-32t/32777/actuator_4/
+/haulick-32t/32777/actuator_1
+/haulick-32t/32777/actuator_2
+/haulick-32t/32777/actuator_3
+/haulick-32t/32777/actuator_4
 ```
 
 **Actuator Payload Format:**
@@ -55,6 +55,8 @@ Implemented topics:
     "T_tool": "<value>",  // Tool temperature
     "Imax": "<value>",    // Maximum current
     "Imin": "<value>"     // Minimum current
+    "Fmax": "<Value>"     //Maximum force
+    "Fmin": "<value>"     //Minimum force
 }
 ```
 
