@@ -27,9 +27,11 @@ This project contains MQTT broker configuration and topic structure for industri
 **Payload Format:**
 ```json
 {
-    "T_env": "<value>",              // Environment temperature in °C
-    "is_in_continous_mode": "<bool>", // Machine continuous mode status
-    "is_in_error": "<bool>"          // Machine error status
+    "T_env": "<value>",                // Environment temperature in °C
+    "is_in_continous_mode": "<bool>",  // Machine continuous mode status
+    "is_in_error": "<bool>"            // Machine error status
+    "speed": <int>                     //Machine speed (RPM)
+    "current_count": <int>             //Machine counter
 }
 ```
 
