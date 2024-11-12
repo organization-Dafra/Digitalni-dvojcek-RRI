@@ -47,10 +47,6 @@ This project contains MQTT broker configuration and topic structure for industri
 ```
 
 #### Actuator Topics
-Base pattern:
-```text
-/machine/tool-nr/type-of-sensor_#number
-```
 
 Implemented topics:
 ```text
