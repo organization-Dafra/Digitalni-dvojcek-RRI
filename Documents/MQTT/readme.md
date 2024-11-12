@@ -9,12 +9,16 @@ This project contains MQTT broker configuration and topic structure for industri
 - **MQTT Broker Address:** tcp://192.168.1.1
 - **Port:** 1883 (default MQTT port)
   - 1883: Standard MQTT port (unencrypted)
-  - 8883: MQTT over TLS/SSL (encrypted)
+  - 8883: MQTT over TLS/SSL (encrypted) - disabled
 - **Security:**
-  - Username authentication enabled
-  - Credentials to be configured based on deployment environment
+  - Username authentication disabled
 
 ### Topic Structure
+/machine-type/tool-number/actuator-type
+
+/machine-type: /haulick-32
+/tool-number: /32777
+/actuator-type: actuator_1 - actuator_4
 
 #### Machine Status Topic
 ```
