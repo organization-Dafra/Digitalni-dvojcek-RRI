@@ -15,11 +15,11 @@ This project contains MQTT broker configuration and topic structure for industri
 
 ### Topic Structure
 /machine-type/tool-number/actuator-type
-
+```json
 /machine-type: /haulick-32
 /tool-number: /32777
 /actuator-type: actuator_1 - actuator_4
-
+```
 #### Machine Status Topic
 ```
 /haulick-32t/
