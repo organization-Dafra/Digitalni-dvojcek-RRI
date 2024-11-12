@@ -15,23 +15,23 @@ This project contains MQTT broker configuration and topic structure for industri
 
 ### Topic Structure
 /machine-type/tool-number/actuator-type
-```json
+```text
 /machine-type: /haulick-32
 /tool-number: /32777
 /actuator-type: actuator_1 - actuator_4
 ```
 #### Machine Status Topic
-```json
+```text
 /haulick-32t
 ```
 **Payload Format:**
 ```json
 {
-    "T_env": "<value>",                // Environment temperature in °C
-    "is_in_continous_mode": "<bool>",  // Machine continuous mode status
-    "is_in_error": "<bool>"            // Machine error status
-    "speed": "<int>"                     //Machine speed (RPM)
-    "current_count": "<int>"            //Machine counter
+    "T_env": "<value>",                # Environment temperature in °C
+    "is_in_continous_mode": "<bool>",  # Machine continuous mode status
+    "is_in_error": "<bool>"            # Machine error status
+    "speed": "<int>"                    #Machine speed (RPM)
+    "current_count": "<int>"            #Machine counter
 }
 ```
 
