@@ -35,6 +35,17 @@ This project contains MQTT broker configuration and topic structure for industri
 }
 ```
 
+#### Tool status topic
+```
+/haulick-32t/32712
+```
+**Payload Format:**
+```json
+{
+    "T_tool": "<value>"                // Tool temperature [°C]
+}
+```
+
 #### Actuator Topics
 Base pattern:
 ```
