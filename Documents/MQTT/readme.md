@@ -7,6 +7,9 @@ This project contains MQTT broker configuration and topic structure for industri
 
 ### Broker Settings
 - **MQTT Broker Address:** tcp://192.168.1.1
+- **Port:** 1883 (default MQTT port)
+  - 1883: Standard MQTT port (unencrypted)
+  - 8883: MQTT over TLS/SSL (encrypted)
 - **Security:**
   - Username authentication enabled
   - Credentials to be configured based on deployment environment
@@ -58,11 +61,11 @@ Implemented topics:
 
 ### Prerequisites
 - MQTT Broker installed and running
-- Network access to broker address (192.168.1.1)
+- Network access to broker address (192.168.1.1:1883)
 - MQTT client library for your programming language
 
 ### Basic Usage
-1. Connect to the MQTT broker using the provided address
+1. Connect to the MQTT broker using the provided address and port
 2. Subscribe to relevant topics based on monitoring needs
 3. Publish data using the defined JSON formats
 4. Monitor machine status and actuator data
@@ -73,12 +76,20 @@ Implemented topics:
 import paho.mqtt.client as mqtt
 
 client = mqtt.Client()
-# Connect to broker
+# Connect to broker with explicit port number
 client.connect("192.168.1.1", 1883, 60)
 # Subscribe to all actuator topics
 client.subscribe("/haulick-32t/32777/actuator_+/")
 # Subscribe to machine status
 client.subscribe("/haulick-32t/")
+```
+
+### Connection Settings Summary
+```
+Host: 192.168.1.1
+Port: 1883
+Protocol: TCP
+Default Keep Alive: 60 seconds
 ```
 
 ## Topic List Summary
@@ -103,3 +114,4 @@ For any questions or issues, please contact:
   - Initial configuration setup
   - Defined topic structure
   - Documented payload formats
+  - Added port configuration details
