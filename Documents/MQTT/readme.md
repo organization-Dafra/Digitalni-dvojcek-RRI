@@ -1,4 +1,4 @@
-# MQTT Configuration Project
+# MQTT Configuration
 
 ## Overview
 This project contains MQTT broker configuration and topic structure for industrial machine monitoring system, specifically configured for Haulick 32T machine data collection and monitoring.
