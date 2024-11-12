@@ -53,7 +53,7 @@ Base pattern:
 ```
 
 Implemented topics:
-```json
+```text
 /haulick-32t/32777/actuator_1
 /haulick-32t/32777/actuator_2
 /haulick-32t/32777/actuator_3
