@@ -98,9 +98,12 @@ client = mqtt.Client()
 # Connect to broker with explicit port number
 client.connect("192.168.1.1", 1883, 60)
 # Subscribe to all actuator topics
-client.subscribe("/haulick-32t/32777/actuator_+/")
+client.subscribe("/haulick-32t/32777/actuator_1")
 # Subscribe to machine status
-client.subscribe("/haulick-32t/")
+client.subscribe("/haulick-32t")
+# Subscribe to tool status
+client.subscribe("/haulick-32t/32777")
+
 ```
 
 ### Connection Settings Summary
