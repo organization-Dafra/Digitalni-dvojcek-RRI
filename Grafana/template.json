@@ -1,0 +1,1980 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 1,
+  "id": 2,
+  "links": [],
+  "panels": [
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "cdnvsrhc5tds0d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "fieldMinMax": false,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "locale"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 7,
+        "x": 0,
+        "y": 0
+      },
+      "id": 12,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.0.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "cdnvsrhc5tds0d"
+          },
+          "query": "from(bucket: \"RRI\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"TestiranjeAktuatorja_13092024\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"PresaStevec\")\r\n  |> aggregateWindow(every: 5s, fn: last, createEmpty: false)\r\n  |> yield(name: \"last\")",
+          "refId": "A"
+        }
+      ],
+      "title": "Stevec preklopov",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "cdnvsrhc5tds0d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 2,
+          "mappings": [],
+          "max": 90,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 70
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "celsius"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 13,
+        "x": 7,
+        "y": 0
+      },
+      "id": 28,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "vertical",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": true,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.0.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "cdnvsrhc5tds0d"
+          },
+          "query": "data1 = from(bucket: \"RRI\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"fromS7_mqtt\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"rt1_ch2\" or r[\"_field\"] == \"rtd1_ch0\" or r[\"_field\"] == \"rtd1_ch1\" or r[\"_field\"] == \"rtd1_ch3\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n\r\ndata2 = from(bucket: \"RRI\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"TestiranjeAktuatorja_13092024\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"Temperatura okolice\" or r[\"_field\"] == \"Temperatura orodja 1\" or r[\"_field\"] == \"Temperatura orodja 2\" or r[\"_field\"] == \"Rezerva\" or r[\"_field\"] == \"Temperatura okolice RTD\" or  r[\"_field\"] == \"Egasi_Temperatura\" or  r[\"_field\"] == \"Temperatura ohisje aktuator RTD\"  or  r[\"_field\"] == \"Temperatura orodja RTD\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n\r\nunion(tables: [data1, data2])\r\n  |> yield(name: \"mean\")\r\n",
+          "refId": "A"
+        }
+      ],
+      "transformations": [
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "rt1_ch2",
+            "renamePattern": "Temperatura okolice (+-0.1°C))"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "Temperatura okolice",
+            "renamePattern": "Temperatura okolice (+-1°C)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "Temperatura okolice RTD",
+            "renamePattern": "Temperatura okolice RTD"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "Temperatura orodja 1",
+            "renamePattern": "Temp. ohišja aktuatorja (+-1°C)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "Temperatura orodja 2",
+            "renamePattern": "Temp. orodja (+-1°C)"
+          }
+        },
+        {
+          "id": "filterFieldsByName",
+          "options": {
+            "byVariable": false,
+            "include": {
+              "names": [
+                "Egasi_Temperatura",
+                "Temperatura ohisje aktuator RTD",
+                "Temperatura orodja RTD",
+                "Temperatura okolice RTD"
+              ]
+            }
+          }
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "cdnvsrhc5tds0d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 230
+              },
+              {
+                "color": "red",
+                "value": 300
+              }
+            ]
+          },
+          "unit": "rotrpm"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 20,
+        "y": 0
+      },
+      "id": 18,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.0.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "cdnvsrhc5tds0d"
+          },
+          "query": "from(bucket: \"RRI\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"TestiranjeAktuatorja_13092024\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"PresaHitrost\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> yield(name: \"mean\")",
+          "refId": "A"
+        }
+      ],
+      "title": "Hitrost stiskalnice",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "cdnvsrhc5tds0d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 2,
+          "mappings": [],
+          "max": 90,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 70
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "celsius"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 24,
+        "x": 0,
+        "y": 3
+      },
+      "id": 27,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "vertical",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": true,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.0.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "cdnvsrhc5tds0d"
+          },
+          "query": "data1 = from(bucket: \"RRI\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"fromS7_mqtt\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"M1_temp\" or r[\"_field\"] == \"M2_temp\" or r[\"_field\"] == \"M3_temp\" or r[\"_field\"] == \"M4_temp\" or r[\"_field\"] == \"M5_temp\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n\r\ndata2 = from(bucket: \"RRI\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"TestiranjeAktuatorja_13092024\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"M1_temp\" or  r[\"_field\"] == \"M2_temp\"  or r[\"_field\"] == \"M3_temp\" or r[\"_field\"] == \"M4_temp\" or r[\"_field\"] == \"M5_temp\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n\r\nunion(tables: [data1, data2])\r\n  |> yield(name: \"mean\")\r\n",
+          "refId": "A"
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "cdnvsrhc5tds0d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "axisSoftMax": 110,
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "decimals": 2,
+          "mappings": [],
+          "max": 110,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 70
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "celsius"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 24,
+        "x": 0,
+        "y": 7
+      },
+      "id": 38,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "maxHeight": 600,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.0.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "cdnvsrhc5tds0d"
+          },
+          "query": "data1 = from(bucket: \"RRI\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"fromS7_mqtt\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"M1_temp\" or r[\"_field\"] == \"M2_temp\" or r[\"_field\"] == \"M3_temp\" or r[\"_field\"] == \"M4_temp\" or r[\"_field\"] == \"M5_temp\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n\r\ndata2 = from(bucket: \"RRI\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"TestiranjeAktuatorja_13092024\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"M1_temp\" or  r[\"_field\"] == \"M2_temp\"  or r[\"_field\"] == \"M3_temp\" or r[\"_field\"] == \"M4_temp\" or r[\"_field\"] == \"M5_temp\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n\r\nunion(tables: [data1, data2])\r\n  |> yield(name: \"mean\")\r\n",
+          "refId": "A"
+        }
+      ],
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "cdnvsrhc5tds0d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-GrYlRd"
+          },
+          "fieldMinMax": false,
+          "mappings": [],
+          "max": 100,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "celsius"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 24,
+        "x": 0,
+        "y": 11
+      },
+      "id": 37,
+      "options": {
+        "displayMode": "lcd",
+        "maxVizHeight": 300,
+        "minVizHeight": 16,
+        "minVizWidth": 8,
+        "namePlacement": "auto",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "sizing": "auto",
+        "valueMode": "color"
+      },
+      "pluginVersion": "11.0.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "cdnvsrhc5tds0d"
+          },
+          "query": "data1 = from(bucket: \"RRI\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"fromS7_mqtt\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"M1_temp\" or r[\"_field\"] == \"M2_temp\" or r[\"_field\"] == \"M3_temp\" or r[\"_field\"] == \"M4_temp\" or r[\"_field\"] == \"M5_temp\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n\r\ndata2 = from(bucket: \"RRI\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"TestiranjeAktuatorja_13092024\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"M1_temp\" or  r[\"_field\"] == \"M2_temp\"  or r[\"_field\"] == \"M3_temp\" or r[\"_field\"] == \"M4_temp\" or r[\"_field\"] == \"M5_temp\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n\r\nunion(tables: [data1, data2])\r\n  |> yield(name: \"mean\")\r\n",
+          "refId": "A"
+        }
+      ],
+      "type": "bargauge"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "cdnvsrhc5tds0d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "stepAfter",
+            "lineWidth": 1,
+            "pointSize": 2,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "rotrpm"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 24,
+        "x": 0,
+        "y": 14
+      },
+      "id": 14,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "tooltip": {
+          "maxHeight": 600,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "cdnvsrhc5tds0d"
+          },
+          "query": "from(bucket: \"RRI\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"TestiranjeAktuatorja_13092024\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"PresaHitrost\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> yield(name: \"mean\")",
+          "refId": "A"
+        }
+      ],
+      "title": "Hitrost stiskalnice",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "cdnvsrhc5tds0d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "forceN"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 5,
+        "x": 0,
+        "y": 20
+      },
+      "id": 22,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": true,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.0.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "cdnvsrhc5tds0d"
+          },
+          "query": "from(bucket: \"RRI\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"TestiranjeAktuatorja_13092024\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"Egasi1_maxForce\")\r\n  |> aggregateWindow(every: 60s, fn: last, createEmpty: false)\r\n  |> yield(name: \"last\")\r\n",
+          "refId": "A"
+        }
+      ],
+      "title": "Maksimalna sila",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "cdnvsrhc5tds0d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "forceN"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 5,
+        "x": 5,
+        "y": 20
+      },
+      "id": 31,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": true,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.0.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "cdnvsrhc5tds0d"
+          },
+          "query": "from(bucket: \"RRI\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"TestiranjeAktuatorja_13092024\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"Egasi1_maxForce\")\r\n  |> aggregateWindow(every: 60s, fn: last, createEmpty: false)\r\n  |> yield(name: \"last\")\r\n",
+          "refId": "A"
+        }
+      ],
+      "title": "Maksimalna sila",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "cdnvsrhc5tds0d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "forceN"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 5,
+        "x": 10,
+        "y": 20
+      },
+      "id": 35,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": true,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.0.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "cdnvsrhc5tds0d"
+          },
+          "query": "from(bucket: \"RRI\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"TestiranjeAktuatorja_13092024\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"Egasi1_maxForce\")\r\n  |> aggregateWindow(every: 60s, fn: last, createEmpty: false)\r\n  |> yield(name: \"last\")\r\n",
+          "refId": "A"
+        }
+      ],
+      "title": "Maksimalna sila",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "cdnvsrhc5tds0d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "forceN"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 4,
+        "x": 15,
+        "y": 20
+      },
+      "id": 29,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": true,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.0.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "cdnvsrhc5tds0d"
+          },
+          "query": "from(bucket: \"RRI\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"TestiranjeAktuatorja_13092024\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"Egasi1_maxForce\")\r\n  |> aggregateWindow(every: 60s, fn: last, createEmpty: false)\r\n  |> yield(name: \"last\")\r\n",
+          "refId": "A"
+        }
+      ],
+      "title": "Maksimalna sila",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "cdnvsrhc5tds0d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "forceN"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 5,
+        "x": 19,
+        "y": 20
+      },
+      "id": 33,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": true,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.0.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "cdnvsrhc5tds0d"
+          },
+          "query": "from(bucket: \"RRI\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"TestiranjeAktuatorja_13092024\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"Egasi1_maxForce\")\r\n  |> aggregateWindow(every: 60s, fn: last, createEmpty: false)\r\n  |> yield(name: \"last\")\r\n",
+          "refId": "A"
+        }
+      ],
+      "title": "Maksimalna sila",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "cdnvsrhc5tds0d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "forceN"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 5,
+        "x": 0,
+        "y": 22
+      },
+      "id": 25,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": true,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.0.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "cdnvsrhc5tds0d"
+          },
+          "query": "from(bucket: \"RRI\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"TestiranjeAktuatorja_13092024\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"Egasi1_minForce\")\r\n  |> aggregateWindow(every: 60s, fn: last, createEmpty: false)\r\n  |> yield(name: \"last\")",
+          "refId": "A"
+        }
+      ],
+      "title": "Minimalna sila",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "cdnvsrhc5tds0d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "forceN"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 5,
+        "x": 5,
+        "y": 22
+      },
+      "id": 32,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": true,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.0.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "cdnvsrhc5tds0d"
+          },
+          "query": "from(bucket: \"RRI\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"TestiranjeAktuatorja_13092024\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"Egasi1_minForce\")\r\n  |> aggregateWindow(every: 60s, fn: last, createEmpty: false)\r\n  |> yield(name: \"last\")",
+          "refId": "A"
+        }
+      ],
+      "title": "Minimalna sila",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "cdnvsrhc5tds0d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "forceN"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 5,
+        "x": 10,
+        "y": 22
+      },
+      "id": 36,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": true,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.0.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "cdnvsrhc5tds0d"
+          },
+          "query": "from(bucket: \"RRI\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"TestiranjeAktuatorja_13092024\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"Egasi1_minForce\")\r\n  |> aggregateWindow(every: 60s, fn: last, createEmpty: false)\r\n  |> yield(name: \"last\")",
+          "refId": "A"
+        }
+      ],
+      "title": "Minimalna sila",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "cdnvsrhc5tds0d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "forceN"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 4,
+        "x": 15,
+        "y": 22
+      },
+      "id": 30,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": true,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.0.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "cdnvsrhc5tds0d"
+          },
+          "query": "from(bucket: \"RRI\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"TestiranjeAktuatorja_13092024\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"Egasi1_minForce\")\r\n  |> aggregateWindow(every: 60s, fn: last, createEmpty: false)\r\n  |> yield(name: \"last\")",
+          "refId": "A"
+        }
+      ],
+      "title": "Minimalna sila",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "cdnvsrhc5tds0d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "forceN"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 5,
+        "x": 19,
+        "y": 22
+      },
+      "id": 34,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": true,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.0.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "cdnvsrhc5tds0d"
+          },
+          "query": "from(bucket: \"RRI\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"TestiranjeAktuatorja_13092024\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"Egasi1_minForce\")\r\n  |> aggregateWindow(every: 60s, fn: last, createEmpty: false)\r\n  |> yield(name: \"last\")",
+          "refId": "A"
+        }
+      ],
+      "title": "Minimalna sila",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "cdnvsrhc5tds0d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-GrYlRd"
+          },
+          "decimals": 2,
+          "mappings": [],
+          "max": 90,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 70
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "celsius"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 24,
+        "x": 0,
+        "y": 24
+      },
+      "id": 21,
+      "options": {
+        "displayMode": "lcd",
+        "maxVizHeight": 300,
+        "minVizHeight": 16,
+        "minVizWidth": 8,
+        "namePlacement": "auto",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showUnfilled": true,
+        "sizing": "auto",
+        "valueMode": "color"
+      },
+      "pluginVersion": "11.0.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "cdnvsrhc5tds0d"
+          },
+          "query": "data1 = from(bucket: \"RRI\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"fromS7_mqtt\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"rt1_ch2\" or r[\"_field\"] == \"rtd1_ch0\" or r[\"_field\"] == \"rtd1_ch1\" or r[\"_field\"] == \"rtd1_ch3\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n\r\ndata2 = from(bucket: \"RRI\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"TestiranjeAktuatorja_13092024\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"Temperatura okolice\" or r[\"_field\"] == \"Temperatura orodja 1\" or r[\"_field\"] == \"Temperatura orodja 2\" or r[\"_field\"] == \"Rezerva\" or r[\"_field\"] == \"Temperatura okolice RTD\" or  r[\"_field\"] == \"Egasi_Temperatura\" or  r[\"_field\"] == \"Temperatura ohisje aktuator RTD\"  or  r[\"_field\"] == \"Temperatura orodja RTD\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n\r\nunion(tables: [data1, data2])\r\n  |> yield(name: \"mean\")\r\n",
+          "refId": "A"
+        }
+      ],
+      "title": "Temperature",
+      "transformations": [
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "rt1_ch2",
+            "renamePattern": "Temperatura okolice (+-0.1°C))"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "Temperatura okolice",
+            "renamePattern": "Temperatura okolice (+-1°C)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "Temperatura okolice RTD",
+            "renamePattern": "Temperatura okolice (+-0.1°C)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "Temperatura orodja 1",
+            "renamePattern": "Temp. ohišja aktuatorja (+-1°C)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "Temperatura orodja 2",
+            "renamePattern": "Temp. orodja (+-1°C)"
+          }
+        },
+        {
+          "id": "filterFieldsByName",
+          "options": {
+            "byVariable": false,
+            "include": {
+              "names": [
+                "Egasi_Temperatura",
+                "Temperatura ohisje aktuator RTD",
+                "Temperatura okolice (+-0.1°C)",
+                "Temperatura orodja RTD"
+              ]
+            }
+          }
+        }
+      ],
+      "type": "bargauge"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "cdnvsrhc5tds0d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "orange",
+                "value": 40
+              },
+              {
+                "color": "red",
+                "value": 60
+              }
+            ]
+          },
+          "unit": "forceN"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 24,
+        "x": 0,
+        "y": 30
+      },
+      "id": 24,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "maxHeight": 600,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.0.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "cdnvsrhc5tds0d"
+          },
+          "query": "from(bucket: \"RRI\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"TestiranjeAktuatorja_13092024\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"Egasi1_maxForce\" or r[\"_field\"] == \"Egasi1_minForce\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)",
+          "refId": "A"
+        }
+      ],
+      "title": "Maksimalna sila",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "cdnvsrhc5tds0d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "smooth",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "dashed"
+            }
+          },
+          "decimals": 2,
+          "fieldMinMax": false,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 50
+              }
+            ]
+          },
+          "unit": "celsius"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 24,
+        "x": 0,
+        "y": 35
+      },
+      "id": 13,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "maxHeight": 600,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "cdnvsrhc5tds0d"
+          },
+          "query": "data1 = from(bucket: \"RRI\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"fromS7_mqtt\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"rt1_ch2\" or r[\"_field\"] == \"rtd1_ch0\" or r[\"_field\"] == \"rtd1_ch1\" or r[\"_field\"] == \"rtd1_ch3\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n\r\ndata2 = from(bucket: \"RRI\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"TestiranjeAktuatorja_13092024\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"Temperatura okolice\" or r[\"_field\"] == \"Temperatura orodja 1\" or r[\"_field\"] == \"Temperatura orodja 2\" or r[\"_field\"] == \"Rezerva\" or r[\"_field\"] == \"Temperatura okolice RTD\" or  r[\"_field\"] == \"Egasi_Temperatura\"  or  r[\"_field\"] == \"Temperatura ohisje aktuator RTD\"  or  r[\"_field\"] == \"Temperatura orodja RTD\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n\r\nunion(tables: [data1, data2])\r\n  |> yield(name: \"mean\")\r\n",
+          "refId": "A"
+        }
+      ],
+      "title": "Temperature",
+      "transformations": [
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "rt1_ch2",
+            "renamePattern": "Temperatura okolice (+-0.1°C))"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "Temperatura okolice",
+            "renamePattern": "Temperatura okolice (+-1°C)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "Temperatura okolice RTD",
+            "renamePattern": "Temperatura okolice (+-0.1°C)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "Temperatura orodja 1",
+            "renamePattern": "Temp. ohišja aktuatorja (+-1°C)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "Temperatura orodja 2",
+            "renamePattern": "Temp. orodja (+-1°C)"
+          }
+        },
+        {
+          "id": "filterFieldsByName",
+          "options": {
+            "include": {
+              "names": [
+                "Time",
+                "Egasi_Temperatura",
+                "Temperatura ohisje aktuator RTD",
+                "Temperatura okolice (+-0.1°C)",
+                "Temperatura orodja RTD"
+              ]
+            }
+          }
+        }
+      ],
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "cdnvsrhc5tds0d"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 5,
+        "x": 0,
+        "y": 44
+      },
+      "id": 20,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<a href=\"https://freeimage.host/i/d60cEpn\"><img src=\"https://iili.io/d60cEpn.md.jpg\" alt=\"d60cEpn.md.jpg\" border=\"0\"></a>",
+        "mode": "html"
+      },
+      "pluginVersion": "11.0.0",
+      "title": "Projekt RRI / DD",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "cdnvsrhc5tds0d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "__systemRef": "hideSeriesFrom",
+            "matcher": {
+              "id": "byNames",
+              "options": {
+                "mode": "exclude",
+                "names": [
+                  "Temperatura ohisje aktuator RTD",
+                  "Egasi_Temperatura",
+                  "Temperatura okolice RTD",
+                  "Temperatura orodja RTD"
+                ],
+                "prefix": "All except:",
+                "readOnly": true
+              }
+            },
+            "properties": [
+              {
+                "id": "custom.hideFrom",
+                "value": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": true
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 19,
+        "x": 5,
+        "y": 44
+      },
+      "id": 26,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "maxHeight": 600,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "cdnvsrhc5tds0d"
+          },
+          "query": "data1 = from(bucket: \"RRI\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"fromS7_mqtt\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"rt1_ch2\" or r[\"_field\"] == \"rtd1_ch0\" or r[\"_field\"] == \"rtd1_ch1\" or r[\"_field\"] == \"rtd1_ch3\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n\r\ndata2 = from(bucket: \"RRI\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"TestiranjeAktuatorja_13092024\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"Temperatura okolice\" or r[\"_field\"] == \"Temperatura orodja 1\" or r[\"_field\"] == \"Temperatura orodja 2\" or r[\"_field\"] == \"Rezerva\" or r[\"_field\"] == \"Temperatura okolice RTD\" or  r[\"_field\"] == \"Egasi_Temperatura\"  or  r[\"_field\"] == \"Temperatura ohisje aktuator RTD\"  or  r[\"_field\"] == \"Temperatura orodja RTD\" or r[\"_field\"] == \"PresaStevec\" or r[\"_field\"] == \"PresaHitrost\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n\r\nunion(tables: [data1, data2])\r\n  |> yield(name: \"mean\")\r\n",
+          "refId": "A"
+        }
+      ],
+      "title": "Panel Title",
+      "transformations": [
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "Temperatura orodja 1",
+            "renamePattern": "Temperatura ohišja aktuatorja"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "Temperatura orodja 2",
+            "renamePattern": "Temperatura orodja"
+          }
+        },
+        {
+          "id": "filterFieldsByName",
+          "options": {
+            "include": {
+              "names": [
+                "Time",
+                "Egasi_Temperatura",
+                "PresaStevec",
+                "Temperatura ohisje aktuator RTD",
+                "Temperatura okolice RTD",
+                "Temperatura orodja RTD",
+                "PresaHitrost"
+              ]
+            }
+          }
+        }
+      ],
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "cdnvsrhc5tds0d"
+      },
+      "description": "temperatura v aktuatorju",
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 70
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "celsius"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 0,
+        "y": 52
+      },
+      "id": 4,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": true,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.0.0",
+      "targets": [
+        {
+          "alias": "Temeratura okolice ",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "cdnvsrhc5tds0d"
+          },
+          "groupBy": [],
+          "measurement": "Orodje_temperatura",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "from(bucket: \"RRI\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"TestiranjeAktuatorja_13092024\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"Egasi_Temperatura\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> yield(name: \"mean\")",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Temperatura okolice"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "title": "Temperatura - EGASI",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "cdnvsrhc5tds0d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 50
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "celsius"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 8,
+        "x": 3,
+        "y": 52
+      },
+      "id": 16,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": true,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.0.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "cdnvsrhc5tds0d"
+          },
+          "query": "from(bucket: \"RRI\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"TestiranjeAktuatorja_13092024\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"Temperatura okolice\" or r[\"_field\"] == \"Temperatura orodja 1\" or r[\"_field\"] == \"Temperatura orodja 2\" or r[\"_field\"] == \"Rezerva\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> yield(name: \"mean\")",
+          "refId": "A"
+        }
+      ],
+      "title": "Temperature",
+      "transformations": [
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "Temperatura okolice",
+            "renamePattern": "Temperatura okolice (+-1°C)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "Temperatura orodja 1",
+            "renamePattern": "Temp. ohišja aktuatorja(+-1°C)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "Temperatura orodja 2",
+            "renamePattern": "Temperatura orodja (+-1°C)"
+          }
+        },
+        {
+          "id": "renameByRegex",
+          "options": {
+            "regex": "Rezerva",
+            "renamePattern": "//"
+          }
+        },
+        {
+          "id": "filterFieldsByName",
+          "options": {
+            "include": {
+              "names": [
+                "Time",
+                "Temperatura okolice (+-1°C)",
+                "Temp. ohišja aktuatorja(+-1°C)",
+                "Temperatura orodja (+-1°C)"
+              ]
+            }
+          }
+        }
+      ],
+      "type": "stat"
+    }
+  ],
+  "refresh": "",
+  "schemaVersion": 39,
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-1h",
+    "to": "now"
+  },
+  "timeRangeUpdatedDuringEditOrView": false,
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "RRI",
+  "uid": "adt0ykcd3uy9sa",
+  "version": 245,
+  "weekStart": ""
+}
