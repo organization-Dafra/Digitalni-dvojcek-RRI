@@ -524,7 +524,7 @@
                 "cols": "15"
             }
         ],
-        "order": 1,
+        "order": 2,
         "className": "",
         "visible": true,
         "disabled": false
@@ -632,7 +632,7 @@
                 "cols": "12"
             }
         ],
-        "order": 4,
+        "order": 6,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -672,7 +672,7 @@
         "icon": "error",
         "layout": "grid",
         "theme": "theme-01",
-        "order": 3,
+        "order": 5,
         "className": ""
     },
     {
@@ -830,10 +830,10 @@
         "id": "58e9b0c008e334d3",
         "type": "ui-group",
         "name": "STATUS",
-        "page": "1ede0b9feaa4bacd",
+        "page": "b8454629e10ceac0",
         "width": "6",
         "height": "1",
-        "order": 5,
+        "order": 1,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -871,7 +871,7 @@
                 "cols": "12"
             }
         ],
-        "order": 2,
+        "order": 4,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -883,7 +883,7 @@
         "page": "1ede0b9feaa4bacd",
         "width": "6",
         "height": "1",
-        "order": 7,
+        "order": 6,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -897,7 +897,7 @@
         "page": "1ede0b9feaa4bacd",
         "width": "6",
         "height": "1",
-        "order": 6,
+        "order": 5,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -999,10 +999,424 @@
                 "cols": 12
             }
         ],
-        "order": 5,
+        "order": 7,
         "className": "",
         "visible": true,
         "disabled": false
+    },
+    {
+        "id": "114668a8e4c713e1",
+        "type": "ui-page",
+        "name": "Motor status M1",
+        "ui": "47a6c454bea5d1c6",
+        "path": "/page6",
+        "icon": "",
+        "layout": "grid",
+        "theme": "theme-01",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 3,
+        "className": "",
+        "visible": true,
+        "disabled": false
+    },
+    {
+        "id": "b8454629e10ceac0",
+        "type": "ui-page",
+        "name": "Motor status",
+        "ui": "47a6c454bea5d1c6",
+        "path": "/page7",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "theme-01",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "23e0960124121c06",
+        "type": "s7 endpoint",
+        "transport": "iso-on-tcp",
+        "address": "192.168.1.101",
+        "port": "102",
+        "rack": "0",
+        "slot": "1",
+        "localtsaphi": "01",
+        "localtsaplo": "00",
+        "remotetsaphi": "01",
+        "remotetsaplo": "00",
+        "connmode": "rack-slot",
+        "adapter": "",
+        "busaddr": "2",
+        "cycletime": "2000",
+        "timeout": "2000",
+        "name": "RRI-DB_MotorStatus(45)",
+        "vartable": [
+            {
+                "addr": "DB45,X0.0",
+                "name": "M1_xinPOS1"
+            },
+            {
+                "addr": "DB45,X0.1",
+                "name": "M1_xinPOS2"
+            },
+            {
+                "addr": "DB45,X0.2",
+                "name": "M1_xisHOMMED"
+            },
+            {
+                "addr": "DB45,X0.3",
+                "name": "M1_xinERROR"
+            },
+            {
+                "addr": "DB45,X0.4",
+                "name": "M1_xFuseError"
+            },
+            {
+                "addr": "DB45,X0.5",
+                "name": "M1_xPOS1Error"
+            },
+            {
+                "addr": "DB45,X0.6",
+                "name": "M1_xPOS2Error"
+            },
+            {
+                "addr": "DB45,X0.7",
+                "name": "M1_PWRStatus"
+            },
+            {
+                "addr": "DB45,R2",
+                "name": "M1_rTemperature"
+            },
+            {
+                "addr": "DB45,R6",
+                "name": "M1_rMaxForce"
+            },
+            {
+                "addr": "DB45,R10",
+                "name": "M1_rMinForce"
+            },
+            {
+                "addr": "DB45,X14.0",
+                "name": "M2_xinPOS1"
+            },
+            {
+                "addr": "DB45,X14.1",
+                "name": "M2_xinPOS2"
+            },
+            {
+                "addr": "DB45,X14.2",
+                "name": "M2_xisHOMMED"
+            },
+            {
+                "addr": "DB45,X14.3",
+                "name": "M2_xinERROR"
+            },
+            {
+                "addr": "DB45,X14.4",
+                "name": "M2_xFuseError"
+            },
+            {
+                "addr": "DB45,X14.5",
+                "name": "M2_xPOS1Error"
+            },
+            {
+                "addr": "DB45,X14.6",
+                "name": "M2_xPOS2Error"
+            },
+            {
+                "addr": "DB45,X14.7",
+                "name": "M2_PWRStatus"
+            },
+            {
+                "addr": "DB45,R16",
+                "name": "M2_rTemperature"
+            },
+            {
+                "addr": "DB45,R20",
+                "name": "M2_rMaxForce"
+            },
+            {
+                "addr": "DB45,R24",
+                "name": "M2_rMinForce"
+            },
+            {
+                "addr": "DB45,X28.0",
+                "name": "M3_xinPOS1"
+            },
+            {
+                "addr": "DB45,X28.1",
+                "name": "M3_xinPOS2"
+            },
+            {
+                "addr": "DB45,X28.2",
+                "name": "M3_xisHOMMED"
+            },
+            {
+                "addr": "DB45,X28.3",
+                "name": "M3_xinERROR"
+            },
+            {
+                "addr": "DB45,X28.4",
+                "name": "M3_xFuseError"
+            },
+            {
+                "addr": "DB45,X28.5",
+                "name": "M3_xPOS1Error"
+            },
+            {
+                "addr": "DB45,X28.6",
+                "name": "M3_xPOS2Error"
+            },
+            {
+                "addr": "DB45,X28.7",
+                "name": "M3_PWRStatus"
+            },
+            {
+                "addr": "DB45,R30",
+                "name": "M3_rTemperature"
+            },
+            {
+                "addr": "DB45,R34",
+                "name": "M3_rMaxForce"
+            },
+            {
+                "addr": "DB45,R38",
+                "name": "M3_rMinForce"
+            },
+            {
+                "addr": "DB45,X42.0",
+                "name": "M4_xinPOS1"
+            },
+            {
+                "addr": "DB45,X42.1",
+                "name": "M4_xinPOS2"
+            },
+            {
+                "addr": "DB45,X42.2",
+                "name": "M4_xisHOMMED"
+            },
+            {
+                "addr": "DB45,X42.3",
+                "name": "M4_xinERROR"
+            },
+            {
+                "addr": "DB45,X42.4",
+                "name": "M4_xFuseError"
+            },
+            {
+                "addr": "DB45,X42.5",
+                "name": "M4_xPOS1Error"
+            },
+            {
+                "addr": "DB45,X42.6",
+                "name": "M4_xPOS2Error"
+            },
+            {
+                "addr": "DB45,X42.7",
+                "name": "M4_PWRStatus"
+            },
+            {
+                "addr": "DB45,R44",
+                "name": "M4_rTemperature"
+            },
+            {
+                "addr": "DB45,R48",
+                "name": "M4_rMaxForce"
+            },
+            {
+                "addr": "DB45,R52",
+                "name": "M4_rMinForce"
+            },
+            {
+                "addr": "DB45,X56.0",
+                "name": "M5_xinPOS1"
+            },
+            {
+                "addr": "DB45,X56.1",
+                "name": "M5_xinPOS2"
+            },
+            {
+                "addr": "DB45,X56.2",
+                "name": "M5_xisHOMMED"
+            },
+            {
+                "addr": "DB45,X56.3",
+                "name": "M5_xinERROR"
+            },
+            {
+                "addr": "DB45,X56.4",
+                "name": "M5_xFuseError"
+            },
+            {
+                "addr": "DB45,X56.5",
+                "name": "M5_xPOS1Error"
+            },
+            {
+                "addr": "DB45,X56.6",
+                "name": "M5_xPOS2Error"
+            },
+            {
+                "addr": "DB45,X56.7",
+                "name": "M5_PWRStatus"
+            },
+            {
+                "addr": "DB45,R58",
+                "name": "M5_rTemperature"
+            },
+            {
+                "addr": "DB45,R62",
+                "name": "M5_rMaxForce"
+            },
+            {
+                "addr": "DB45,R66",
+                "name": "M5_rMinForce"
+            }
+        ]
+    },
+    {
+        "id": "457a24245a8bd6df",
+        "type": "s7 endpoint",
+        "transport": "iso-on-tcp",
+        "address": "192.168.1.101",
+        "port": "102",
+        "rack": "0",
+        "slot": "1",
+        "localtsaphi": "01",
+        "localtsaplo": "00",
+        "remotetsaphi": "01",
+        "remotetsaplo": "00",
+        "connmode": "rack-slot",
+        "adapter": "",
+        "busaddr": "2",
+        "cycletime": "500",
+        "timeout": "2000",
+        "name": "MOTOR_CONTROL",
+        "vartable": [
+            {
+                "addr": "DB46,X0.0",
+                "name": "M1_goPOS1"
+            },
+            {
+                "addr": "DB46,X0.1",
+                "name": "M1_goPOS2"
+            },
+            {
+                "addr": "DB46,X0.2",
+                "name": "M1_goHOME"
+            },
+            {
+                "addr": "DB46,X0.3",
+                "name": "M1_HW_RESET"
+            },
+            {
+                "addr": "DB46,X2.0",
+                "name": "M2_goPOS1"
+            },
+            {
+                "addr": "DB46,X2.1",
+                "name": "M2_goPOS2"
+            },
+            {
+                "addr": "DB46,X2.2",
+                "name": "M2_goHOME"
+            },
+            {
+                "addr": "DB46,X2.3",
+                "name": "M2_HW_RESET"
+            },
+            {
+                "addr": "DB46,X4.0",
+                "name": "M3_goPOS1"
+            },
+            {
+                "addr": "DB46,X4.1",
+                "name": "M3_goPOS2"
+            },
+            {
+                "addr": "DB46,X4.2",
+                "name": "M3_goHOME"
+            },
+            {
+                "addr": "DB46,X4.3",
+                "name": "M3_HW_RESET"
+            },
+            {
+                "addr": "DB46,X6.0",
+                "name": "M4_goPOS1"
+            },
+            {
+                "addr": "DB46,X6.1",
+                "name": "M4_goPOS2"
+            },
+            {
+                "addr": "DB46,X6.2",
+                "name": "M4_goHOME"
+            },
+            {
+                "addr": "DB46,X6.3",
+                "name": "M4_HW_RESET"
+            },
+            {
+                "addr": "DB46,X8.0",
+                "name": "M5_goPOS1"
+            },
+            {
+                "addr": "DB46,X8.1",
+                "name": "M5_goPOS2"
+            },
+            {
+                "addr": "DB46,X8.2",
+                "name": "M5_goHOME"
+            },
+            {
+                "addr": "DB46,X8.3",
+                "name": "M5_HW_RESET"
+            }
+        ]
     },
     {
         "id": "3cc11d24.ff01a2",
@@ -1263,11 +1677,11 @@
         "type": "s7 in",
         "z": "c3ef6562b4dbd1ef",
         "endpoint": "edd4b3a91b062270",
-        "mode": "all",
+        "mode": "all-split",
         "variable": "",
-        "diff": true,
-        "name": "Haulick32T",
-        "x": 120,
+        "diff": false,
+        "name": "",
+        "x": 170,
         "y": 80,
         "wires": [
             [
@@ -1281,7 +1695,7 @@
         "type": "debug",
         "z": "c3ef6562b4dbd1ef",
         "name": "debug 2",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1298,7 +1712,7 @@
         "type": "function",
         "z": "c3ef6562b4dbd1ef",
         "name": "function 2",
-        "func": "msg.topic =\"InfluxDataFromPLC\"\n\nvar Temp1 = msg.payload[\"temp1\"]; //temp orodja 1- na egasi ohišje\nvar Temp2 = msg.payload[\"temp2\"];\nvar Temp3 = msg.payload[\"temp3\"]; //temp. okolice\nvar Temp4 = msg.payload[\"temp4\"];\n\n//temperature aktuatorjev\nvar M1_temp = 25;\nvar M2_temp = 26;\nvar M3_temp = 27;\nvar M4_temp = 28;\nvar M5_temp = 29;\n\nvar PresaHitrost = global.get('Haulick32T.speed');\n//var PresaHitrost = msg.payload[\"PresaHitrost\"];\nvar PresaStevec = msg.payload[\"PresaStevec\"]\nvar PresaDeluje = msg.payload[\"PresaDeluje\"]\nvar RTD1 = msg.payload[\"RTD1\"]\nvar RTD2 = msg.payload[\"RTD2\"];\nvar RTD3 = msg.payload[\"RTD3\"]; //temp. okolice\nvar RTD4 = msg.payload[\"RTD4\"];\nvar Egasi1_Max = msg.payload[\"MaxForce\"]; //Max sila - aktuator 1\nvar Egasi1_Min = msg.payload[\"MinForce\"]; //min sila - aktuator 1\nvar EgasiTemp = msg.payload[\"EgasiTempAktuator\"];\n\nvar Timestam = global.get('timestamp')\nmsg.payload =  {\n    \"timestamp\": Timestam,\n    \"Temperatura orodja 1\": Temp1,\n    \"Temperatura orodja 2\": Temp2,\n    \"Temperatura okolice\": Temp3,\n    \"Rezerva\": Temp4,\n    \"PresaHitrost\" :   PresaHitrost,\n    \"PresaStevec\"  : PresaStevec,\n    \"PresaDelujeINT\"      : PresaDeluje,\n    \"Temperatura ohisje aktuator RTD\" : RTD1,\n    \"Temperatura orodja RTD\": RTD2,\n    \"Temperatura okolice RTD\" : RTD3,\n    \"Egasi1_maxForce\": Egasi1_Max,\n    \"Egasi1_minForce\": Egasi1_Min,\n    \"Egasi_Temperatura\": EgasiTemp,\n    \"M1_temp\" :M1_temp,\n    \"M2_temp\" :M2_temp,\n    \"M3_temp\": M3_temp,\n    \"M4_temp\": M4_temp,\n    \"M5_temp\" :M5_temp\n}\n\nreturn msg;\n",
+        "func": "msg.topic =\"InfluxDataFromPLC\"\n\nvar Temp1 = msg.payload[\"temp1\"]; //temp orodja 1- na egasi ohišje\nvar Temp2 = msg.payload[\"temp2\"];\nvar Temp3 = msg.payload[\"temp3\"]; //temp. okolice\nvar Temp4 = msg.payload[\"temp4\"];\n\n//temperature aktuatorjev\nvar M1_temp = parseFloat(global.get('motorji.temp_M1'));\nvar M2_temp = parseFloat(global.get('motorji.temp_M2'));\nvar M3_temp = parseFloat(global.get('motorji.temp_M3'));\nvar M4_temp = parseFloat(global.get('motorji.temp_M4'));\nvar M5_temp = parseFloat(global.get('motorji.temp_M5'));\n\nvar PresaHitrost = global.get('Haulick32T.speed');\n//var PresaHitrost = msg.payload[\"PresaHitrost\"];\nvar PresaStevec = msg.payload[\"PresaStevec\"]\nvar PresaDeluje = msg.payload[\"PresaDeluje\"]\nvar RTD1 = msg.payload[\"RTD1\"]\nvar RTD2 = msg.payload[\"RTD2\"];\nvar RTD3 = msg.payload[\"RTD3\"]; //temp. okolice\nvar RTD4 = msg.payload[\"RTD4\"];\nvar Egasi1_Max = msg.payload[\"MaxForce\"]; //Max sila - aktuator 1\nvar Egasi1_Min = msg.payload[\"MinForce\"]; //min sila - aktuator 1\nvar EgasiTemp = msg.payload[\"EgasiTempAktuator\"];\n\nvar Timestam = global.get('timestamp')\nmsg.payload =  {\n    \"timestamp\": Timestam,\n    \"Temperatura orodja 1\": Temp1,\n    \"Temperatura orodja 2\": Temp2,\n    \"Temperatura okolice\": Temp3,\n    \"Rezerva\": Temp4,\n    \"PresaHitrost\" :   PresaHitrost,\n    \"PresaStevec\"  : PresaStevec,\n    \"PresaDelujeINT\"      : PresaDeluje,\n    \"Temperatura ohisje aktuator RTD\" : RTD1,\n    \"Temperatura orodja RTD\": RTD2,\n    \"Temperatura okolice RTD\" : RTD3,\n    \"Egasi1_maxForce\": Egasi1_Max,\n    \"Egasi1_minForce\": Egasi1_Min,\n    \"Egasi_Temperatura\": EgasiTemp,\n    \"M1_temp\" :M1_temp,\n    \"M2_temp\" :M2_temp,\n    \"M3_temp\": M3_temp,\n    \"M4_temp\": M4_temp,\n    \"M5_temp\" :M5_temp\n}\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1310,12 +1724,7 @@
         "wires": [
             [
                 "b4a1b890487a0263",
-                "53968cbc4343ed97",
-                "0d19ee2de14b0878",
-                "b26f62dee7226bba",
-                "b3b07d48b2273d1b",
-                "924830db7f575bf5",
-                "524593a60bd902fb"
+                "53968cbc4343ed97"
             ]
         ]
     },
@@ -1333,8 +1742,8 @@
         "retentionPolicyV18Flux": "",
         "org": "DAFRA",
         "bucket": "RRI",
-        "x": 620,
-        "y": 140,
+        "x": 660,
+        "y": 40,
         "wires": []
     },
     {
@@ -1349,8 +1758,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 320,
-        "y": 740,
+        "x": 280,
+        "y": 820,
         "wires": [
             []
         ]
@@ -1376,8 +1785,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 150,
-        "y": 740,
+        "x": 110,
+        "y": 820,
         "wires": [
             [
                 "25c4dc6fb205f728"
@@ -1420,7 +1829,7 @@
         "mode": "all",
         "variable": "",
         "diff": false,
-        "name": "Haulick32T",
+        "name": "",
         "x": 115,
         "y": 900,
         "wires": [
@@ -1494,8 +1903,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 890,
-        "y": 960,
+        "x": 770,
+        "y": 1040,
         "wires": []
     },
     {
@@ -1747,8 +2156,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 850,
-        "y": 240,
+        "x": 570,
+        "y": 500,
         "wires": [
             []
         ]
@@ -1801,8 +2210,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 850,
-        "y": 280,
+        "x": 570,
+        "y": 540,
         "wires": [
             []
         ]
@@ -1855,8 +2264,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 850,
-        "y": 320,
+        "x": 570,
+        "y": 580,
         "wires": [
             []
         ]
@@ -1909,8 +2318,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 850,
-        "y": 360,
+        "x": 570,
+        "y": 620,
         "wires": [
             []
         ]
@@ -1963,8 +2372,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 850,
-        "y": 400,
+        "x": 570,
+        "y": 660,
         "wires": [
             []
         ]
@@ -1974,18 +2383,18 @@
         "type": "function",
         "z": "c3ef6562b4dbd1ef",
         "name": "function 12",
-        "func": "msg.payload = msg.payload.M1_temp;\nmsg.payload = msg.payload.toFixed(1);\nreturn msg;\n\n",
+        "func": "msg.payload = msg.payload.M1_rTemperature;\nmsg.payload = msg.payload.toFixed(1);\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 670,
-        "y": 240,
+        "x": 130,
+        "y": 500,
         "wires": [
             [
-                "48b9d491af0e1c12"
+                "eccda3afeac56151"
             ]
         ]
     },
@@ -1994,18 +2403,18 @@
         "type": "function",
         "z": "c3ef6562b4dbd1ef",
         "name": "function 13",
-        "func": "msg.payload = msg.payload.M2_temp;\nmsg.payload = msg.payload.toFixed(1);\nreturn msg;\n\n",
+        "func": "msg.payload = msg.payload.M2_rTemperature;\nmsg.payload = msg.payload.toFixed(1);\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 670,
-        "y": 280,
+        "x": 130,
+        "y": 540,
         "wires": [
             [
-                "f3000b7bbeabdb8d"
+                "f4ebbd795e139d4d"
             ]
         ]
     },
@@ -2014,18 +2423,18 @@
         "type": "function",
         "z": "c3ef6562b4dbd1ef",
         "name": "function 14",
-        "func": "msg.payload = msg.payload.M3_temp;\nmsg.payload = msg.payload.toFixed(1);\nreturn msg;\n\n",
+        "func": "msg.payload = msg.payload.M3_rTemperature;\nmsg.payload = msg.payload.toFixed(1);\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 670,
-        "y": 320,
+        "x": 130,
+        "y": 580,
         "wires": [
             [
-                "a950f1124fc1823d"
+                "01cd3ecdec656b99"
             ]
         ]
     },
@@ -2034,18 +2443,18 @@
         "type": "function",
         "z": "c3ef6562b4dbd1ef",
         "name": "function 15",
-        "func": "msg.payload = msg.payload.M4_temp;\nmsg.payload = msg.payload.toFixed(1);\nreturn msg;\n\n",
+        "func": "msg.payload = msg.payload.M4_rTemperature;\nmsg.payload = msg.payload.toFixed(1);\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 670,
-        "y": 360,
+        "x": 130,
+        "y": 620,
         "wires": [
             [
-                "3806a33dc7544828"
+                "8512fa058473a687"
             ]
         ]
     },
@@ -2054,18 +2463,18 @@
         "type": "function",
         "z": "c3ef6562b4dbd1ef",
         "name": "function 16",
-        "func": "msg.payload = msg.payload.M5_temp;\nmsg.payload = msg.payload.toFixed(1);\nreturn msg;\n\n",
+        "func": "msg.payload = msg.payload.M5_rTemperature;\nmsg.payload = msg.payload.toFixed(1);\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 670,
-        "y": 400,
+        "x": 130,
+        "y": 660,
         "wires": [
             [
-                "edfcb64dd7ce6d9b"
+                "3e224b2fdcdbc744"
             ]
         ]
     },
@@ -2103,8 +2512,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1100,
-        "y": 980,
+        "x": 1180,
+        "y": 1100,
         "wires": []
     },
     {
@@ -3072,72 +3481,6 @@
         ]
     },
     {
-        "id": "894d127f8497541d",
-        "type": "ui-text",
-        "z": "c3ef6562b4dbd1ef",
-        "group": "58e9b0c008e334d3",
-        "order": 2,
-        "width": "2",
-        "height": "1",
-        "name": "",
-        "label": "POWER:  ",
-        "format": "{{msg.payload}}",
-        "layout": "row-left",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "wrapText": false,
-        "className": "",
-        "x": 1040,
-        "y": 1400,
-        "wires": []
-    },
-    {
-        "id": "dfaf3869b53472b1",
-        "type": "ui-text",
-        "z": "c3ef6562b4dbd1ef",
-        "group": "58e9b0c008e334d3",
-        "order": 3,
-        "width": "2",
-        "height": "1",
-        "name": "",
-        "label": "MOTOR:  ",
-        "format": "{{msg.payload}}",
-        "layout": "row-left",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "wrapText": false,
-        "className": "",
-        "x": 1040,
-        "y": 1440,
-        "wires": []
-    },
-    {
-        "id": "7fe5b69c291c375c",
-        "type": "ui-text",
-        "z": "c3ef6562b4dbd1ef",
-        "group": "58e9b0c008e334d3",
-        "order": 4,
-        "width": "2",
-        "height": "1",
-        "name": "",
-        "label": "MODE ",
-        "format": "{{msg.payload}}",
-        "layout": "row-left",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "wrapText": false,
-        "className": "",
-        "x": 1030,
-        "y": 1480,
-        "wires": []
-    },
-    {
         "id": "fc77cb4d637ead4c",
         "type": "function",
         "z": "c3ef6562b4dbd1ef",
@@ -3152,15 +3495,9 @@
         "x": 810,
         "y": 1440,
         "wires": [
-            [
-                "894d127f8497541d"
-            ],
-            [
-                "dfaf3869b53472b1"
-            ],
-            [
-                "7fe5b69c291c375c"
-            ],
+            [],
+            [],
+            [],
             [],
             [],
             [],
@@ -3494,28 +3831,6 @@
         ]
     },
     {
-        "id": "ef3c4a9b1b044d02",
-        "type": "ui-text",
-        "z": "c3ef6562b4dbd1ef",
-        "group": "58e9b0c008e334d3",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "text",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "wrapText": false,
-        "className": "",
-        "x": 1830,
-        "y": 1840,
-        "wires": []
-    },
-    {
         "id": "3062abf065d477e8",
         "type": "s7 out",
         "z": "c3ef6562b4dbd1ef",
@@ -3580,8 +3895,8 @@
         "src": "http://192.168.1.203:3000",
         "width": "12",
         "height": "16",
-        "x": 910,
-        "y": 520,
+        "x": 490,
+        "y": 860,
         "wires": []
     },
     {
@@ -3594,8 +3909,8 @@
         "src": "http://192.168.1.1:3000",
         "width": "12",
         "height": "16",
-        "x": 910,
-        "y": 560,
+        "x": 490,
+        "y": 820,
         "wires": []
     },
     {
@@ -3616,8 +3931,8 @@
         "resendOnRefresh": true,
         "templateScope": "widget:page",
         "className": "",
-        "x": 860,
-        "y": 480,
+        "x": 600,
+        "y": 780,
         "wires": [
             []
         ]
@@ -3689,248 +4004,6 @@
         "wires": []
     },
     {
-        "id": "06d4df7a8e745417",
-        "type": "ui-radio-group",
-        "z": "c3ef6562b4dbd1ef",
-        "group": "363ce6a952c91fa6",
-        "name": "M1 pozicija",
-        "label": "M1 polozaj",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "columns": "2",
-        "passthru": false,
-        "options": [
-            {
-                "label": "POS1",
-                "value": "POS1",
-                "type": "str"
-            },
-            {
-                "label": "POS2",
-                "value": "POS2",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "x": 1390,
-        "y": 80,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "6a810870c2d17201",
-        "type": "ui-radio-group",
-        "z": "c3ef6562b4dbd1ef",
-        "group": "363ce6a952c91fa6",
-        "name": "M2 pozicija",
-        "label": "M2 polozaj",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "columns": "2",
-        "passthru": false,
-        "options": [
-            {
-                "label": "POS1",
-                "value": "POS1",
-                "type": "str"
-            },
-            {
-                "label": "POS2",
-                "value": "POS2",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "x": 1390,
-        "y": 120,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "3d171c0d1cd441a5",
-        "type": "ui-radio-group",
-        "z": "c3ef6562b4dbd1ef",
-        "group": "363ce6a952c91fa6",
-        "name": "M3 pozicija",
-        "label": "M3 polozaj",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "columns": "2",
-        "passthru": false,
-        "options": [
-            {
-                "label": "POS1",
-                "value": "POS1",
-                "type": "str"
-            },
-            {
-                "label": "POS2",
-                "value": "POS2",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "x": 1390,
-        "y": 160,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "322ec0312e6ecb0d",
-        "type": "function",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "Button ON or OFF",
-        "func": "if (msg.payload === false || msg.payload === \"false\") {\n  // When button is ON → HIDE the group\n  msg.payload = {\n    groups: {\n      hide: [\"Egasi Position Button Cotrol\"]\n    }\n  };\n} else {\n  // When button is OFF → SHOW the group\n  msg.payload = {\n    groups: {\n      show: [\"Egasi Position Button Cotrol\"]\n    }\n  };\n}\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1170,
-        "y": 80,
-        "wires": [
-            [
-                "06d4df7a8e745417",
-                "6a810870c2d17201",
-                "3d171c0d1cd441a5",
-                "ede210505fb21124",
-                "fdfc62e286a50062",
-                "782fe468c80e6b93"
-            ]
-        ]
-    },
-    {
-        "id": "64657265b93f2a80",
-        "type": "ui-switch",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "ROCNO/AUTO",
-        "label": "ROCNI NACIN",
-        "group": "cb763d77c58374b7",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "decouple": false,
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "className": "",
-        "layout": "row-spread",
-        "clickableArea": "switch",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "x": 960,
-        "y": 80,
-        "wires": [
-            [
-                "322ec0312e6ecb0d"
-            ]
-        ]
-    },
-    {
-        "id": "ede210505fb21124",
-        "type": "ui-radio-group",
-        "z": "c3ef6562b4dbd1ef",
-        "group": "363ce6a952c91fa6",
-        "name": "M4 pozicija",
-        "label": "M4 polozaj",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "columns": "2",
-        "passthru": false,
-        "options": [
-            {
-                "label": "POS1",
-                "value": "POS1",
-                "type": "str"
-            },
-            {
-                "label": "POS2",
-                "value": "POS2",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "x": 1390,
-        "y": 200,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "fdfc62e286a50062",
-        "type": "ui-radio-group",
-        "z": "c3ef6562b4dbd1ef",
-        "group": "363ce6a952c91fa6",
-        "name": "M5 pozicija",
-        "label": "M5 polozaj",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "columns": "2",
-        "passthru": false,
-        "options": [
-            {
-                "label": "POS1",
-                "value": "POS1",
-                "type": "str"
-            },
-            {
-                "label": "POS2",
-                "value": "POS2",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "x": 1390,
-        "y": 240,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "782fe468c80e6b93",
-        "type": "ui-control",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "Disable UI control",
-        "ui": "47a6c454bea5d1c6",
-        "events": "all",
-        "x": 1410,
-        "y": 40,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "8b2a8b990b9bc284",
         "type": "ui-template",
         "z": "c3ef6562b4dbd1ef",
@@ -3948,8 +4021,8 @@
         "resendOnRefresh": true,
         "templateScope": "widget:ui",
         "className": "",
-        "x": 860,
-        "y": 600,
+        "x": 440,
+        "y": 760,
         "wires": [
             []
         ]
@@ -3975,8 +4048,8 @@
         "topic": "",
         "payload": "122",
         "payloadType": "num",
-        "x": 550,
-        "y": 600,
+        "x": 130,
+        "y": 760,
         "wires": [
             [
                 "8b2a8b990b9bc284"
@@ -4235,7 +4308,7 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": "<template>\n  <div>\n    <!-- Dynamic image -->\n    <img\n      :src=\"imageSrc\"\n      alt=\"Recipe Image\"\n      style=\"width:100%; height:75%; object-fit:contain;\"\n    >\n    \n  <img src=\"http://localhost:1880/pictures/2x6%20Cell.PNG\" alt=\"Girl in a jacket\" style=\"width:500px;height:600px;\">\n    <!-- Show current value (for debugging/visibility) -->\n    <div style=\"margin-top:.5rem; font-family:monospace;\">\n      { globals.recept.ime }\n    </div>\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      receptIme: \"\", // local copy of globals.recept.ime\n    }\n  },\n  computed: {\n    normalizedKey() {\n      // Make the key robust: trim, uppercase, collapse spaces/underscores to hyphens\n      const k = (this.receptIme || \"\")\n        .trim()\n        .replace(/\\s+/g, \"-\")\n        .replace(/_/g, \"-\")\n        .toUpperCase();\n      return k;\n    },\n    imageSrc() {\n      const map = {\n        \"1X2-CELL\": \"https://github.com/organization-Dafra/Digitalni-dvojcek-RRI/blob/main/HMI/pictures/1x2%20Cell.PNG?raw=true\",\n        \"1X4-CELL\": \"https://github.com/organization-Dafra/Digitalni-dvojcek-RRI/blob/main/HMI/pictures/1x4%20Cell.PNG?raw=true\",\n        \"1X6-CELL\": \"https://github.com/organization-Dafra/Digitalni-dvojcek-RRI/blob/main/HMI/pictures/1x6%20Cell.PNG?raw=true\",\n      };\n      // Fallback to 1x2 if unknown\n      return map[this.normalizedKey] || map[\"1X2-CELL\"];\n    }\n  },\n  methods: {\n    updateFromGlobal() {\n      // Safely read the dashboard 2.0 reactive globals\n      this.receptIme = this.globals?.recept?.ime || \"\";\n    }\n  },\n  mounted() {\n    // Initial sync\n    this.updateFromGlobal();\n\n    // React to future changes of the global\n    this.$watch(\n      () => this.globals?.recept?.ime,\n      () => this.updateFromGlobal()\n    );\n  }\n}\n</script>\n\n<style>\n.my-class { color: red; }\n</style>\n",
+        "format": "<template>\n  <div>\n    \n    <!-- Dynamic image -->\n    <img\n      :src=\"imageSrc\"\n      alt=\"Recipe Image\"\n      style=\"width:100%; height:75%; object-fit:contain;\"\n    >\n    \n  <img src=\"http://localhost:1880/pictures/2x6%20Cell.PNG\" alt=\"Girl in a jacket\" style=\"width:500px;height:600px;\">\n    <!-- Show current value (for debugging/visibility) -->\n    <div style=\"margin-top:.5rem; font-family:monospace;\">\n      { globals.recept.ime }\n    </div>\n  </div>\n</template>\n\n<script>\n  \n  \nexport default {\n  data() {\n    return {\n      receptIme: \"\", // local copy of globals.recept.ime\n    }\n  },\n  computed: {\n    normalizedKey() {\n      // Make the key robust: trim, uppercase, collapse spaces/underscores to hyphens\n      const k = (this.receptIme || \"\")\n        .trim()\n        .replace(/\\s+/g, \"-\")\n        .replace(/_/g, \"-\")\n        .toUpperCase();\n      return k;\n    },\n    imageSrc() {\n      const map = {\n        \"1X2-CELL\": \"https://github.com/organization-Dafra/Digitalni-dvojcek-RRI/blob/main/HMI/pictures/1x2%20Cell.PNG?raw=true\",\n        \"1X4-CELL\": \"https://github.com/organization-Dafra/Digitalni-dvojcek-RRI/blob/main/HMI/pictures/1x4%20Cell.PNG?raw=true\",\n        \"1X6-CELL\": \"https://github.com/organization-Dafra/Digitalni-dvojcek-RRI/blob/main/HMI/pictures/1x6%20Cell.PNG?raw=true\",\n      };\n      // Fallback to 1x2 if unknown\n      return map[this.normalizedKey] || map[\"1X2-CELL\"];\n    }\n  },\n  methods: {\n    updateFromGlobal() {\n      // Safely read the dashboard 2.0 reactive globals\n      this.receptIme = this.globals?.recept?.ime || \"\";\n    }\n  },\n  mounted() {\n    // Initial sync\n    this.updateFromGlobal();\n\n    // React to future changes of the global\n    this.$watch(\n      () => this.globals?.recept?.ime,\n      () => this.updateFromGlobal()\n    );\n  }\n}\n</script>\n\n<style>\n.my-class { color: red; }\n</style>\n",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
@@ -4272,30 +4345,6 @@
         ]
     },
     {
-        "id": "cdfc364c3080d0c3",
-        "type": "ui-template",
-        "z": "c3ef6562b4dbd1ef",
-        "group": "35792cf1e5d30f6c",
-        "page": "",
-        "ui": "",
-        "name": "",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "head": "",
-        "format": "<template>\n    <div>\n        {{ globalReceptiIme }}\n    </div>\n</template>\n\n<script>\nexport default {\n    data() {\n        return {\n            globalReceptiIme: '' // Initialize the variable\n        };\n    },\n    mounted() {\n        // Fetch the global context value when the component is mounted\n        this.globalReceptiIme = this.getGlobalContext('recepti.ime') || 'No data';\n    },\n    watch: {\n        // Watch for incoming msg to update the value dynamically\n        'msg.payload': function(newPayload) {\n            if (newPayload && newPayload.recepti && newPayload.recepti.ime) {\n                this.globalReceptiIme = newPayload.recepti.ime;\n            }\n        }\n    },\n    methods: {\n        // Method to get global context\n        getGlobalContext(key) {\n            return this.$nodeRed.global.get(key);\n        }\n    }\n}\n</script>\n\n<style >\n\n</style>",
-        "storeOutMessages": true,
-        "passthru": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 1660,
-        "y": 780,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "c36ffc1b81a176f4",
         "type": "function",
         "z": "c3ef6562b4dbd1ef",
@@ -4310,8 +4359,905 @@
         "x": 1450,
         "y": 700,
         "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3d75fa18882c00e5",
+        "type": "ui-template",
+        "z": "c3ef6562b4dbd1ef",
+        "group": "58e9b0c008e334d3",
+        "page": "",
+        "ui": "",
+        "name": "BTNS - MOTOR CONTROL M1",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n \n  <!--\n    <hr>\n    <h3>PLC Status (latest msg)</h2>\n    <pre>{{ msg }}</pre>\n   -->\n\n  <!-- Quick status chips -->\n    <hr>\n  <h3>Motor status M1</h5>\n\n  <div style=\"display:flex; gap:8px; margin:8px 0;\">\n    \n    <v-chip :color=\"isPowerON ? 'green' : undefined\" variant=\"elevated\">POWER</v-chip>\n    <v-chip :color=\"isPOS1 ? 'green' : undefined\" variant=\"elevated\">POS1</v-chip>\n    <v-chip :color=\"isPOS2 ? 'green' : undefined\" variant=\"elevated\">POS2</v-chip>\n    <v-chip :color=\"isHOMED ? 'green' : undefined\" variant=\"elevated\">IS HOMED</v-chip>\n    <!-- NEW: Error chip (red when true, grey when false) -->\n    <v-chip :color=\"isERROR ? 'red' : 'undefined'\" variant=\"elevated\">ERROR</v-chip>\n    <v-chip :color=\"isPOS1ERROR ? 'red' : 'undefined'\" variant=\"elevated\">POS1 ERR</v-chip>\n    <v-chip :color=\"isPOS2ERROR ? 'red' : 'undefined'\" variant=\"elevated\">POS2 ERR</v-chip>\n    <v-chip :color=\"isFUSEERROR ? 'red' : 'undefined'\" variant=\"elevated\">FUSE ERR</v-chip>\n  </div>\n\n <hr>\n <h3>Motor Control M1</h5>\n  <div style=\"display:flex; gap:8px; margin:8px 0;\" >\n    <!-- Keep existing buttons (don't create duplicates) -->\n    <v-btn :disabled=\"isPOS1\" @click=\"send({ topic:'motor/cmd', payload:'GO_POS1' })\">GO POS1</v-btn>\n    <v-btn :disabled=\"isPOS2\" @click=\"send({ topic:'motor/cmd', payload:'GO_POS2' })\">GO POS2</v-btn>\n    <v-btn :disabled=\"isHOMED\" @click=\"send({ topic:'motor/cmd', payload:'GO_HOME' })\" >GO HOME</v-btn>\n\n    <!-- NEW: Hardware reset -->\n    <v-btn  color=\"warning\" variant=\"elevated\"\n           @click=\"send({ topic:'motor/cmd', payload:'HARDWARE_RESET' })\">\n      HARDWARE RESET\n    </v-btn>\n  </div>\n <hr>\n  \n\n  <!-- Error popup dialog -->\n  <v-dialog v-model=\"showErrorDialog\" max-width=\"420\">\n    <v-card>\n      <v-card-title class=\"text-error\">Motor Error</v-card-title>\n      <v-card-text>\n        <div style=\"white-space:pre-wrap\">\n          {{ errorText || 'An error condition has been reported by the PLC.' }}\n        </div>\n      </v-card-text>\n      <v-card-actions class=\"justify-end\">\n        <v-btn variant=\"text\" @click=\"showErrorDialog=false\">Close</v-btn>\n        <v-btn color=\"warning\"\n               @click=\"send({ topic:'motor/cmd', payload:'HARDWARE_RESET' }); showErrorDialog=false;\">\n          Hardware Reset\n        </v-btn>\n      </v-card-actions>\n    </v-card>\n  </v-dialog>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      selectedRadio: null,  // 'one' | 'two' | 'three' | null\n      showErrorDialog: false,\n      errorText: ''\n    }\n  },\n\n  computed: {\n    // Robust coercion: accept 1/0, \"1\"/\"0\", \"true\"/\"false\", true/false\n    isPOS1() {\n      const v = this.msg?.payload?.pos1;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPOS2() {\n      const v = this.msg?.payload?.pos2;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isHOMED() {\n      const v = this.msg?.payload?.homed;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isERROR() {\n      const v = this.msg?.payload?.error;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPOS1ERROR() {\n      const v = this.msg?.payload?.pos1err;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPOS2ERROR() {\n      const v = this.msg?.payload?.pos2err;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isFUSEERROR() {\n      const v = this.msg?.payload?.fuseerror;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPowerON() {\n      const v = this.msg?.payload?.pwrStatus;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    }\n    \n\n  },\n\n  watch: {\n    // Re-map radios whenever new PLC msg arrives\n    msg: {\n      deep: true,\n      immediate: true,\n      handler(n) {\n        // Radios priority: HOMED > POS1 > POS2\n        if (this.isHOMED)      this.selectedRadio = 'three';\n        else if (this.isPOS1)  this.selectedRadio = 'one';\n        else if (this.isPOS2)  this.selectedRadio = 'two';\n        else                   this.selectedRadio = null;\n\n        // Error popup\n        if (this.isERROR) {\n          this.errorText = n?.payload?.errorText || '';\n          //this.showErrorDialog = true;\n        }\n      }\n    }\n  },\n\n  methods: {\n    // UI action that also sends a message (your original behavior)\n    activateHommed() {\n      this.selectedRadio = 'three'; // visually select radio immediately\n      this.send({ topic:'motor/ui', payload:{ hello:'world3', forceHommed:true }});\n    }\n  }\n}\n</script>\n",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 430,
+        "y": 240,
+        "wires": [
             [
-                "cdfc364c3080d0c3"
+                "278fcdc416b3e609"
+            ]
+        ]
+    },
+    {
+        "id": "9e98cb0195be697c",
+        "type": "function",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "Prepera for v-function",
+        "func": "// Mapper before ui-template\nconst s = msg.payload || {};\nfunction toBool(x) {\n  return x === true || x === 1 || x === \"1\" || x === \"true\";\n}\nmsg.payload = {\n  pos1:  toBool(s.M1_xinPOS1 ?? s.pos1_arrived ?? s.M1_xinPOS1),\n  pos2: toBool(s.M1_xinPOS2 ?? s.pos2_arrived ?? s.M1_xinPOS2),\n  homed: toBool(s.M1_xisHOMMED ?? s.isHome ?? s.home),\n  error: toBool(s.M1_xinERROR),  \n  mode:  s.mode,\n  fuseerror: toBool(s.M1_xFuseError),\n  pos1err:toBool(s.M1_xPOS1Error),\n  pos2err:toBool(s.M1_xPOS2Error),\n  pwrStatus: toBool(s.M1_PWRStatus)\n};\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 180,
+        "y": 240,
+        "wires": [
+            [
+                "3d75fa18882c00e5"
+            ]
+        ]
+    },
+    {
+        "id": "30e64d7c036f9744",
+        "type": "ui-template",
+        "z": "c3ef6562b4dbd1ef",
+        "group": "58e9b0c008e334d3",
+        "page": "",
+        "ui": "",
+        "name": "BTNS - MOTOR CONTROL M2",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n \n  <!--\n    <hr>\n    <h3>PLC Status (latest msg)</h2>\n    <pre>{{ msg }}</pre>\n   -->\n\n  <!-- Quick status chips -->\n    <hr>\n  <h3>Motor status M2</h5>\n\n  <div style=\"display:flex; gap:8px; margin:8px 0;\">\n    \n    <v-chip :color=\"isPowerON ? 'green' : undefined\" variant=\"elevated\">POWER</v-chip>\n    <v-chip :color=\"isPOS1 ? 'green' : undefined\" variant=\"elevated\">POS1</v-chip>\n    <v-chip :color=\"isPOS2 ? 'green' : undefined\" variant=\"elevated\">POS2</v-chip>\n    <v-chip :color=\"isHOMED ? 'green' : undefined\" variant=\"elevated\">IS HOMED</v-chip>\n    <!-- NEW: Error chip (red when true, grey when false) -->\n    <v-chip :color=\"isERROR ? 'red' : 'undefined'\" variant=\"elevated\">ERROR</v-chip>\n    <v-chip :color=\"isPOS1ERROR ? 'red' : 'undefined'\" variant=\"elevated\">POS1 ERR</v-chip>\n    <v-chip :color=\"isPOS2ERROR ? 'red' : 'undefined'\" variant=\"elevated\">POS2 ERR</v-chip>\n    <v-chip :color=\"isFUSEERROR ? 'red' : 'undefined'\" variant=\"elevated\">FUSE ERR</v-chip>\n  </div>\n\n <hr>\n  <div style=\"display:flex; gap:8px; margin:8px 0;\" >\n    <!-- Keep existing buttons (don't create duplicates) -->\n    <v-btn :disabled=\"isPOS1\" @click=\"send({ topic:'motor/cmd', payload:'GO_POS1' })\">GO POS1</v-btn>\n    <v-btn :disabled=\"isPOS2\" @click=\"send({ topic:'motor/cmd', payload:'GO_POS2' })\">GO POS2</v-btn>\n    <v-btn :disabled=\"isHOMED\" @click=\"send({ topic:'motor/cmd', payload:'GO_HOME' })\" >GO HOME</v-btn>\n\n    <!-- NEW: Hardware reset -->\n    <v-btn  color=\"warning\" variant=\"elevated\"\n           @click=\"send({ topic:'motor/cmd', payload:'HARDWARE_RESET' })\">\n      HARDWARE RESET\n    </v-btn>\n  </div>\n <hr>\n  \n\n  <!-- Error popup dialog -->\n  <v-dialog v-model=\"showErrorDialog\" max-width=\"420\">\n    <v-card>\n      <v-card-title class=\"text-error\">Motor Error</v-card-title>\n      <v-card-text>\n        <div style=\"white-space:pre-wrap\">\n          {{ errorText || 'An error condition has been reported by the PLC.' }}\n        </div>\n      </v-card-text>\n      <v-card-actions class=\"justify-end\">\n        <v-btn variant=\"text\" @click=\"showErrorDialog=false\">Close</v-btn>\n        <v-btn color=\"warning\"\n               @click=\"send({ topic:'motor/cmd', payload:'HARDWARE_RESET' }); showErrorDialog=false;\">\n          Hardware Reset\n        </v-btn>\n      </v-card-actions>\n    </v-card>\n  </v-dialog>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      selectedRadio: null,  // 'one' | 'two' | 'three' | null\n      showErrorDialog: false,\n      errorText: ''\n    }\n  },\n\n  computed: {\n    // Robust coercion: accept 1/0, \"1\"/\"0\", \"true\"/\"false\", true/false\n    isPOS1() {\n      const v = this.msg?.payload?.pos1;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPOS2() {\n      const v = this.msg?.payload?.pos2;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isHOMED() {\n      const v = this.msg?.payload?.homed;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isERROR() {\n      const v = this.msg?.payload?.error;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPOS1ERROR() {\n      const v = this.msg?.payload?.pos1err;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPOS2ERROR() {\n      const v = this.msg?.payload?.pos2err;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isFUSEERROR() {\n      const v = this.msg?.payload?.fuseerror;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPowerON() {\n      const v = this.msg?.payload?.pwrStatus;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    }\n    \n\n  },\n\n  watch: {\n    // Re-map radios whenever new PLC msg arrives\n    msg: {\n      deep: true,\n      immediate: true,\n      handler(n) {\n        // Radios priority: HOMED > POS1 > POS2\n        if (this.isHOMED)      this.selectedRadio = 'three';\n        else if (this.isPOS1)  this.selectedRadio = 'one';\n        else if (this.isPOS2)  this.selectedRadio = 'two';\n        else                   this.selectedRadio = null;\n\n        // Error popup\n        if (this.isERROR) {\n          this.errorText = n?.payload?.errorText || '';\n          //this.showErrorDialog = true;\n        }\n      }\n    }\n  },\n\n  methods: {\n    // UI action that also sends a message (your original behavior)\n    activateHommed() {\n      this.selectedRadio = 'three'; // visually select radio immediately\n      this.send({ topic:'motor/ui', payload:{ hello:'world3', forceHommed:true }});\n    }\n  }\n}\n</script>\n",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 430,
+        "y": 280,
+        "wires": [
+            [
+                "7e08db8b10d56089"
+            ]
+        ]
+    },
+    {
+        "id": "53d6d6e1abfc79a3",
+        "type": "ui-template",
+        "z": "c3ef6562b4dbd1ef",
+        "group": "58e9b0c008e334d3",
+        "page": "",
+        "ui": "",
+        "name": "BTNS - MOTOR CONTROL M3",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n \n  <!--\n    <hr>\n    <h3>PLC Status (latest msg)</h2>\n    <pre>{{ msg }}</pre>\n   -->\n\n  <!-- Quick status chips -->\n    <hr>\n  <h3>Motor status M3</h5>\n\n  <div style=\"display:flex; gap:8px; margin:8px 0;\">\n    \n    <v-chip :color=\"isPowerON ? 'green' : undefined\" variant=\"elevated\">POWER</v-chip>\n    <v-chip :color=\"isPOS1 ? 'green' : undefined\" variant=\"elevated\">POS1</v-chip>\n    <v-chip :color=\"isPOS2 ? 'green' : undefined\" variant=\"elevated\">POS2</v-chip>\n    <v-chip :color=\"isHOMED ? 'green' : undefined\" variant=\"elevated\">IS HOMED</v-chip>\n    <!-- NEW: Error chip (red when true, grey when false) -->\n    <v-chip :color=\"isERROR ? 'red' : 'undefined'\" variant=\"elevated\">ERROR</v-chip>\n    <v-chip :color=\"isPOS1ERROR ? 'red' : 'undefined'\" variant=\"elevated\">POS1 ERR</v-chip>\n    <v-chip :color=\"isPOS2ERROR ? 'red' : 'undefined'\" variant=\"elevated\">POS2 ERR</v-chip>\n    <v-chip :color=\"isFUSEERROR ? 'red' : 'undefined'\" variant=\"elevated\">FUSE ERR</v-chip>\n  </div>\n\n <hr>\n  <div style=\"display:flex; gap:8px; margin:8px 0;\" >\n    <!-- Keep existing buttons (don't create duplicates) -->\n    <v-btn :disabled=\"isPOS1\" @click=\"send({ topic:'motor/cmd', payload:'GO_POS1' })\">GO POS1</v-btn>\n    <v-btn :disabled=\"isPOS2\" @click=\"send({ topic:'motor/cmd', payload:'GO_POS2' })\">GO POS2</v-btn>\n    <v-btn :disabled=\"isHOMED\" @click=\"send({ topic:'motor/cmd', payload:'GO_HOME' })\" >GO HOME</v-btn>\n\n    <!-- NEW: Hardware reset -->\n    <v-btn  color=\"warning\" variant=\"elevated\"\n           @click=\"send({ topic:'motor/cmd', payload:'HARDWARE_RESET' })\">\n      HARDWARE RESET\n    </v-btn>\n  </div>\n <hr>\n  \n\n  <!-- Error popup dialog -->\n  <v-dialog v-model=\"showErrorDialog\" max-width=\"420\">\n    <v-card>\n      <v-card-title class=\"text-error\">Motor Error</v-card-title>\n      <v-card-text>\n        <div style=\"white-space:pre-wrap\">\n          {{ errorText || 'An error condition has been reported by the PLC.' }}\n        </div>\n      </v-card-text>\n      <v-card-actions class=\"justify-end\">\n        <v-btn variant=\"text\" @click=\"showErrorDialog=false\">Close</v-btn>\n        <v-btn color=\"warning\"\n               @click=\"send({ topic:'motor/cmd', payload:'HARDWARE_RESET' }); showErrorDialog=false;\">\n          Hardware Reset\n        </v-btn>\n      </v-card-actions>\n    </v-card>\n  </v-dialog>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      selectedRadio: null,  // 'one' | 'two' | 'three' | null\n      showErrorDialog: false,\n      errorText: ''\n    }\n  },\n\n  computed: {\n    // Robust coercion: accept 1/0, \"1\"/\"0\", \"true\"/\"false\", true/false\n    isPOS1() {\n      const v = this.msg?.payload?.pos1;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPOS2() {\n      const v = this.msg?.payload?.pos2;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isHOMED() {\n      const v = this.msg?.payload?.homed;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isERROR() {\n      const v = this.msg?.payload?.error;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPOS1ERROR() {\n      const v = this.msg?.payload?.pos1err;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPOS2ERROR() {\n      const v = this.msg?.payload?.pos2err;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isFUSEERROR() {\n      const v = this.msg?.payload?.fuseerror;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPowerON() {\n      const v = this.msg?.payload?.pwrStatus;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    }\n    \n\n  },\n\n  watch: {\n    // Re-map radios whenever new PLC msg arrives\n    msg: {\n      deep: true,\n      immediate: true,\n      handler(n) {\n        // Radios priority: HOMED > POS1 > POS2\n        if (this.isHOMED)      this.selectedRadio = 'three';\n        else if (this.isPOS1)  this.selectedRadio = 'one';\n        else if (this.isPOS2)  this.selectedRadio = 'two';\n        else                   this.selectedRadio = null;\n\n        // Error popup\n        if (this.isERROR) {\n          this.errorText = n?.payload?.errorText || '';\n          //this.showErrorDialog = true;\n        }\n      }\n    }\n  },\n\n  methods: {\n    // UI action that also sends a message (your original behavior)\n    activateHommed() {\n      this.selectedRadio = 'three'; // visually select radio immediately\n      this.send({ topic:'motor/ui', payload:{ hello:'world3', forceHommed:true }});\n    }\n  }\n}\n</script>\n",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 430,
+        "y": 320,
+        "wires": [
+            [
+                "986cf72940c912bc"
+            ]
+        ]
+    },
+    {
+        "id": "33731ce67d493d69",
+        "type": "ui-template",
+        "z": "c3ef6562b4dbd1ef",
+        "group": "58e9b0c008e334d3",
+        "page": "",
+        "ui": "",
+        "name": "BTNS - MOTOR CONTROL M4",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n \n  <!--\n    <hr>\n    <h3>PLC Status (latest msg)</h2>\n    <pre>{{ msg }}</pre>\n   -->\n\n  <!-- Quick status chips -->\n    <hr>\n  <h3>Motor status M4</h5>\n\n  <div style=\"display:flex; gap:8px; margin:8px 0;\">\n    \n    <v-chip :color=\"isPowerON ? 'green' : undefined\" variant=\"elevated\">POWER</v-chip>\n    <v-chip :color=\"isPOS1 ? 'green' : undefined\" variant=\"elevated\">POS1</v-chip>\n    <v-chip :color=\"isPOS2 ? 'green' : undefined\" variant=\"elevated\">POS2</v-chip>\n    <v-chip :color=\"isHOMED ? 'green' : undefined\" variant=\"elevated\">IS HOMED</v-chip>\n    <!-- NEW: Error chip (red when true, grey when false) -->\n    <v-chip :color=\"isERROR ? 'red' : 'undefined'\" variant=\"elevated\">ERROR</v-chip>\n    <v-chip :color=\"isPOS1ERROR ? 'red' : 'undefined'\" variant=\"elevated\">POS1 ERR</v-chip>\n    <v-chip :color=\"isPOS2ERROR ? 'red' : 'undefined'\" variant=\"elevated\">POS2 ERR</v-chip>\n    <v-chip :color=\"isFUSEERROR ? 'red' : 'undefined'\" variant=\"elevated\">FUSE ERR</v-chip>\n  </div>\n\n <hr>\n  <div style=\"display:flex; gap:8px; margin:8px 0;\" >\n    <!-- Keep existing buttons (don't create duplicates) -->\n    <v-btn :disabled=\"isPOS1\" @click=\"send({ topic:'motor/cmd', payload:'GO_POS1' })\">GO POS1</v-btn>\n    <v-btn :disabled=\"isPOS2\" @click=\"send({ topic:'motor/cmd', payload:'GO_POS2' })\">GO POS2</v-btn>\n    <v-btn :disabled=\"isHOMED\" @click=\"send({ topic:'motor/cmd', payload:'GO_HOME' })\" >GO HOME</v-btn>\n\n    <!-- NEW: Hardware reset -->\n    <v-btn  color=\"warning\" variant=\"elevated\"\n           @click=\"send({ topic:'motor/cmd', payload:'HARDWARE_RESET' })\">\n      HARDWARE RESET\n    </v-btn>\n  </div>\n <hr>\n  \n\n  <!-- Error popup dialog -->\n  <v-dialog v-model=\"showErrorDialog\" max-width=\"420\">\n    <v-card>\n      <v-card-title class=\"text-error\">Motor Error</v-card-title>\n      <v-card-text>\n        <div style=\"white-space:pre-wrap\">\n          {{ errorText || 'An error condition has been reported by the PLC.' }}\n        </div>\n      </v-card-text>\n      <v-card-actions class=\"justify-end\">\n        <v-btn variant=\"text\" @click=\"showErrorDialog=false\">Close</v-btn>\n        <v-btn color=\"warning\"\n               @click=\"send({ topic:'motor/cmd', payload:'HARDWARE_RESET' }); showErrorDialog=false;\">\n          Hardware Reset\n        </v-btn>\n      </v-card-actions>\n    </v-card>\n  </v-dialog>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      selectedRadio: null,  // 'one' | 'two' | 'three' | null\n      showErrorDialog: false,\n      errorText: ''\n    }\n  },\n\n  computed: {\n    // Robust coercion: accept 1/0, \"1\"/\"0\", \"true\"/\"false\", true/false\n    isPOS1() {\n      const v = this.msg?.payload?.pos1;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPOS2() {\n      const v = this.msg?.payload?.pos2;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isHOMED() {\n      const v = this.msg?.payload?.homed;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isERROR() {\n      const v = this.msg?.payload?.error;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPOS1ERROR() {\n      const v = this.msg?.payload?.pos1err;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPOS2ERROR() {\n      const v = this.msg?.payload?.pos2err;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isFUSEERROR() {\n      const v = this.msg?.payload?.fuseerror;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPowerON() {\n      const v = this.msg?.payload?.pwrStatus;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    }\n    \n\n  },\n\n  watch: {\n    // Re-map radios whenever new PLC msg arrives\n    msg: {\n      deep: true,\n      immediate: true,\n      handler(n) {\n        // Radios priority: HOMED > POS1 > POS2\n        if (this.isHOMED)      this.selectedRadio = 'three';\n        else if (this.isPOS1)  this.selectedRadio = 'one';\n        else if (this.isPOS2)  this.selectedRadio = 'two';\n        else                   this.selectedRadio = null;\n\n        // Error popup\n        if (this.isERROR) {\n          this.errorText = n?.payload?.errorText || '';\n          //this.showErrorDialog = true;\n        }\n      }\n    }\n  },\n\n  methods: {\n    // UI action that also sends a message (your original behavior)\n    activateHommed() {\n      this.selectedRadio = 'three'; // visually select radio immediately\n      this.send({ topic:'motor/ui', payload:{ hello:'world3', forceHommed:true }});\n    }\n  }\n}\n</script>\n",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 430,
+        "y": 360,
+        "wires": [
+            [
+                "442b5e2d85da9679"
+            ]
+        ]
+    },
+    {
+        "id": "b2b596e4a55b295f",
+        "type": "ui-template",
+        "z": "c3ef6562b4dbd1ef",
+        "group": "58e9b0c008e334d3",
+        "page": "",
+        "ui": "",
+        "name": "BTNS - MOTOR CONTROL M5",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n \n  <!--\n    <hr>\n    <h3>PLC Status (latest msg)</h2>\n    <pre>{{ msg }}</pre>\n   -->\n\n  <!-- Quick status chips -->\n    <hr>\n  <h3>Motor status M5</h5>\n\n  <div style=\"display:flex; gap:8px; margin:8px 0;\">\n    \n    <v-chip :color=\"isPowerON ? 'green' : undefined\" variant=\"elevated\">POWER</v-chip>\n    <v-chip :color=\"isPOS1 ? 'green' : undefined\" variant=\"elevated\">POS1</v-chip>\n    <v-chip :color=\"isPOS2 ? 'green' : undefined\" variant=\"elevated\">POS2</v-chip>\n    <v-chip :color=\"isHOMED ? 'green' : undefined\" variant=\"elevated\">IS HOMED</v-chip>\n    <!-- NEW: Error chip (red when true, grey when false) -->\n    <v-chip :color=\"isERROR ? 'red' : 'undefined'\" variant=\"elevated\">ERROR</v-chip>\n    <v-chip :color=\"isPOS1ERROR ? 'red' : 'undefined'\" variant=\"elevated\">POS1 ERR</v-chip>\n    <v-chip :color=\"isPOS2ERROR ? 'red' : 'undefined'\" variant=\"elevated\">POS2 ERR</v-chip>\n    <v-chip :color=\"isFUSEERROR ? 'red' : 'undefined'\" variant=\"elevated\">FUSE ERR</v-chip>\n  </div>\n\n <hr>\n  <div style=\"display:flex; gap:8px; margin:8px 0;\">\n    <!-- Keep existing buttons (don't create duplicates) -->\n    <v-btn @click=\"send({ topic:'motor/cmd', payload:'GO_POS1' })\">GO POS1</v-btn>\n    <v-btn @click=\"send({ topic:'motor/cmd', payload:'GO_POS2' })\">GO POS2</v-btn>\n    <v-btn @click=\"send({ topic:'motor/cmd', payload:'GO_HOME' })\">GO HOME</v-btn>\n\n    <!-- NEW: Hardware reset -->\n    <v-btn color=\"warning\" variant=\"elevated\"\n           @click=\"send({ topic:'motor/cmd', payload:'HARDWARE_RESET' })\">\n      HARDWARE RESET\n    </v-btn>\n  </div>\n <hr>\n  \n\n  <!-- Error popup dialog -->\n  <v-dialog v-model=\"showErrorDialog\" max-width=\"420\">\n    <v-card>\n      <v-card-title class=\"text-error\">Motor Error</v-card-title>\n      <v-card-text>\n        <div style=\"white-space:pre-wrap\">\n          {{ errorText || 'An error condition has been reported by the PLC.' }}\n        </div>\n      </v-card-text>\n      <v-card-actions class=\"justify-end\">\n        <v-btn variant=\"text\" @click=\"showErrorDialog=false\">Close</v-btn>\n        <v-btn color=\"warning\"\n               @click=\"send({ topic:'motor/cmd', payload:'HARDWARE_RESET' }); showErrorDialog=false;\">\n          Hardware Reset\n        </v-btn>\n      </v-card-actions>\n    </v-card>\n  </v-dialog>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      selectedRadio: null,  // 'one' | 'two' | 'three' | null\n      showErrorDialog: false,\n      errorText: ''\n    }\n  },\n\n  computed: {\n    // Robust coercion: accept 1/0, \"1\"/\"0\", \"true\"/\"false\", true/false\n    isPOS1() {\n      const v = this.msg?.payload?.pos1;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPOS2() {\n      const v = this.msg?.payload?.pos2;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isHOMED() {\n      const v = this.msg?.payload?.homed;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isERROR() {\n      const v = this.msg?.payload?.error;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPOS1ERROR() {\n      const v = this.msg?.payload?.pos1err;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPOS2ERROR() {\n      const v = this.msg?.payload?.pos2err;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isFUSEERROR() {\n      const v = this.msg?.payload?.fuseerror;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPowerON() {\n      const v = this.msg?.payload?.pwrStatus;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    }\n    \n\n  },\n\n  watch: {\n    // Re-map radios whenever new PLC msg arrives\n    msg: {\n      deep: true,\n      immediate: true,\n      handler(n) {\n        // Radios priority: HOMED > POS1 > POS2\n        if (this.isHOMED)      this.selectedRadio = 'three';\n        else if (this.isPOS1)  this.selectedRadio = 'one';\n        else if (this.isPOS2)  this.selectedRadio = 'two';\n        else                   this.selectedRadio = null;\n\n        // Error popup\n        if (this.isERROR) {\n          this.errorText = n?.payload?.errorText || '';\n          //this.showErrorDialog = true;\n        }\n      }\n    }\n  },\n\n  methods: {\n    // UI action that also sends a message (your original behavior)\n    activateHommed() {\n      this.selectedRadio = 'three'; // visually select radio immediately\n      this.send({ topic:'motor/ui', payload:{ hello:'world3', forceHommed:true }});\n    }\n  }\n}\n</script>\n",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 430,
+        "y": 400,
+        "wires": [
+            [
+                "b206b23cf3afee90"
+            ]
+        ]
+    },
+    {
+        "id": "d298df7f960685c7",
+        "type": "function",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "Prepera for v-function",
+        "func": "// Mapper before ui-template\nconst s = msg.payload || {};\nfunction toBool(x) {\n  return x === true || x === 1 || x === \"1\" || x === \"true\";\n}\nmsg.payload = {\n  pos1: toBool(s.M2_xinPOS1 ?? s.pos1_arrived ?? s.M2_xinPOS1),\n  pos2: toBool(s.M2_xinPOS2 ?? s.pos2_arrived ?? s.M2_xinPOS2),\n  homed: toBool(s.M2_xisHOMMED ?? s.isHome ?? s.home),\n  error: toBool(s.M2_xinERROR),\n  mode: s.mode,\n  fuseerror: toBool(s.M2_xFuseError),\n  pos1err: toBool(s.M2_xPOS1Error),\n  pos2err: toBool(s.M2_xPOS2Error),\n  pwrStatus: toBool(s.M2_PWRStatus)\n};\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 180,
+        "y": 280,
+        "wires": [
+            [
+                "30e64d7c036f9744"
+            ]
+        ]
+    },
+    {
+        "id": "6bc13868b756abc6",
+        "type": "function",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "Prepera for v-function",
+        "func": "// Mapper before ui-template\nconst s = msg.payload || {};\nfunction toBool(x) {\n  return x === true || x === 1 || x === \"1\" || x === \"true\";\n}\nmsg.payload = {\n  pos1: toBool(s.M3_xinPOS1 ?? s.pos1_arrived ?? s.M3_xinPOS1),\n  pos2: toBool(s.M3_xinPOS2 ?? s.pos2_arrived ?? s.M3_xinPOS2),\n  homed: toBool(s.M3_xisHOMMED ?? s.isHome ?? s.home),\n  error: toBool(s.M3_xinERROR),\n  mode: s.mode,\n  fuseerror: toBool(s.M3_xFuseError),\n  pos1err: toBool(s.M3_xPOS1Error),\n  pos2err: toBool(s.M3_xPOS2Error),\n  pwrStatus: toBool(s.M3_PWRStatus)\n};\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 180,
+        "y": 320,
+        "wires": [
+            [
+                "53d6d6e1abfc79a3"
+            ]
+        ]
+    },
+    {
+        "id": "4034d55c79f5f0f1",
+        "type": "function",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "Prepera for v-function",
+        "func": "// Mapper before ui-template\nconst s = msg.payload || {};\nfunction toBool(x) {\n  return x === true || x === 1 || x === \"1\" || x === \"true\";\n}\nmsg.payload = {\n  pos1: toBool(s.M4_xinPOS1 ?? s.pos1_arrived ?? s.M4_xinPOS1),\n  pos2: toBool(s.M4_xinPOS2 ?? s.pos2_arrived ?? s.M4_xinPOS2),\n  homed: toBool(s.M4_xisHOMMED ?? s.isHome ?? s.home),\n  error: toBool(s.M4_xinERROR),\n  mode: s.mode,\n  fuseerror: toBool(s.M4_xFuseError),\n  pos1err: toBool(s.M4_xPOS1Error),\n  pos2err: toBool(s.M4_xPOS2Error),\n  pwrStatus: toBool(s.M4_PWRStatus)\n};\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 180,
+        "y": 360,
+        "wires": [
+            [
+                "33731ce67d493d69"
+            ]
+        ]
+    },
+    {
+        "id": "36e47126e5a939fd",
+        "type": "function",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "Prepera for v-function",
+        "func": "// Mapper before ui-template\nconst s = msg.payload || {};\nfunction toBool(x) {\n  return x === true || x === 1 || x === \"1\" || x === \"true\";\n}\nmsg.payload = {\n  pos1: toBool(s.M5_xinPOS1 ?? s.pos1_arrived ?? s.M5_xinPOS1),\n  pos2: toBool(s.M5_xinPOS2 ?? s.pos2_arrived ?? s.M5_xinPOS2),\n  homed: toBool(s.M5_xisHOMMED ?? s.isHome ?? s.home),\n  error: toBool(s.M5_xinERROR),\n  mode: s.mode,\n  fuseerror: toBool(s.M5_xFuseError),\n  pos1err: toBool(s.M5_xPOS1Error),\n  pos2err: toBool(s.M5_xPOS2Error),\n  pwrStatus: toBool(s.M5_PWRStatus)\n};\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 180,
+        "y": 400,
+        "wires": [
+            [
+                "b2b596e4a55b295f"
+            ]
+        ]
+    },
+    {
+        "id": "7fe38dbc67ea7dc0",
+        "type": "s7 in",
+        "z": "c3ef6562b4dbd1ef",
+        "endpoint": "23e0960124121c06",
+        "mode": "all",
+        "variable": "",
+        "diff": false,
+        "name": "",
+        "x": 170,
+        "y": 160,
+        "wires": [
+            [
+                "9e98cb0195be697c",
+                "f0d6a96dc48e7ad4",
+                "d298df7f960685c7",
+                "6bc13868b756abc6",
+                "4034d55c79f5f0f1",
+                "36e47126e5a939fd",
+                "33a0ae650dabe217",
+                "0d19ee2de14b0878",
+                "b26f62dee7226bba",
+                "b3b07d48b2273d1b",
+                "924830db7f575bf5",
+                "524593a60bd902fb"
+            ]
+        ]
+    },
+    {
+        "id": "f0d6a96dc48e7ad4",
+        "type": "debug",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "debug 21",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "34d913d923a0054f",
+        "type": "ui-template",
+        "z": "c3ef6562b4dbd1ef",
+        "group": "58e9b0c008e334d3",
+        "page": "",
+        "ui": "",
+        "name": "STATUS FOR V MOTORS 1-5",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n \n  <!--\n    <hr>\n    <h3>PLC Status (latest msg)</h2>\n    <pre>{{ msg }}</pre>\n   -->\n\n  <!-- Quick status chips -->\n    <hr>\n  <h3>Motor status </h5>\n\n  <div style=\"display:flex; gap:8px; margin:8px 0;\">\n    <v-chip :color=\"isM1error ? 'red' : 'undefined'\" variant=\"elevated\">M1</v-chip>\n    <v-chip :color=\"isM2error ? 'red' : 'undefined'\" variant=\"elevated\">M2</v-chip>\n    <v-chip :color=\"isM3error ? 'red' : 'undefined'\" variant=\"elevated\">M3</v-chip>\n    <v-chip :color=\"isM4error ? 'red' : 'undefined'\" variant=\"elevated\">M4</v-chip>\n    <v-chip :color=\"isM5error ? 'red' : 'undefined'\" variant=\"elevated\">M5</v-chip>\n  </div>\n\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      selectedRadio: null,  // 'one' | 'two' | 'three' | null\n      showErrorDialog: false,\n      errorText: ''\n    }\n  },\n\n  computed: {\n    // Robust coercion: accept 1/0, \"1\"/\"0\", \"true\"/\"false\", true/false\n    isM1error() {\n      const v = this.msg?.payload?.errorM1;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isM2error() {\n      const v = this.msg?.payload?.errorM2;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isM3error() {\n      const v = this.msg?.payload?.errorM3;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isM4error() {\n      const v = this.msg?.payload?.errorM4;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isM5error() {\n      const v = this.msg?.payload?.errorM5;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPOS2ERROR() {\n      const v = this.msg?.payload?.pos2err;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isFUSEERROR() {\n      const v = this.msg?.payload?.fuseerror;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPowerON() {\n      const v = this.msg?.payload?.pwrStatus;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    }\n    \n\n  },\n\n  watch: {\n    // Re-map radios whenever new PLC msg arrives\n    msg: {\n      deep: true,\n      immediate: true,\n      handler(n) {\n        // Radios priority: HOMED > POS1 > POS2\n        if (this.isHOMED)      this.selectedRadio = 'three';\n        else if (this.isPOS1)  this.selectedRadio = 'one';\n        else if (this.isPOS2)  this.selectedRadio = 'two';\n        else                   this.selectedRadio = null;\n\n        // Error popup\n        if (this.isERROR) {\n          this.errorText = n?.payload?.errorText || '';\n          //this.showErrorDialog = true;\n        }\n      }\n    }\n  },\n\n  methods: {\n    // UI action that also sends a message (your original behavior)\n    activateHommed() {\n      this.selectedRadio = 'three'; // visually select radio immediately\n      this.send({ topic:'motor/ui', payload:{ hello:'world3', forceHommed:true }});\n    }\n  }\n}\n</script>\n",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 430,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "33a0ae650dabe217",
+        "type": "function",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "Prepera for v-function",
+        "func": "// Mapper before ui-template\nconst s = msg.payload || {};\nfunction toBool(x) {\n  return x === true || x === 1 || x === \"1\" || x === \"true\";\n}\nmsg.payload = {\n  errorM1: toBool(s.M1_xinERROR),\n  errorM2: toBool(s.M2_xinERROR),\n  errorM3: toBool(s.M3_xinERROR),\n  errorM4: toBool(s.M4_xinERROR),\n  errorM5: toBool(s.M5_xinERROR),\n};\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 180,
+        "y": 460,
+        "wires": [
+            [
+                "34d913d923a0054f"
+            ]
+        ]
+    },
+    {
+        "id": "278fcdc416b3e609",
+        "type": "function",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "Format → UI ",
+        "func": "const cmd = String(msg.payload || \"\").trim().toUpperCase();\nconst ON = { payload: true };\n\nswitch (cmd) {\n  case \"GO_POS1\": return [ON, null, null, null];\n  case \"GO_POS2\": return [null, ON, null, null];\n  case \"GO_HOME\": return [null, null, ON, null];\n  case \"HARDWARE_RESET\": return [null, null, null, ON];\n  default: return [null, null, null, null];\n}",
+        "outputs": 9,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 360,
+        "wires": [
+            [
+                "0755d304fba6c2cc"
+            ],
+            [
+                "a9b347064e173e7b"
+            ],
+            [
+                "ed00ac6882f2bbab"
+            ],
+            [
+                "9afda0cc07267459"
+            ],
+            [],
+            [],
+            [],
+            [],
+            []
+        ],
+        "outputLabels": [
+            "POS1",
+            "POS2",
+            "HOME",
+            "HW_RESET",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "id": "7e08db8b10d56089",
+        "type": "function",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "Format → UI",
+        "func": "const cmd = String(msg.payload || \"\").trim().toUpperCase();\nconst ON = { payload: true };\n\nswitch (cmd) {\n  case \"GO_POS1\": return [ON, null, null, null];\n  case \"GO_POS2\": return [null, ON, null, null];\n  case \"GO_HOME\": return [null, null, ON, null];\n  case \"HARDWARE_RESET\": return [null, null, null, ON];\n  default: return [null, null, null, null];\n}",
+        "outputs": 9,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 500,
+        "wires": [
+            [
+                "116487a03b93e0a3"
+            ],
+            [
+                "cd72ee06db284ba1"
+            ],
+            [
+                "cfa39e58f5e83fb8"
+            ],
+            [
+                "07ef4d7000ac22d5"
+            ],
+            [],
+            [],
+            [],
+            [],
+            []
+        ],
+        "outputLabels": [
+            "POS1",
+            "POS2",
+            "HOME",
+            "HW_RESET",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "id": "0755d304fba6c2cc",
+        "type": "s7 out",
+        "z": "c3ef6562b4dbd1ef",
+        "endpoint": "457a24245a8bd6df",
+        "variable": "M1_goPOS1",
+        "name": "GO POS1",
+        "x": 1080,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "a9b347064e173e7b",
+        "type": "s7 out",
+        "z": "c3ef6562b4dbd1ef",
+        "endpoint": "457a24245a8bd6df",
+        "variable": "M1_goPOS2",
+        "name": "GOPOS2",
+        "x": 1200,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "ed00ac6882f2bbab",
+        "type": "s7 out",
+        "z": "c3ef6562b4dbd1ef",
+        "endpoint": "457a24245a8bd6df",
+        "variable": "M1_goHOME",
+        "name": "GO HOME",
+        "x": 1090,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "9afda0cc07267459",
+        "type": "s7 out",
+        "z": "c3ef6562b4dbd1ef",
+        "endpoint": "457a24245a8bd6df",
+        "variable": "M1_HW_RESET",
+        "name": "HW_RESET",
+        "x": 1210,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "116487a03b93e0a3",
+        "type": "s7 out",
+        "z": "c3ef6562b4dbd1ef",
+        "endpoint": "457a24245a8bd6df",
+        "variable": "M2_goPOS1",
+        "name": "GO POS2",
+        "x": 1080,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "cfa39e58f5e83fb8",
+        "type": "s7 out",
+        "z": "c3ef6562b4dbd1ef",
+        "endpoint": "457a24245a8bd6df",
+        "variable": "M2_goHOME",
+        "name": "GO HOME",
+        "x": 1090,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "cd72ee06db284ba1",
+        "type": "s7 out",
+        "z": "c3ef6562b4dbd1ef",
+        "endpoint": "457a24245a8bd6df",
+        "variable": "M2_goPOS2",
+        "name": "GOPOS2",
+        "x": 1200,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "07ef4d7000ac22d5",
+        "type": "s7 out",
+        "z": "c3ef6562b4dbd1ef",
+        "endpoint": "457a24245a8bd6df",
+        "variable": "M2_HW_RESET",
+        "name": "HW_RESET",
+        "x": 1210,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "986cf72940c912bc",
+        "type": "function",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "Format → UI",
+        "func": "const cmd = String(msg.payload || \"\").trim().toUpperCase();\nconst ON = { payload: true };\n\nswitch (cmd) {\n  case \"GO_POS1\": return [ON, null, null, null];\n  case \"GO_POS2\": return [null, ON, null, null];\n  case \"GO_HOME\": return [null, null, ON, null];\n  case \"HARDWARE_RESET\": return [null, null, null, ON];\n  default: return [null, null, null, null];\n}",
+        "outputs": 9,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 640,
+        "wires": [
+            [
+                "1c5560e9668e7a08"
+            ],
+            [
+                "f32407bfe5016311"
+            ],
+            [
+                "4f5507c5945ddd83"
+            ],
+            [
+                "4aa75a1dae0e2b93"
+            ],
+            [],
+            [],
+            [],
+            [],
+            []
+        ],
+        "outputLabels": [
+            "POS1",
+            "POS2",
+            "HOME",
+            "HW_RESET",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "id": "1c5560e9668e7a08",
+        "type": "s7 out",
+        "z": "c3ef6562b4dbd1ef",
+        "endpoint": "457a24245a8bd6df",
+        "variable": "M3_goPOS1",
+        "name": "GO POS2",
+        "x": 1080,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "4f5507c5945ddd83",
+        "type": "s7 out",
+        "z": "c3ef6562b4dbd1ef",
+        "endpoint": "457a24245a8bd6df",
+        "variable": "M3_goHOME",
+        "name": "GO HOME",
+        "x": 1090,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "f32407bfe5016311",
+        "type": "s7 out",
+        "z": "c3ef6562b4dbd1ef",
+        "endpoint": "457a24245a8bd6df",
+        "variable": "M3_goPOS2",
+        "name": "GOPOS2",
+        "x": 1200,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "4aa75a1dae0e2b93",
+        "type": "s7 out",
+        "z": "c3ef6562b4dbd1ef",
+        "endpoint": "457a24245a8bd6df",
+        "variable": "M3_HW_RESET",
+        "name": "HW_RESET",
+        "x": 1210,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "442b5e2d85da9679",
+        "type": "function",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "Format → UI",
+        "func": "const cmd = String(msg.payload || \"\").trim().toUpperCase();\nconst ON = { payload: true };\n\nswitch (cmd) {\n  case \"GO_POS1\": return [ON, null, null, null];\n  case \"GO_POS2\": return [null, ON, null, null];\n  case \"GO_HOME\": return [null, null, ON, null];\n  case \"HARDWARE_RESET\": return [null, null, null, ON];\n  default: return [null, null, null, null];\n}",
+        "outputs": 9,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 780,
+        "wires": [
+            [
+                "bc8082e1bb49f095"
+            ],
+            [
+                "df8b654062249ad0"
+            ],
+            [
+                "44040d03052db44a"
+            ],
+            [
+                "a0c0f7c1a01adeb9"
+            ],
+            [],
+            [],
+            [],
+            [],
+            []
+        ],
+        "outputLabels": [
+            "POS1",
+            "POS2",
+            "HOME",
+            "HW_RESET",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "id": "bc8082e1bb49f095",
+        "type": "s7 out",
+        "z": "c3ef6562b4dbd1ef",
+        "endpoint": "457a24245a8bd6df",
+        "variable": "M4_goPOS1",
+        "name": "GO POS2",
+        "x": 1080,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "44040d03052db44a",
+        "type": "s7 out",
+        "z": "c3ef6562b4dbd1ef",
+        "endpoint": "457a24245a8bd6df",
+        "variable": "M4_goHOME",
+        "name": "GO HOME",
+        "x": 1090,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "df8b654062249ad0",
+        "type": "s7 out",
+        "z": "c3ef6562b4dbd1ef",
+        "endpoint": "457a24245a8bd6df",
+        "variable": "M4_goPOS2",
+        "name": "GOPOS2",
+        "x": 1200,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "a0c0f7c1a01adeb9",
+        "type": "s7 out",
+        "z": "c3ef6562b4dbd1ef",
+        "endpoint": "457a24245a8bd6df",
+        "variable": "M4_HW_RESET",
+        "name": "HW_RESET",
+        "x": 1210,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "b206b23cf3afee90",
+        "type": "function",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "Format → UI",
+        "func": "const cmd = String(msg.payload || \"\").trim().toUpperCase();\nconst ON = { payload: true };\n\nswitch (cmd) {\n  case \"GO_POS1\": return [ON, null, null, null];\n  case \"GO_POS2\": return [null, ON, null, null];\n  case \"GO_HOME\": return [null, null, ON, null];\n  case \"HARDWARE_RESET\": return [null, null, null, ON];\n  default: return [null, null, null, null];\n}",
+        "outputs": 9,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 920,
+        "wires": [
+            [
+                "e160a630c15d59d9"
+            ],
+            [
+                "e1c2e0116cf897b9"
+            ],
+            [
+                "618abd9a7559b615"
+            ],
+            [
+                "bd457a27f98f356a"
+            ],
+            [],
+            [],
+            [],
+            [],
+            []
+        ],
+        "outputLabels": [
+            "POS1",
+            "POS2",
+            "HOME",
+            "HW_RESET",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "id": "e160a630c15d59d9",
+        "type": "s7 out",
+        "z": "c3ef6562b4dbd1ef",
+        "endpoint": "457a24245a8bd6df",
+        "variable": "M5_goPOS1",
+        "name": "GO POS2",
+        "x": 1080,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "618abd9a7559b615",
+        "type": "s7 out",
+        "z": "c3ef6562b4dbd1ef",
+        "endpoint": "457a24245a8bd6df",
+        "variable": "M5_goHOME",
+        "name": "GO HOME",
+        "x": 1090,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "e1c2e0116cf897b9",
+        "type": "s7 out",
+        "z": "c3ef6562b4dbd1ef",
+        "endpoint": "457a24245a8bd6df",
+        "variable": "M5_goPOS2",
+        "name": "GOPOS2",
+        "x": 1200,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "bd457a27f98f356a",
+        "type": "s7 out",
+        "z": "c3ef6562b4dbd1ef",
+        "endpoint": "457a24245a8bd6df",
+        "variable": "M5_HW_RESET",
+        "name": "HW_RESET",
+        "x": 1210,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "eccda3afeac56151",
+        "type": "change",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "motorji.temp_M1",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 500,
+        "wires": [
+            [
+                "48b9d491af0e1c12"
+            ]
+        ]
+    },
+    {
+        "id": "f4ebbd795e139d4d",
+        "type": "change",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "motorji.temp_M2",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 540,
+        "wires": [
+            [
+                "f3000b7bbeabdb8d"
+            ]
+        ]
+    },
+    {
+        "id": "01cd3ecdec656b99",
+        "type": "change",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "motorji.temp_M3",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 580,
+        "wires": [
+            [
+                "a950f1124fc1823d"
+            ]
+        ]
+    },
+    {
+        "id": "8512fa058473a687",
+        "type": "change",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "motorji.temp_M4",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 620,
+        "wires": [
+            [
+                "3806a33dc7544828"
+            ]
+        ]
+    },
+    {
+        "id": "3e224b2fdcdbc744",
+        "type": "change",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "motorji.temp_M5",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 660,
+        "wires": [
+            [
+                "edfcb64dd7ce6d9b"
             ]
         ]
     },
