@@ -23,24 +23,9 @@
         "env": []
     },
     {
-        "id": "03a181bb0db104b3",
-        "type": "tab",
-        "label": "Flow 1",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "9c6f2f9b2c2f6d1a",
         "type": "tab",
         "label": "Custom Error Popup Demo",
-        "disabled": false,
-        "info": ""
-    },
-    {
-        "id": "c7e88c77b7a82c8f",
-        "type": "tab",
-        "label": "Dashboard2 Popup Demo",
         "disabled": false,
         "info": ""
     },
@@ -50,6 +35,22 @@
         "label": "D2 Error Popup (Catch)",
         "disabled": false,
         "info": ""
+    },
+    {
+        "id": "3128860356bb51f4",
+        "type": "tab",
+        "label": "DEMO CODE",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f0e20bb36738a696",
+        "type": "tab",
+        "label": "WEBPAGES",
+        "disabled": false,
+        "info": "",
+        "env": []
     },
     {
         "id": "72408dfde6e10ad8",
@@ -219,7 +220,7 @@
         "connmode": "rack-slot",
         "adapter": "",
         "busaddr": "2",
-        "cycletime": "1000",
+        "cycletime": "2000",
         "timeout": "10000",
         "name": "PLC - RRI - 192.168.1.101",
         "vartable": [
@@ -260,7 +261,7 @@
                 "name": "RTD2"
             },
             {
-                "addr": "DB1,REAL32",
+                "addr": "DB1,R32",
                 "name": "RTD3"
             },
             {
@@ -278,6 +279,10 @@
             {
                 "addr": "DB1,REAL48",
                 "name": "EgasiTempAktuator"
+            },
+            {
+                "addr": "DB1,INT92",
+                "name": "TrenutenPomik"
             }
         ]
     },
@@ -498,7 +503,7 @@
         "type": "ui-page",
         "name": "Egasi kontrola aktuatorjev",
         "ui": "47a6c454bea5d1c6",
-        "path": "/page1",
+        "path": "/page100",
         "icon": "home",
         "layout": "grid",
         "theme": "b06e263ae016d710",
@@ -524,10 +529,10 @@
                 "cols": "15"
             }
         ],
-        "order": 2,
+        "order": 1,
         "className": "",
-        "visible": true,
-        "disabled": false
+        "visible": "true",
+        "disabled": "false"
     },
     {
         "id": "bef3adb506e0f612",
@@ -548,25 +553,14 @@
         "type": "ui-group",
         "name": "Haulick 32T - STAUTS",
         "page": "1ede0b9feaa4bacd",
-        "width": "4",
+        "width": 5,
         "height": "1",
-        "order": 3,
+        "order": 6,
         "showTitle": true,
         "className": "",
         "visible": "true",
         "disabled": "false",
         "groupType": "default"
-    },
-    {
-        "id": "9f165e10739262bb",
-        "type": "ui-spacer",
-        "group": "bef3adb506e0f612",
-        "name": "spacer",
-        "tooltip": "",
-        "order": 6,
-        "width": 1,
-        "height": 1,
-        "className": ""
     },
     {
         "id": "5d4f4a5c1a0c47e2",
@@ -632,7 +626,7 @@
                 "cols": "12"
             }
         ],
-        "order": 6,
+        "order": 9,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -672,7 +666,7 @@
         "icon": "error",
         "layout": "grid",
         "theme": "theme-01",
-        "order": 5,
+        "order": 8,
         "className": ""
     },
     {
@@ -728,9 +722,9 @@
         "type": "ui-group",
         "name": "Motor POWER",
         "page": "1ede0b9feaa4bacd",
-        "width": "5",
+        "width": 1,
         "height": "1",
-        "order": 4,
+        "order": 3,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -798,6 +792,7 @@
     {
         "id": "mqtt-broker",
         "type": "mqtt-broker",
+        "d": true,
         "name": "Your MQTT",
         "broker": "192.168.1.10",
         "port": "1883",
@@ -845,7 +840,7 @@
         "type": "ui-page",
         "name": "Grafana",
         "ui": "47a6c454bea5d1c6",
-        "path": "/page4",
+        "path": "/page25",
         "icon": "home",
         "layout": "grid",
         "theme": "theme-01",
@@ -871,9 +866,9 @@
                 "cols": "12"
             }
         ],
-        "order": 4,
+        "order": 7,
         "className": "",
-        "visible": "true",
+        "visible": "false",
         "disabled": "false"
     },
     {
@@ -881,9 +876,9 @@
         "type": "ui-group",
         "name": "Egasi pozija",
         "page": "1ede0b9feaa4bacd",
-        "width": "6",
+        "width": 1,
         "height": "1",
-        "order": 6,
+        "order": 5,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -895,9 +890,9 @@
         "type": "ui-group",
         "name": "Egasi Position Button Cotrol",
         "page": "1ede0b9feaa4bacd",
-        "width": "6",
+        "width": 1,
         "height": "1",
-        "order": 5,
+        "order": 4,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -937,7 +932,7 @@
         "type": "ui-group",
         "name": "Izbira recepta proizvodnje",
         "page": "1ede0b9feaa4bacd",
-        "width": "6",
+        "width": 7,
         "height": "1",
         "order": 2,
         "showTitle": true,
@@ -963,7 +958,7 @@
         "group": "35792cf1e5d30f6c",
         "name": "spacer",
         "tooltip": "",
-        "order": 8,
+        "order": 9,
         "width": 1,
         "height": 1,
         "className": ""
@@ -973,43 +968,43 @@
         "type": "ui-page",
         "name": "Page 5",
         "ui": "47a6c454bea5d1c6",
-        "path": "/page5",
+        "path": "/page500",
         "icon": "home",
         "layout": "grid",
         "theme": "b06e263ae016d710",
         "breakpoints": [
             {
                 "name": "Default",
-                "px": 0,
-                "cols": 3
+                "px": "0",
+                "cols": "3"
             },
             {
                 "name": "Tablet",
-                "px": 576,
-                "cols": 6
+                "px": "576",
+                "cols": "6"
             },
             {
                 "name": "Small Desktop",
-                "px": 768,
-                "cols": 9
+                "px": "768",
+                "cols": "9"
             },
             {
                 "name": "Desktop",
-                "px": 1024,
-                "cols": 12
+                "px": "1024",
+                "cols": "12"
             }
         ],
-        "order": 7,
+        "order": 10,
         "className": "",
-        "visible": true,
-        "disabled": false
+        "visible": "true",
+        "disabled": "false"
     },
     {
         "id": "114668a8e4c713e1",
         "type": "ui-page",
         "name": "Motor status M1",
         "ui": "47a6c454bea5d1c6",
-        "path": "/page6",
+        "path": "/page23",
         "icon": "",
         "layout": "grid",
         "theme": "theme-01",
@@ -1035,17 +1030,17 @@
                 "cols": "12"
             }
         ],
-        "order": 3,
+        "order": 6,
         "className": "",
         "visible": true,
-        "disabled": false
+        "disabled": "false"
     },
     {
         "id": "b8454629e10ceac0",
         "type": "ui-page",
         "name": "Motor status",
         "ui": "47a6c454bea5d1c6",
-        "path": "/page7",
+        "path": "/page110",
         "icon": "home",
         "layout": "grid",
         "theme": "theme-01",
@@ -1071,7 +1066,7 @@
                 "cols": "12"
             }
         ],
-        "order": 1,
+        "order": 2,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -1419,6 +1414,459 @@
         ]
     },
     {
+        "id": "1844aad82a88d39e",
+        "type": "mqtt-broker",
+        "d": true,
+        "name": "mqtt RRI 5.0",
+        "broker": "tcp://192.168.1.1",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "5",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "7fe3ab9ea250acf7",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "d033de49d3badc8c",
+        "type": "ui-page",
+        "d": true,
+        "name": "Page 1",
+        "ui": "47a6c454bea5d1c6",
+        "path": "/page20",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "7fe3ab9ea250acf7",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 3,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "5075265405c0de82",
+        "type": "ui-group",
+        "name": "Group 1",
+        "page": "abf29bc6795e0a88",
+        "width": "6",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "0f3676c5e68f7df2",
+        "type": "ui-page",
+        "name": "DD - Digitalni Dvojcek",
+        "ui": "47a6c454bea5d1c6",
+        "path": "/page22",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "7fe3ab9ea250acf7",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 5,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "9c33b0fe971665f3",
+        "type": "ui-group",
+        "name": "DD - IFRAME - Digitalni Dvojcek",
+        "page": "0f3676c5e68f7df2",
+        "width": "12",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "false",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "df1e43d798ee354c",
+        "type": "ui-page",
+        "name": "Page Name",
+        "ui": "47a6c454bea5d1c6",
+        "path": "/page33",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "7fe3ab9ea250acf7",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 13,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "8bb50b0e8b6f4383",
+        "type": "ui-group",
+        "name": "Group Name",
+        "page": "df1e43d798ee354c",
+        "width": "6",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "3c6cff97b0580c2a",
+        "type": "ui-page",
+        "name": "Page Name",
+        "ui": "47a6c454bea5d1c6",
+        "path": "/page4",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "7fe3ab9ea250acf7",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 12,
+        "className": "",
+        "visible": true,
+        "disabled": false
+    },
+    {
+        "id": "43754586a874fb77",
+        "type": "ui-group",
+        "name": "Group Name",
+        "page": "3c6cff97b0580c2a",
+        "width": "6",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "1694259e5b9b0e3d",
+        "type": "ui-page",
+        "name": "Page Name3",
+        "ui": "47a6c454bea5d1c6",
+        "path": "/page5",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "7fe3ab9ea250acf7",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 11,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "c120319f9d9c7fb4",
+        "type": "ui-group",
+        "name": "Group Name",
+        "page": "1694259e5b9b0e3d",
+        "width": "6",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "abf29bc6795e0a88",
+        "type": "ui-page",
+        "name": "Page Name2",
+        "ui": "47a6c454bea5d1c6",
+        "path": "/page7",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "7fe3ab9ea250acf7",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 4,
+        "className": "",
+        "visible": true,
+        "disabled": false
+    },
+    {
+        "id": "4dd4fe22cd17faab",
+        "type": "mqtt-broker",
+        "d": true,
+        "name": "RRI-ROUTER",
+        "broker": "tcp://192.168.1.1",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "a88aa5a4ca9f4a86",
+        "type": "ui-page",
+        "name": "Page 14",
+        "ui": "47a6c454bea5d1c6",
+        "path": "/page14",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "b06e263ae016d710",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 14,
+        "className": "",
+        "visible": true,
+        "disabled": false
+    },
+    {
+        "id": "573dd7a29407d2ed",
+        "type": "ui-link",
+        "name": "Link 1",
+        "ui": "47a6c454bea5d1c6",
+        "path": "/page1100",
+        "icon": "home",
+        "order": 15,
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "9d2347970356a939",
+        "type": "ui-page",
+        "name": "Page ",
+        "ui": "47a6c454bea5d1c6",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "b06e263ae016d710",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 16,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
         "id": "3cc11d24.ff01a2",
         "type": "comment",
         "z": "f6f2187d.f17ca8",
@@ -1677,7 +2125,7 @@
         "type": "s7 in",
         "z": "c3ef6562b4dbd1ef",
         "endpoint": "edd4b3a91b062270",
-        "mode": "all-split",
+        "mode": "all",
         "variable": "",
         "diff": false,
         "name": "",
@@ -1686,33 +2134,18 @@
         "wires": [
             [
                 "a473b6c969ee254c",
-                "ac4995140eba2037"
+                "ac4995140eba2037",
+                "648f9c9a2762d90a",
+                "ae8b5feb3ac30b07"
             ]
         ]
-    },
-    {
-        "id": "b4a1b890487a0263",
-        "type": "debug",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "debug 2",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 600,
-        "y": 80,
-        "wires": []
     },
     {
         "id": "a473b6c969ee254c",
         "type": "function",
         "z": "c3ef6562b4dbd1ef",
         "name": "function 2",
-        "func": "msg.topic =\"InfluxDataFromPLC\"\n\nvar Temp1 = msg.payload[\"temp1\"]; //temp orodja 1- na egasi ohišje\nvar Temp2 = msg.payload[\"temp2\"];\nvar Temp3 = msg.payload[\"temp3\"]; //temp. okolice\nvar Temp4 = msg.payload[\"temp4\"];\n\n//temperature aktuatorjev\nvar M1_temp = parseFloat(global.get('motorji.temp_M1'));\nvar M2_temp = parseFloat(global.get('motorji.temp_M2'));\nvar M3_temp = parseFloat(global.get('motorji.temp_M3'));\nvar M4_temp = parseFloat(global.get('motorji.temp_M4'));\nvar M5_temp = parseFloat(global.get('motorji.temp_M5'));\n\nvar PresaHitrost = global.get('Haulick32T.speed');\n//var PresaHitrost = msg.payload[\"PresaHitrost\"];\nvar PresaStevec = msg.payload[\"PresaStevec\"]\nvar PresaDeluje = msg.payload[\"PresaDeluje\"]\nvar RTD1 = msg.payload[\"RTD1\"]\nvar RTD2 = msg.payload[\"RTD2\"];\nvar RTD3 = msg.payload[\"RTD3\"]; //temp. okolice\nvar RTD4 = msg.payload[\"RTD4\"];\nvar Egasi1_Max = msg.payload[\"MaxForce\"]; //Max sila - aktuator 1\nvar Egasi1_Min = msg.payload[\"MinForce\"]; //min sila - aktuator 1\nvar EgasiTemp = msg.payload[\"EgasiTempAktuator\"];\n\nvar Timestam = global.get('timestamp')\nmsg.payload =  {\n    \"timestamp\": Timestam,\n    \"Temperatura orodja 1\": Temp1,\n    \"Temperatura orodja 2\": Temp2,\n    \"Temperatura okolice\": Temp3,\n    \"Rezerva\": Temp4,\n    \"PresaHitrost\" :   PresaHitrost,\n    \"PresaStevec\"  : PresaStevec,\n    \"PresaDelujeINT\"      : PresaDeluje,\n    \"Temperatura ohisje aktuator RTD\" : RTD1,\n    \"Temperatura orodja RTD\": RTD2,\n    \"Temperatura okolice RTD\" : RTD3,\n    \"Egasi1_maxForce\": Egasi1_Max,\n    \"Egasi1_minForce\": Egasi1_Min,\n    \"Egasi_Temperatura\": EgasiTemp,\n    \"M1_temp\" :M1_temp,\n    \"M2_temp\" :M2_temp,\n    \"M3_temp\": M3_temp,\n    \"M4_temp\": M4_temp,\n    \"M5_temp\" :M5_temp\n}\n\nreturn msg;\n",
+        "func": "msg.topic =\"InfluxDataFromPLC\"\n\nvar Temp1 = msg.payload[\"temp1\"]; //temp orodja 1- na egasi ohišje\nvar Temp2 = msg.payload[\"temp2\"];\nvar Temp3 = msg.payload[\"temp3\"]; //temp. okolice\nvar Temp4 = msg.payload[\"temp4\"];\n\n//temperature aktuatorjev\nvar M1_temp = parseFloat(global.get('motorji.temp_M1'));\nvar M2_temp = parseFloat(global.get('motorji.temp_M2'));\nvar M3_temp = parseFloat(global.get('motorji.temp_M3'));\nvar M4_temp = parseFloat(global.get('motorji.temp_M4'));\nvar M5_temp = parseFloat(global.get('motorji.temp_M5'));\n\nvar PresaHitrost = global.get('Haulick32T.speed');\n//var PresaHitrost = msg.payload[\"PresaHitrost\"];\nvar PresaStevec = msg.payload[\"PresaStevec\"]\nvar PresaDeluje = msg.payload[\"PresaDeluje\"]\nvar RTD1 = msg.payload[\"RTD1\"]\nvar RTD2 = msg.payload[\"RTD2\"];\nvar RTD3 = (msg.payload[\"RTD3\"]); //temp. okolice\nvar RTD4 = msg.payload[\"RTD4\"];\nvar Egasi1_Max = msg.payload[\"MaxForce\"]; //Max sila - aktuator 1\nvar Egasi1_Min = msg.payload[\"MinForce\"]; //min sila - aktuator 1\nvar EgasiTemp = msg.payload[\"EgasiTempAktuator\"];\n\nvar M1_MaxCurrent = global.get('aktuator1.MaxCurrent');\nvar M2_MaxCurrent = global.get('aktuator2.MaxCurrent');\nvar M3_MaxCurrent = global.get('aktuator3.MaxCurrent');\nvar M4_MaxCurrent = global.get('aktuator4.MaxCurrent');\nvar M5_MaxCurrent = global.get('aktuator5.MaxCurrent');\n\nvar M1_MinCurrent = global.get('aktuator1.MinCurrent');\nvar M2_MinCurrent = global.get('aktuator2.MinCurrent');\nvar M3_MinCurrent = global.get('aktuator3.MinCurrent');\nvar M4_MinCurrent = global.get('aktuator4.MinCurrent');\nvar M5_MinCurrent = global.get('aktuator5.MinCurrent');\n\n\nvar Timestam = global.get('timestamp')\nmsg.payload =  {\n    \"timestamp\": Timestam,\n    \"Temperatura orodja 1\": Temp1,\n    \"Temperatura orodja 2\": Temp2,\n    \"Temperatura okolice\": Temp3,\n    \"Rezerva\": Temp4,\n    \"PresaHitrost\" :   PresaHitrost,\n    \"PresaStevec\"  : PresaStevec,\n    \"PresaDelujeINT\"      : PresaDeluje,\n    \"Temperatura ohisje aktuator RTD\" : RTD1,\n    \"Temperatura orodja RTD\": RTD2,\n    \"Temperatura okolice RTD\" : RTD3,\n    \"Egasi1_maxForce\": Egasi1_Max,\n    \"Egasi1_minForce\": Egasi1_Min,\n    \"Egasi_Temperatura\": EgasiTemp,\n    \"M1_temp\" :M1_temp,\n    \"M2_temp\" :M2_temp,\n    \"M3_temp\": M3_temp,\n    \"M4_temp\": M4_temp,\n    \"M5_temp\" :M5_temp,\n    \"M1_maxCurrent\": M1_MaxCurrent,\n    \"M2_maxCurrent\": M2_MaxCurrent,\n    \"M3_maxCurrent\": M3_MaxCurrent,\n    \"M4_maxCurrent\": M4_MaxCurrent,\n    \"M5_maxCurrent\": M5_MaxCurrent,\n    \"M1_minCurrent\": M1_MinCurrent,\n    \"M2_minCurrent\": M2_MinCurrent,\n    \"M3_minCurrent\": M3_MinCurrent,\n    \"M4_minCurrent\": M4_MinCurrent,\n    \"M5_minCurrent\": M5_MinCurrent\n    \n}\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1723,7 +2156,6 @@
         "y": 80,
         "wires": [
             [
-                "b4a1b890487a0263",
                 "53968cbc4343ed97"
             ]
         ]
@@ -1742,56 +2174,9 @@
         "retentionPolicyV18Flux": "",
         "org": "DAFRA",
         "bucket": "RRI",
-        "x": 660,
-        "y": 40,
+        "x": 600,
+        "y": 80,
         "wires": []
-    },
-    {
-        "id": "25c4dc6fb205f728",
-        "type": "function",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "function 3",
-        "func": "msg.topic =\"InfluxDataFromPLC\"\n\nmsg.payload =  {\n    \"timestamp\": 24,\n    \"Temperatura orodja 1\": 23,\n    \"Temperatura orodja 2\": 24,\n    \"Temperatura okolice\": 23,\n    \"Št preklopov\":24        \n\n}\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 280,
-        "y": 820,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "98d142278cd311ca",
-        "type": "inject",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "5",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 110,
-        "y": 820,
-        "wires": [
-            [
-                "25c4dc6fb205f728"
-            ]
-        ]
     },
     {
         "id": "ac4995140eba2037",
@@ -1817,8 +2202,8 @@
         "z": "c3ef6562b4dbd1ef",
         "name": " TestiranjeAktuatorja_13092024",
         "info": " - Save data",
-        "x": 650,
-        "y": 180,
+        "x": 950,
+        "y": 160,
         "wires": []
     },
     {
@@ -1829,9 +2214,9 @@
         "mode": "all",
         "variable": "",
         "diff": false,
-        "name": "",
-        "x": 115,
-        "y": 900,
+        "name": "Haulick32T",
+        "x": 495,
+        "y": 920,
         "wires": [
             [
                 "291e51f04dbacc9d",
@@ -1852,8 +2237,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 500,
-        "y": 900,
+        "x": 640,
+        "y": 920,
         "wires": []
     },
     {
@@ -1875,14 +2260,15 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 300,
+        "x": 700,
         "y": 960,
         "wires": [
             [
                 "3f9a6ba6c59a76dd",
                 "61f04157e8c6b6bd",
                 "772ac61197a4d05e",
-                "34c08c1eda03c1bc"
+                "34c08c1eda03c1bc",
+                "3f99c60dde55bae2"
             ]
         ]
     },
@@ -1903,43 +2289,15 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 770,
-        "y": 1040,
-        "wires": []
-    },
-    {
-        "id": "dcee6d433b16c1e4",
-        "type": "ui_gauge",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "",
-        "group": "2d27132af92f3f1e",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "gtype": "gage",
-        "title": "Hitrost",
-        "label": "units",
-        "format": "{{value}}",
-        "min": 0,
-        "max": 10,
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 1130,
-        "y": 1200,
+        "x": 1010,
+        "y": 960,
         "wires": []
     },
     {
         "id": "61f04157e8c6b6bd",
         "type": "function",
         "z": "c3ef6562b4dbd1ef",
-        "name": "function 5",
+        "name": "convert to string",
         "func": "msg.payload = msg.payload.hitrost.toString(); //+\" km/h\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -1947,13 +2305,13 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 820,
-        "y": 1180,
+        "x": 1000,
+        "y": 1060,
         "wires": [
             [
-                "dcee6d433b16c1e4",
                 "6b782ca0d4c0e6d6",
-                "9dcf263f0fac3a62"
+                "9dcf263f0fac3a62",
+                "c03670332bbcb235"
             ]
         ]
     },
@@ -1981,15 +2339,15 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1060,
-        "y": 1300,
+        "x": 1280,
+        "y": 900,
         "wires": []
     },
     {
         "id": "772ac61197a4d05e",
         "type": "function",
         "z": "c3ef6562b4dbd1ef",
-        "name": "function 6",
+        "name": "get Temperature1 -",
         "func": "msg.payload = global.get('Temperature1');\nmsg.payload = msg.payload.toFixed(1);\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": 0,
@@ -1997,8 +2355,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 820,
-        "y": 1300,
+        "x": 1030,
+        "y": 900,
         "wires": [
             [
                 "03e1e54c1fb0ee26",
@@ -2012,11 +2370,11 @@
         "z": "c3ef6562b4dbd1ef",
         "name": "",
         "group": "cb763d77c58374b7",
-        "order": 7,
+        "order": 6,
         "value": "payload",
         "valueType": "msg",
-        "width": "0",
-        "height": "0",
+        "width": null,
+        "height": null,
         "gtype": "gauge-half",
         "gstyle": "needle",
         "title": "Hitrost stiskalnice",
@@ -2054,56 +2412,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 1170,
-        "y": 1240,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "3be848da40df9eb2",
-        "type": "inject",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 140,
-        "y": 1520,
-        "wires": [
-            [
-                "dbd65121ecc20af4",
-                "6f6b7dd39e530869"
-            ]
-        ]
-    },
-    {
-        "id": "dbd65121ecc20af4",
-        "type": "function",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "function 8",
-        "func": "msg.payload = global.get('Temperature1');\nmsg.payload = msg.payload.toFixed(1);\nreturn msg;\n\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 380,
-        "y": 1580,
+        "x": 1290,
+        "y": 1100,
         "wires": [
             []
         ]
@@ -2156,8 +2466,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 570,
-        "y": 500,
+        "x": 990,
+        "y": 460,
         "wires": [
             []
         ]
@@ -2210,8 +2520,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 570,
-        "y": 540,
+        "x": 990,
+        "y": 500,
         "wires": [
             []
         ]
@@ -2264,8 +2574,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 570,
-        "y": 580,
+        "x": 990,
+        "y": 540,
         "wires": [
             []
         ]
@@ -2318,8 +2628,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 570,
-        "y": 620,
+        "x": 990,
+        "y": 580,
         "wires": [
             []
         ]
@@ -2372,8 +2682,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 570,
-        "y": 660,
+        "x": 990,
+        "y": 620,
         "wires": [
             []
         ]
@@ -2383,17 +2693,18 @@
         "type": "function",
         "z": "c3ef6562b4dbd1ef",
         "name": "function 12",
-        "func": "msg.payload = msg.payload.M1_rTemperature;\nmsg.payload = msg.payload.toFixed(1);\nreturn msg;\n\n",
+        "func": "msg.payload = msg.payload.M1_rTemperature;\nmsg.payload = msg.payload.toFixed(1);\n\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 130,
-        "y": 500,
+        "x": 330,
+        "y": 460,
         "wires": [
             [
+                "3b61c7373948f577",
                 "eccda3afeac56151"
             ]
         ]
@@ -2410,8 +2721,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 130,
-        "y": 540,
+        "x": 330,
+        "y": 500,
         "wires": [
             [
                 "f4ebbd795e139d4d"
@@ -2430,8 +2741,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 130,
-        "y": 580,
+        "x": 330,
+        "y": 540,
         "wires": [
             [
                 "01cd3ecdec656b99"
@@ -2450,8 +2761,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 130,
-        "y": 620,
+        "x": 330,
+        "y": 580,
         "wires": [
             [
                 "8512fa058473a687"
@@ -2470,8 +2781,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 130,
-        "y": 660,
+        "x": 330,
+        "y": 620,
         "wires": [
             [
                 "3e224b2fdcdbc744"
@@ -2482,7 +2793,7 @@
         "id": "34c08c1eda03c1bc",
         "type": "function",
         "z": "c3ef6562b4dbd1ef",
-        "name": "function 17",
+        "name": "get strojObratuje",
         "func": "msg.payload = msg.payload.strojObratuje;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -2490,1451 +2801,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 790,
-        "y": 1080,
+        "x": 1010,
+        "y": 1020,
         "wires": [
             [
-                "87f61dc770a34d2a",
-                "d8a192a359b7392f",
                 "8561aec65c13bc9a"
             ]
-        ]
-    },
-    {
-        "id": "87f61dc770a34d2a",
-        "type": "debug",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "debug 14",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1180,
-        "y": 1100,
-        "wires": []
-    },
-    {
-        "id": "d8a192a359b7392f",
-        "type": "ui-switch",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "",
-        "label": "Pah v obratovanju",
-        "group": "cb763d77c58374b7",
-        "order": 6,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "decouple": false,
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "className": "",
-        "layout": "row-spread",
-        "clickableArea": "none",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "x": 1050,
-        "y": 1060,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "8d8ebd0cc50f0b9c",
-        "type": "ui-switch",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "",
-        "label": "M1_PWR",
-        "group": "5faddce37920c798",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "decouple": false,
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "className": "",
-        "layout": "row-spread",
-        "clickableArea": "label",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "x": 300,
-        "y": 1820,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "18c79b7508d692ac",
-        "type": "ui-switch",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "",
-        "label": "M2_PWR",
-        "group": "5faddce37920c798",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "decouple": false,
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "className": "",
-        "layout": "row-spread",
-        "clickableArea": "switch",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "x": 300,
-        "y": 1880,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "14f607fed3ddee17",
-        "type": "ui-switch",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "",
-        "label": "M3_PWR",
-        "group": "5faddce37920c798",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "decouple": false,
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "className": "",
-        "layout": "row-spread",
-        "clickableArea": "switch",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "x": 300,
-        "y": 1940,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c9480f417fec4f6b",
-        "type": "ui-switch",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "",
-        "label": "M4_PWR",
-        "group": "5faddce37920c798",
-        "order": 7,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "decouple": false,
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "className": "",
-        "layout": "row-spread",
-        "clickableArea": "switch",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "x": 300,
-        "y": 2000,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "02c129ebc64e5584",
-        "type": "ui-switch",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "",
-        "label": "M5_PWR",
-        "group": "5faddce37920c798",
-        "order": 9,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "decouple": false,
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "className": "",
-        "layout": "row-spread",
-        "clickableArea": "switch",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "x": 300,
-        "y": 2060,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "06c61041f3f8685a",
-        "type": "ui-button",
-        "z": "c3ef6562b4dbd1ef",
-        "group": "5faddce37920c798",
-        "name": "",
-        "label": "HARD RESET M1",
-        "order": 2,
-        "width": "3",
-        "height": "1",
-        "emulateClick": false,
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "iconPosition": "left",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "buttonColor": "",
-        "textColor": "",
-        "iconColor": "",
-        "enableClick": true,
-        "enablePointerdown": false,
-        "pointerdownPayload": "",
-        "pointerdownPayloadType": "str",
-        "enablePointerup": false,
-        "pointerupPayload": "",
-        "pointerupPayloadType": "str",
-        "x": 150,
-        "y": 2220,
-        "wires": [
-            [
-                "3062abf065d477e8"
-            ]
-        ]
-    },
-    {
-        "id": "9d9a22830ac8f795",
-        "type": "ui-button",
-        "z": "c3ef6562b4dbd1ef",
-        "group": "5faddce37920c798",
-        "name": "",
-        "label": "HARD RESET M2",
-        "order": 4,
-        "width": "3",
-        "height": "1",
-        "emulateClick": false,
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "iconPosition": "left",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "buttonColor": "",
-        "textColor": "",
-        "iconColor": "",
-        "enableClick": true,
-        "enablePointerdown": false,
-        "pointerdownPayload": "",
-        "pointerdownPayloadType": "str",
-        "enablePointerup": false,
-        "pointerupPayload": "",
-        "pointerupPayloadType": "str",
-        "x": 150,
-        "y": 2280,
-        "wires": [
-            [
-                "076da71d68ad6ef9"
-            ]
-        ]
-    },
-    {
-        "id": "b6cac7f53e395d95",
-        "type": "ui-button",
-        "z": "c3ef6562b4dbd1ef",
-        "group": "5faddce37920c798",
-        "name": "",
-        "label": "HARD RESET M3",
-        "order": 6,
-        "width": "3",
-        "height": "1",
-        "emulateClick": false,
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "iconPosition": "left",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "buttonColor": "",
-        "textColor": "",
-        "iconColor": "",
-        "enableClick": true,
-        "enablePointerdown": false,
-        "pointerdownPayload": "",
-        "pointerdownPayloadType": "str",
-        "enablePointerup": false,
-        "pointerupPayload": "",
-        "pointerupPayloadType": "str",
-        "x": 150,
-        "y": 2340,
-        "wires": [
-            [
-                "655b5384c51d66a9"
-            ]
-        ]
-    },
-    {
-        "id": "cbc1bbe74e2b2be8",
-        "type": "ui-button",
-        "z": "c3ef6562b4dbd1ef",
-        "group": "5faddce37920c798",
-        "name": "",
-        "label": "HARD RESET M4",
-        "order": 8,
-        "width": "3",
-        "height": "1",
-        "emulateClick": false,
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "iconPosition": "left",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "buttonColor": "",
-        "textColor": "",
-        "iconColor": "",
-        "enableClick": true,
-        "enablePointerdown": false,
-        "pointerdownPayload": "",
-        "pointerdownPayloadType": "str",
-        "enablePointerup": false,
-        "pointerupPayload": "",
-        "pointerupPayloadType": "str",
-        "x": 150,
-        "y": 2400,
-        "wires": [
-            [
-                "342938e0da97dd2c"
-            ]
-        ]
-    },
-    {
-        "id": "1d59578b01d8a5ff",
-        "type": "ui-button",
-        "z": "c3ef6562b4dbd1ef",
-        "group": "5faddce37920c798",
-        "name": "",
-        "label": "HARD RESET M5",
-        "order": 10,
-        "width": "3",
-        "height": "1",
-        "emulateClick": false,
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "iconPosition": "left",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "buttonColor": "",
-        "textColor": "",
-        "iconColor": "",
-        "enableClick": true,
-        "enablePointerdown": false,
-        "pointerdownPayload": "",
-        "pointerdownPayloadType": "str",
-        "enablePointerup": false,
-        "pointerupPayload": "",
-        "pointerupPayloadType": "str",
-        "x": 150,
-        "y": 2460,
-        "wires": [
-            [
-                "75cf05b8fb5951a0"
-            ]
-        ]
-    },
-    {
-        "id": "fn-merge-status",
-        "type": "function",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "Merge incoming → flow.state",
-        "func": "// Expects topics like:\n// machine/motor/status/power_enabled (true/false)\n// machine/motor/status/motor_enabled (true/false)\n// machine/motor/status/mode (\"Auto\"|\"Manual\")\n// machine/motor/status/pos1_arrived (true/false)\n// machine/motor/status/pos2_arrived (true/false)\n// machine/motor/status/homed (true/false)\n// machine/motor/status/position (number)\n// machine/motor/status/pos1_setpoint (number)\n// machine/motor/status/pos2_setpoint (number)\n\nlet state = flow.get('state') || {\n    power_enabled:false,\n    motor_enabled:false,\n    mode:\"Manual\",\n    pos1_arrived:false,\n    pos2_arrived:false,\n    homed:false,\n    position:0,\n    pos1_setpoint:0,\n    pos2_setpoint:0\n};\n\nconst parts = (msg.topic||'').split('/');\nconst key = parts[parts.length - 1];\nstate[key] = msg.payload;\nflow.set('state', state);\nreturn [{payload: state}];",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1140,
-        "y": 2120,
-        "wires": [
-            [
-                "ui-status-refresh"
-            ]
-        ]
-    },
-    {
-        "id": "ui-status-refresh",
-        "type": "function",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "Format → UI",
-        "func": "const s = msg.payload;\nreturn [\n  {topic:\"power\", payload: s.power_enabled?\"ON\":\"OFF\"},\n  {topic:\"motor\", payload: s.motor_enabled?\"ON\":\"OFF\"},\n  {topic:\"mode\", payload: s.mode},\n  {topic:\"pos1\", payload: s.pos1_arrived?\"ARRIVED\":\"-\"},\n  {topic:\"pos2\", payload: s.pos2_arrived?\"ARRIVED\":\"-\"},\n  {topic:\"homed\", payload: s.homed?\"YES\":\"NO\"},\n  {topic:\"position\", payload: s.position},\n  {topic:\"pos1_sp\", payload: s.pos1_setpoint},\n  {topic:\"pos2_sp\", payload: s.pos2_setpoint}\n];",
-        "outputs": 9,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1370,
-        "y": 2120,
-        "wires": [
-            [
-                "ui-txt-power",
-                "6de38b91c6480713"
-            ],
-            [
-                "ui-txt-motor"
-            ],
-            [
-                "ui-txt-mode"
-            ],
-            [
-                "ui-txt-pos1"
-            ],
-            [
-                "ui-txt-pos2"
-            ],
-            [
-                "ui-txt-homed"
-            ],
-            [
-                "ui-txt-position"
-            ],
-            [
-                "ui-num-pos1"
-            ],
-            [
-                "ui-num-pos2"
-            ]
-        ]
-    },
-    {
-        "id": "ui-sw-power",
-        "type": "ui_switch",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "Power Enable",
-        "label": "Power Enable",
-        "tooltip": "",
-        "group": "grp-controls",
-        "order": 1,
-        "width": 4,
-        "height": 1,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "",
-        "topicType": "str",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": true,
-        "className": "",
-        "x": 920,
-        "y": 1780,
-        "wires": [
-            [
-                "fn-cmd-power"
-            ]
-        ]
-    },
-    {
-        "id": "fn-cmd-power",
-        "type": "function",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "→ cmd/power_enable",
-        "func": "flow.set('state', Object.assign(flow.get('state')||{}, {power_enabled: !!msg.payload}));\nmsg.topic = \"machine/motor/cmd/power_enable\";\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1190,
-        "y": 1780,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ui-sw-motor",
-        "type": "ui_switch",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "Motor Enable",
-        "label": "Motor Enable",
-        "group": "grp-controls",
-        "order": 2,
-        "width": 4,
-        "height": 1,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "",
-        "style": "",
-        "onvalue": true,
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": false,
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": true,
-        "x": 920,
-        "y": 1830,
-        "wires": [
-            [
-                "fn-cmd-motor"
-            ]
-        ]
-    },
-    {
-        "id": "fn-cmd-motor",
-        "type": "function",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "→ cmd/motor_enable",
-        "func": "flow.set('state', Object.assign(flow.get('state')||{}, {motor_enabled: !!msg.payload}));\nmsg.topic = \"machine/motor/cmd/motor_enable\";\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1190,
-        "y": 1830,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "fn-cmd-mode",
-        "type": "function",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "→ cmd/mode & cache",
-        "func": "const mode = msg.payload;\nlet state = flow.get('state') || {};\nstate.mode = mode;\nflow.set('state', state);\nmsg.topic = \"machine/motor/cmd/mode\";\nreturn msg;",
-        "outputs": 1,
-        "x": 1190,
-        "y": 1880,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ui-btn-go1",
-        "type": "ui_button",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "Go POS1",
-        "group": "grp-manual",
-        "order": 1,
-        "width": 2,
-        "height": 1,
-        "label": "Go POS1",
-        "color": "",
-        "icon": "",
-        "payload": "POS1",
-        "payloadType": "str",
-        "topic": "",
-        "x": 870,
-        "y": 1960,
-        "wires": [
-            [
-                "fn-gate-manual"
-            ]
-        ]
-    },
-    {
-        "id": "ui-btn-go2",
-        "type": "ui_button",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "Go POS2",
-        "group": "grp-manual",
-        "order": 2,
-        "width": 2,
-        "height": 1,
-        "label": "Go POS2",
-        "payload": "POS2",
-        "payloadType": "str",
-        "topic": "",
-        "x": 870,
-        "y": 2000,
-        "wires": [
-            [
-                "fn-gate-manual"
-            ]
-        ]
-    },
-    {
-        "id": "ui-btn-home",
-        "type": "ui_button",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "Go HOME",
-        "group": "grp-manual",
-        "order": 3,
-        "width": 2,
-        "height": 1,
-        "label": "Go HOME",
-        "payload": "HOME",
-        "payloadType": "str",
-        "topic": "",
-        "x": 870,
-        "y": 2040,
-        "wires": [
-            [
-                "fn-gate-manual"
-            ]
-        ]
-    },
-    {
-        "id": "fn-gate-manual",
-        "type": "function",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "Gate (Manual only) → cmd/go",
-        "func": "const s = flow.get('state') || {mode:\"Manual\"};\nif (s.mode !== \"Manual\") {\n    node.status({fill:\"red\", shape:\"dot\", text:\"Blocked: Auto mode\"});\n    return null;\n}\nnode.status({});\nmsg.topic = \"machine/motor/cmd/go\"; // payload: POS1 | POS2 | HOME\nreturn msg;",
-        "outputs": 1,
-        "x": 1170,
-        "y": 2000,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ui-num-pos1",
-        "type": "ui_numeric",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "POS1 setpoint",
-        "label": "POS1 setpoint",
-        "group": "grp-positions",
-        "order": 1,
-        "width": 4,
-        "height": 1,
-        "wrap": false,
-        "topic": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": 100000,
-        "step": 1,
-        "x": 910,
-        "y": 2220,
-        "wires": [
-            [
-                "fn-pos1-cache"
-            ]
-        ]
-    },
-    {
-        "id": "fn-pos1-cache",
-        "type": "function",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "cache pos1_setpoint",
-        "func": "let s = flow.get('state')||{}; s.pos1_setpoint = Number(msg.payload)||0; flow.set('state', s);\nreturn null;",
-        "outputs": 1,
-        "x": 1170,
-        "y": 2220,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ui-num-pos2",
-        "type": "ui_numeric",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "POS2 setpoint",
-        "label": "POS2 setpoint",
-        "group": "grp-positions",
-        "order": 2,
-        "width": 4,
-        "height": 1,
-        "wrap": false,
-        "topic": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": 100000,
-        "step": 1,
-        "x": 910,
-        "y": 2260,
-        "wires": [
-            [
-                "fn-pos2-cache"
-            ]
-        ]
-    },
-    {
-        "id": "fn-pos2-cache",
-        "type": "function",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "cache pos2_setpoint",
-        "func": "let s = flow.get('state')||{}; s.pos2_setpoint = Number(msg.payload)||0; flow.set('state', s);\nreturn null;",
-        "outputs": 1,
-        "x": 1170,
-        "y": 2260,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ui-btn-set1",
-        "type": "ui_button",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "Set POS1",
-        "group": "grp-positions",
-        "order": 3,
-        "width": 2,
-        "height": 1,
-        "label": "Send POS1 SP",
-        "payload": "",
-        "topic": "",
-        "x": 910,
-        "y": 2300,
-        "wires": [
-            [
-                "fn-send-pos1"
-            ]
-        ]
-    },
-    {
-        "id": "fn-send-pos1",
-        "type": "function",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "→ cmd/pos1_setpoint",
-        "func": "const s = flow.get('state')||{};\nmsg.topic = \"machine/motor/cmd/pos1_setpoint\";\nmsg.payload = s.pos1_setpoint || 0;\nreturn msg;",
-        "outputs": 1,
-        "x": 1190,
-        "y": 2300,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ui-btn-set2",
-        "type": "ui_button",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "Set POS2",
-        "group": "grp-positions",
-        "order": 4,
-        "width": 2,
-        "height": 1,
-        "label": "Send POS2 SP",
-        "payload": "",
-        "topic": "",
-        "x": 910,
-        "y": 2340,
-        "wires": [
-            [
-                "fn-send-pos2"
-            ]
-        ]
-    },
-    {
-        "id": "fn-send-pos2",
-        "type": "function",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "→ cmd/pos2_setpoint",
-        "func": "const s = flow.get('state')||{};\nmsg.topic = \"machine/motor/cmd/pos2_setpoint\";\nmsg.payload = s.pos2_setpoint || 0;\nreturn msg;",
-        "outputs": 1,
-        "x": 1190,
-        "y": 2340,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ui-txt-power",
-        "type": "ui_text",
-        "z": "c3ef6562b4dbd1ef",
-        "group": "grp-status",
-        "order": 1,
-        "width": 4,
-        "height": 1,
-        "name": "Power",
-        "label": "Power",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
-        "x": 1680,
-        "y": 2080,
-        "wires": []
-    },
-    {
-        "id": "ui-txt-motor",
-        "type": "ui_text",
-        "z": "c3ef6562b4dbd1ef",
-        "group": "grp-status",
-        "order": 2,
-        "width": 4,
-        "height": 1,
-        "name": "Motor",
-        "label": "Motor",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
-        "x": 1680,
-        "y": 2120,
-        "wires": []
-    },
-    {
-        "id": "ui-txt-mode",
-        "type": "ui_text",
-        "z": "c3ef6562b4dbd1ef",
-        "group": "grp-status",
-        "order": 3,
-        "width": 4,
-        "height": 1,
-        "name": "Mode",
-        "label": "Mode",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 1680,
-        "y": 2160,
-        "wires": []
-    },
-    {
-        "id": "ui-txt-pos1",
-        "type": "ui_text",
-        "z": "c3ef6562b4dbd1ef",
-        "group": "grp-status",
-        "order": 4,
-        "width": 4,
-        "height": 1,
-        "name": "POS1 Arrived",
-        "label": "POS1",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 1680,
-        "y": 2200,
-        "wires": []
-    },
-    {
-        "id": "ui-txt-pos2",
-        "type": "ui_text",
-        "z": "c3ef6562b4dbd1ef",
-        "group": "grp-status",
-        "order": 5,
-        "width": 4,
-        "height": 1,
-        "name": "POS2 Arrived",
-        "label": "POS2",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 1680,
-        "y": 2240,
-        "wires": []
-    },
-    {
-        "id": "ui-txt-homed",
-        "type": "ui_text",
-        "z": "c3ef6562b4dbd1ef",
-        "group": "grp-status",
-        "order": 6,
-        "width": 4,
-        "height": 1,
-        "name": "HOMED",
-        "label": "HOMED",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 1680,
-        "y": 2280,
-        "wires": []
-    },
-    {
-        "id": "ui-txt-position",
-        "type": "ui_text",
-        "z": "c3ef6562b4dbd1ef",
-        "group": "grp-status",
-        "order": 7,
-        "width": 8,
-        "height": 1,
-        "name": "Position",
-        "label": "Current Position",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 1690,
-        "y": 2320,
-        "wires": []
-    },
-    {
-        "id": "init-state",
-        "type": "inject",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "Init state (once)",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.5,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 890,
-        "y": 1740,
-        "wires": [
-            [
-                "fn-init-state"
-            ]
-        ]
-    },
-    {
-        "id": "fn-init-state",
-        "type": "function",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "default flow.state",
-        "func": "const s = flow.get('state') || {\n  power_enabled:false,\n  motor_enabled:false,\n  mode:\"Manual\",\n  pos1_arrived:false,\n  pos2_arrived:false,\n  homed:false,\n  position:0,\n  pos1_setpoint:0,\n  pos2_setpoint:0\n};\nflow.set('state', s);\nreturn {payload:s};",
-        "outputs": 1,
-        "x": 1140,
-        "y": 1740,
-        "wires": [
-            [
-                "ui-status-refresh"
-            ]
-        ]
-    },
-    {
-        "id": "326c9557f6ef55e5",
-        "type": "function",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "Format → UI",
-        "func": "const s = msg.payload;\nreturn [\n  {topic:\"power\", payload: s.power_enabled?\"ON\":\"OFF\"},\n  {topic:\"motor\", payload: s.motor_enabled?\"ON\":\"OFF\"},\n  {topic:\"mode\", payload: s.mode},\n  {topic:\"pos1\", payload: s.pos1_arrived?\"ARRIVED\":\"-\"},\n  {topic:\"pos2\", payload: s.pos2_arrived?\"ARRIVED\":\"-\"},\n  {topic:\"homed\", payload: s.homed?\"YES\":\"NO\"},\n  {topic:\"position\", payload: s.position},\n  {topic:\"pos1_sp\", payload: s.pos1_setpoint},\n  {topic:\"pos2_sp\", payload: s.pos2_setpoint}\n];",
-        "outputs": 9,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 110,
-        "y": 1680,
-        "wires": [
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "fc77cb4d637ead4c",
-        "type": "function",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "Format → UI",
-        "func": "const s = msg.payload;\nreturn [\n  {topic:\"power\", payload: 'ON'},\n  {topic:\"motor\", payload:\"OFF\"},\n  {topic: \"mode\", payload: msg.payload.modeText },\n  {topic:\"pos1\", payload: s.pos1_arrived?\"ARRIVED\":\"-\"},\n  {topic:\"pos2\", payload: s.pos2_arrived?\"ARRIVED\":\"-\"},\n  {topic:\"homed\", payload: s.homed?\"YES\":\"NO\"},\n  {topic:\"position\", payload: s.position},\n  {topic:\"pos1_sp\", payload: s.pos1_setpoint},\n  {topic:\"pos2_sp\", payload: s.pos2_setpoint}\n];",
-        "outputs": 9,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 810,
-        "y": 1440,
-        "wires": [
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "6f6b7dd39e530869",
-        "type": "function",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "function 19",
-        "func": "const s = msg.payload || {};\n\nconst modeMap = {\n    0: \"manual\",\n    1: \"automatic\",\n    2: \"semi-auto\",\n    3: \"jog\"\n};\n\nconst modeText = modeMap[s.mode] ?? String(s.mode); // fallback to raw value\n\nreturn [\n    { topic: \"power\", payload: \"ON\" },\n    { topic: \"motor\", payload: \"OFF\" },\n    { topic: \"mode\", payload: modeText },\n    { topic: \"pos1\", payload: s.pos1_arrived ? \"ARRIVED\" : \"-\" },\n    { topic: \"pos2\", payload: s.pos2_arrived ? \"ARRIVED\" : \"-\" },\n    { topic: \"homed\", payload: s.homed ? \"YES\" : \"NO\" },\n    { topic: \"position\", payload: s.position },\n    { topic: \"pos1_sp\", payload: s.pos1_setpoint },\n    { topic: \"pos2_sp\", payload: s.pos2_setpoint }\n];\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 430,
-        "y": 1520,
-        "wires": [
-            [
-                "fc77cb4d637ead4c",
-                "4d4c74737586e5bf"
-            ]
-        ]
-    },
-    {
-        "id": "4d4c74737586e5bf",
-        "type": "debug",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "debug 15",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 940,
-        "y": 1580,
-        "wires": []
-    },
-    {
-        "id": "6de38b91c6480713",
-        "type": "function",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "function 20",
-        "func": "msg.payload = (msg.payload === 'ON');\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1770,
-        "y": 2020,
-        "wires": [
-            [
-                "0dcb243fa233d751"
-            ]
-        ]
-    },
-    {
-        "id": "0dcb243fa233d751",
-        "type": "debug",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "debug 16",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1940,
-        "y": 2020,
-        "wires": []
-    },
-    {
-        "id": "0efce053c5f7a6bc",
-        "type": "inject",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 700,
-        "y": 1960,
-        "wires": [
-            [
-                "ui-btn-go1"
-            ]
-        ]
-    },
-    {
-        "id": "e8fee78a704b0ce7",
-        "type": "inject",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 700,
-        "y": 2000,
-        "wires": [
-            [
-                "ui-btn-go2"
-            ]
-        ]
-    },
-    {
-        "id": "0187d94741a236a2",
-        "type": "debug",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "debug 17",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1080,
-        "y": 2060,
-        "wires": []
-    },
-    {
-        "id": "bdac0ecffba549c4",
-        "type": "debug",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "debug 18",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1120,
-        "y": 2600,
-        "wires": []
-    },
-    {
-        "id": "4c255bc24c279691",
-        "type": "debug",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "debug 19",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1080,
-        "y": 2520,
-        "wires": []
-    },
-    {
-        "id": "79a8e6b108459f23",
-        "type": "inject",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 120,
-        "y": 1820,
-        "wires": [
-            [
-                "8d8ebd0cc50f0b9c"
-            ]
-        ]
-    },
-    {
-        "id": "bf6d5226e10f3d97",
-        "type": "inject",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 120,
-        "y": 1880,
-        "wires": [
-            [
-                "18c79b7508d692ac"
-            ]
-        ]
-    },
-    {
-        "id": "48095a87ad2e59d1",
-        "type": "inject",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 120,
-        "y": 1940,
-        "wires": [
-            [
-                "14f607fed3ddee17"
-            ]
-        ]
-    },
-    {
-        "id": "004419df5b6c96a1",
-        "type": "inject",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 120,
-        "y": 2000,
-        "wires": [
-            [
-                "c9480f417fec4f6b"
-            ]
-        ]
-    },
-    {
-        "id": "2720543a80488327",
-        "type": "inject",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 120,
-        "y": 2060,
-        "wires": [
-            [
-                "02c129ebc64e5584"
-            ]
-        ]
-    },
-    {
-        "id": "3062abf065d477e8",
-        "type": "s7 out",
-        "z": "c3ef6562b4dbd1ef",
-        "endpoint": "92c8e8fe227fe833",
-        "variable": "M1_reset",
-        "name": "",
-        "x": 380,
-        "y": 2220,
-        "wires": []
-    },
-    {
-        "id": "076da71d68ad6ef9",
-        "type": "s7 out",
-        "z": "c3ef6562b4dbd1ef",
-        "endpoint": "92c8e8fe227fe833",
-        "variable": "M2_reset",
-        "name": "",
-        "x": 380,
-        "y": 2280,
-        "wires": []
-    },
-    {
-        "id": "655b5384c51d66a9",
-        "type": "s7 out",
-        "z": "c3ef6562b4dbd1ef",
-        "endpoint": "92c8e8fe227fe833",
-        "variable": "M3_reset",
-        "name": "",
-        "x": 380,
-        "y": 2340,
-        "wires": []
-    },
-    {
-        "id": "342938e0da97dd2c",
-        "type": "s7 out",
-        "z": "c3ef6562b4dbd1ef",
-        "endpoint": "92c8e8fe227fe833",
-        "variable": "M4_reset",
-        "name": "",
-        "x": 380,
-        "y": 2400,
-        "wires": []
-    },
-    {
-        "id": "75cf05b8fb5951a0",
-        "type": "s7 out",
-        "z": "c3ef6562b4dbd1ef",
-        "endpoint": "92c8e8fe227fe833",
-        "variable": "M5_reset",
-        "name": "",
-        "x": 380,
-        "y": 2460,
-        "wires": []
-    },
-    {
-        "id": "963606d5f2aca4e5",
-        "type": "ui-iframe",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "GrafanaWEbpage-iframe",
-        "group": "c18c0e9eb893c9ad",
-        "order": 2,
-        "src": "http://192.168.1.203:3000",
-        "width": "12",
-        "height": "16",
-        "x": 490,
-        "y": 860,
-        "wires": []
-    },
-    {
-        "id": "fa930e3c94ea0233",
-        "type": "ui-iframe",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "GrafanaWEbpage-iframe",
-        "group": "c18c0e9eb893c9ad",
-        "order": 1,
-        "src": "http://192.168.1.1:3000",
-        "width": "12",
-        "height": "16",
-        "x": 490,
-        "y": 820,
-        "wires": []
-    },
-    {
-        "id": "ba8c0d3609f5c958",
-        "type": "ui-template",
-        "z": "c3ef6562b4dbd1ef",
-        "group": "",
-        "page": "f143a0cbca30f65d",
-        "ui": "",
-        "name": "",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "head": "",
-        "format": "<template>\n    <div>\n       <iframe src=\"http://grafana:3000\" width=\"100%\" height=\"600\" style=\"border:1px solid black;\">\n</iframe>\n<iframe src=\"http://192.168.1.203:3000\" width=\"100%\" height=\"600\" style=\"border:1px solid black;\">\n</iframe>\n<iframe src=\"http://192.168.1.1:3000\" width=\"100%\" height=\"600\" style=\"border:1px solid black;\">\n</iframe>\n    </div>\n\n</template>",
-        "storeOutMessages": true,
-        "passthru": true,
-        "resendOnRefresh": true,
-        "templateScope": "widget:page",
-        "className": "",
-        "x": 600,
-        "y": 780,
-        "wires": [
-            []
         ]
     },
     {
@@ -3955,8 +2827,8 @@
         "color": "#717171",
         "wrapText": false,
         "className": "",
-        "x": 1030,
-        "y": 1120,
+        "x": 1250,
+        "y": 1020,
         "wires": []
     },
     {
@@ -3964,8 +2836,8 @@
         "type": "ui-text",
         "z": "c3ef6562b4dbd1ef",
         "group": "cb763d77c58374b7",
-        "order": 2,
-        "width": 0,
+        "order": 1,
+        "width": 5,
         "height": 0,
         "name": "",
         "label": "Hitrost",
@@ -3977,8 +2849,8 @@
         "color": "#717171",
         "wrapText": false,
         "className": "",
-        "x": 1130,
-        "y": 1160,
+        "x": 1250,
+        "y": 1060,
         "wires": []
     },
     {
@@ -3986,7 +2858,7 @@
         "type": "ui-text",
         "z": "c3ef6562b4dbd1ef",
         "group": "cb763d77c58374b7",
-        "order": 3,
+        "order": 2,
         "width": 0,
         "height": 0,
         "name": "",
@@ -3999,62 +2871,9 @@
         "color": "#717171",
         "wrapText": false,
         "className": "",
-        "x": 1050,
-        "y": 1340,
+        "x": 1290,
+        "y": 860,
         "wires": []
-    },
-    {
-        "id": "8b2a8b990b9bc284",
-        "type": "ui-template",
-        "z": "c3ef6562b4dbd1ef",
-        "group": "",
-        "page": "",
-        "ui": "47a6c454bea5d1c6",
-        "name": "",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "head": "",
-        "format": "<div class=\"grid grid-cols-5 gap-4\">\n  <ui-card v-for=\"motor in [1,2,3,4,5]\" :key=\"motor\" title=\"Motor {{motor}}\">\n    <ui-button \n      label=\"Activate\" \n      color=\"primary\" \n      @click=\"$send({topic: 'motor/'+motor+'/activate', payload: true})\">\n    </ui-button>\n\n    <div class=\"mt-2\">\n      <span :class=\"{green: msg['motor'+motor+'_pos'] === 1}\">POS1</span> |\n      <span :class=\"{green: msg['motor'+motor+'_pos'] === 2}\">POS2</span> |\n      <span :class=\"{red: msg['motor'+motor+'_error'] === true}\">ERROR</span>\n    </div>\n  </ui-card>\n</div>\n\n<style>\n.green { color: green; font-weight: bold; }\n.red { color: red; font-weight: bold; }\n</style>\n",
-        "storeOutMessages": true,
-        "passthru": true,
-        "resendOnRefresh": true,
-        "templateScope": "widget:ui",
-        "className": "",
-        "x": 440,
-        "y": 760,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "6e48f73cdfc3db48",
-        "type": "inject",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "122",
-        "payloadType": "num",
-        "x": 130,
-        "y": 760,
-        "wires": [
-            [
-                "8b2a8b990b9bc284"
-            ]
-        ]
     },
     {
         "id": "34cf74f7bdc63c70",
@@ -4088,6 +2907,11 @@
                 "type": "str"
             },
             {
+                "label": "1x8-CELL",
+                "value": "1x8-CELL",
+                "type": "str"
+            },
+            {
                 "label": "2x2-CELL",
                 "value": "2x2-CELL",
                 "type": "str"
@@ -4114,11 +2938,12 @@
         "className": "",
         "typeIsComboBox": true,
         "msgTrigger": "onChange",
-        "x": 1710,
-        "y": 440,
+        "x": 630,
+        "y": 1200,
         "wires": [
             [
-                "d46d25045ba423f9"
+                "d46d25045ba423f9",
+                "2c6ef8a9ea61f9cf"
             ]
         ]
     },
@@ -4147,8 +2972,8 @@
         "icon": "",
         "iconPosition": "left",
         "iconInnerPosition": "inside",
-        "x": 1470,
-        "y": 540,
+        "x": 570,
+        "y": 1280,
         "wires": [
             []
         ]
@@ -4184,15 +3009,14 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 1750,
-        "y": 500,
+        "x": 750,
+        "y": 1240,
         "wires": [
             [
                 "8628d55917e28729",
-                "ea3c62b96a0869c1",
-                "4bab51ab740f2f94",
                 "bdc7fce968ba2868",
-                "c36ffc1b81a176f4"
+                "c36ffc1b81a176f4",
+                "5685ea19c36d7c6d"
             ]
         ]
     },
@@ -4227,8 +3051,8 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 1480,
-        "y": 480,
+        "x": 580,
+        "y": 1240,
         "wires": [
             []
         ]
@@ -4251,8 +3075,8 @@
         "color": "#717171",
         "wrapText": false,
         "className": "",
-        "x": 2100,
-        "y": 500,
+        "x": 960,
+        "y": 1320,
         "wires": []
     },
     {
@@ -4274,27 +3098,13 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1980,
-        "y": 440,
+        "x": 960,
+        "y": 1140,
         "wires": [
-            []
+            [
+                "b5b7a6b05468a3bb"
+            ]
         ]
-    },
-    {
-        "id": "ea3c62b96a0869c1",
-        "type": "debug",
-        "z": "c3ef6562b4dbd1ef",
-        "name": "debug 20",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2060,
-        "y": 580,
-        "wires": []
     },
     {
         "id": "4bab51ab740f2f94",
@@ -4303,19 +3113,19 @@
         "group": "35792cf1e5d30f6c",
         "page": "",
         "ui": "",
-        "name": "",
-        "order": 9,
+        "name": "Show Image of THE PART",
+        "order": 8,
         "width": 0,
         "height": 0,
         "head": "",
-        "format": "<template>\n  <div>\n    \n    <!-- Dynamic image -->\n    <img\n      :src=\"imageSrc\"\n      alt=\"Recipe Image\"\n      style=\"width:100%; height:75%; object-fit:contain;\"\n    >\n    \n  <img src=\"http://localhost:1880/pictures/2x6%20Cell.PNG\" alt=\"Girl in a jacket\" style=\"width:500px;height:600px;\">\n    <!-- Show current value (for debugging/visibility) -->\n    <div style=\"margin-top:.5rem; font-family:monospace;\">\n      { globals.recept.ime }\n    </div>\n  </div>\n</template>\n\n<script>\n  \n  \nexport default {\n  data() {\n    return {\n      receptIme: \"\", // local copy of globals.recept.ime\n    }\n  },\n  computed: {\n    normalizedKey() {\n      // Make the key robust: trim, uppercase, collapse spaces/underscores to hyphens\n      const k = (this.receptIme || \"\")\n        .trim()\n        .replace(/\\s+/g, \"-\")\n        .replace(/_/g, \"-\")\n        .toUpperCase();\n      return k;\n    },\n    imageSrc() {\n      const map = {\n        \"1X2-CELL\": \"https://github.com/organization-Dafra/Digitalni-dvojcek-RRI/blob/main/HMI/pictures/1x2%20Cell.PNG?raw=true\",\n        \"1X4-CELL\": \"https://github.com/organization-Dafra/Digitalni-dvojcek-RRI/blob/main/HMI/pictures/1x4%20Cell.PNG?raw=true\",\n        \"1X6-CELL\": \"https://github.com/organization-Dafra/Digitalni-dvojcek-RRI/blob/main/HMI/pictures/1x6%20Cell.PNG?raw=true\",\n      };\n      // Fallback to 1x2 if unknown\n      return map[this.normalizedKey] || map[\"1X2-CELL\"];\n    }\n  },\n  methods: {\n    updateFromGlobal() {\n      // Safely read the dashboard 2.0 reactive globals\n      this.receptIme = this.globals?.recept?.ime || \"\";\n    }\n  },\n  mounted() {\n    // Initial sync\n    this.updateFromGlobal();\n\n    // React to future changes of the global\n    this.$watch(\n      () => this.globals?.recept?.ime,\n      () => this.updateFromGlobal()\n    );\n  }\n}\n</script>\n\n<style>\n.my-class { color: red; }\n</style>\n",
+        "format": "<template>\n  <div>\n    <img :src=\"msg.payload.imageUrl\" alt=\"\" style=\"max-width:100%; height:auto;\">\n  <!-- optional: <div>{{ msg.payload.name }}</div> \n    \n    <img\n      :src=imageSrc\n      alt=\"Recipe Image\"\n      style=\"width:100%; height:75%; object-fit:contain;\"\n    >\n    \n    <!-- Show current value (for debugging/visibility) -->\n    <div style=\"margin-top:.5rem; font-family:monospace;\">\n    </div>\n  </div>\n</template>\n\n<script>\n  \n  \nexport default {\n  data() {\n    return {\n      receptIme: \"\", // local copy of globals.recept.ime\n    }\n  },\n  computed: {\n    normalizedKey() {\n      // Make the key robust: trim, uppercase, collapse spaces/underscores to hyphens\n      const k = (this.receptIme || \"\")\n        .trim()\n        .replace(/\\s+/g, \"-\")\n        .replace(/_/g, \"-\")\n        .toUpperCase();\n      return k;\n    },\n    imageSrc() {\n      const map = {\n        \"1X2-CELL\": \"https://iili.io/KFtw0hB.png\",\n        \"1X4-CELL\": \"https://iili.io/KFtwMEF.png\",\n        \"1X6-CELL\": \"https://iili.io/KFtwX2a.png\",\n      };\n      // Fallback to 1x2 if unknown\n      return map[this.normalizedKey] || map[\"1X2-CELL\"];\n    }\n  },\n  methods: {\n    updateFromGlobal() {\n      // Safely read the dashboard 2.0 reactive globals\n      this.receptIme = this.globals?.recept?.ime || \"\";\n    }\n  },\n  mounted() {\n    // Initial sync\n    this.updateFromGlobal();\n\n    // React to future changes of the global\n    this.$watch(\n      () => this.globals?.recept?.ime,\n      () => this.updateFromGlobal()\n    );\n  }\n}\n</script>\n\n<style>\n.my-class { color: red; }\n</style>\n",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 1660,
-        "y": 640,
+        "x": 1300,
+        "y": 1240,
         "wires": [
             []
         ]
@@ -4324,6 +3134,7 @@
         "id": "bdc7fce968ba2868",
         "type": "ui-template",
         "z": "c3ef6562b4dbd1ef",
+        "d": true,
         "group": "35792cf1e5d30f6c",
         "page": "",
         "ui": "",
@@ -4338,8 +3149,8 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 1660,
-        "y": 720,
+        "x": 960,
+        "y": 1280,
         "wires": [
             []
         ]
@@ -4348,7 +3159,7 @@
         "id": "c36ffc1b81a176f4",
         "type": "function",
         "z": "c3ef6562b4dbd1ef",
-        "name": "function 21",
+        "name": "Global set recept.ime",
         "func": "global.set(\"recepti.ime\", \"1x6-CELL\");\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -4356,36 +3167,10 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1450,
-        "y": 700,
+        "x": 960,
+        "y": 1360,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "3d75fa18882c00e5",
-        "type": "ui-template",
-        "z": "c3ef6562b4dbd1ef",
-        "group": "58e9b0c008e334d3",
-        "page": "",
-        "ui": "",
-        "name": "BTNS - MOTOR CONTROL M1",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "head": "",
-        "format": "<template>\n \n  <!--\n    <hr>\n    <h3>PLC Status (latest msg)</h2>\n    <pre>{{ msg }}</pre>\n   -->\n\n  <!-- Quick status chips -->\n    <hr>\n  <h3>Motor status M1</h5>\n\n  <div style=\"display:flex; gap:8px; margin:8px 0;\">\n    \n    <v-chip :color=\"isPowerON ? 'green' : undefined\" variant=\"elevated\">POWER</v-chip>\n    <v-chip :color=\"isPOS1 ? 'green' : undefined\" variant=\"elevated\">POS1</v-chip>\n    <v-chip :color=\"isPOS2 ? 'green' : undefined\" variant=\"elevated\">POS2</v-chip>\n    <v-chip :color=\"isHOMED ? 'green' : undefined\" variant=\"elevated\">IS HOMED</v-chip>\n    <!-- NEW: Error chip (red when true, grey when false) -->\n    <v-chip :color=\"isERROR ? 'red' : 'undefined'\" variant=\"elevated\">ERROR</v-chip>\n    <v-chip :color=\"isPOS1ERROR ? 'red' : 'undefined'\" variant=\"elevated\">POS1 ERR</v-chip>\n    <v-chip :color=\"isPOS2ERROR ? 'red' : 'undefined'\" variant=\"elevated\">POS2 ERR</v-chip>\n    <v-chip :color=\"isFUSEERROR ? 'red' : 'undefined'\" variant=\"elevated\">FUSE ERR</v-chip>\n  </div>\n\n <hr>\n <h3>Motor Control M1</h5>\n  <div style=\"display:flex; gap:8px; margin:8px 0;\" >\n    <!-- Keep existing buttons (don't create duplicates) -->\n    <v-btn :disabled=\"isPOS1\" @click=\"send({ topic:'motor/cmd', payload:'GO_POS1' })\">GO POS1</v-btn>\n    <v-btn :disabled=\"isPOS2\" @click=\"send({ topic:'motor/cmd', payload:'GO_POS2' })\">GO POS2</v-btn>\n    <v-btn :disabled=\"isHOMED\" @click=\"send({ topic:'motor/cmd', payload:'GO_HOME' })\" >GO HOME</v-btn>\n\n    <!-- NEW: Hardware reset -->\n    <v-btn  color=\"warning\" variant=\"elevated\"\n           @click=\"send({ topic:'motor/cmd', payload:'HARDWARE_RESET' })\">\n      HARDWARE RESET\n    </v-btn>\n  </div>\n <hr>\n  \n\n  <!-- Error popup dialog -->\n  <v-dialog v-model=\"showErrorDialog\" max-width=\"420\">\n    <v-card>\n      <v-card-title class=\"text-error\">Motor Error</v-card-title>\n      <v-card-text>\n        <div style=\"white-space:pre-wrap\">\n          {{ errorText || 'An error condition has been reported by the PLC.' }}\n        </div>\n      </v-card-text>\n      <v-card-actions class=\"justify-end\">\n        <v-btn variant=\"text\" @click=\"showErrorDialog=false\">Close</v-btn>\n        <v-btn color=\"warning\"\n               @click=\"send({ topic:'motor/cmd', payload:'HARDWARE_RESET' }); showErrorDialog=false;\">\n          Hardware Reset\n        </v-btn>\n      </v-card-actions>\n    </v-card>\n  </v-dialog>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      selectedRadio: null,  // 'one' | 'two' | 'three' | null\n      showErrorDialog: false,\n      errorText: ''\n    }\n  },\n\n  computed: {\n    // Robust coercion: accept 1/0, \"1\"/\"0\", \"true\"/\"false\", true/false\n    isPOS1() {\n      const v = this.msg?.payload?.pos1;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPOS2() {\n      const v = this.msg?.payload?.pos2;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isHOMED() {\n      const v = this.msg?.payload?.homed;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isERROR() {\n      const v = this.msg?.payload?.error;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPOS1ERROR() {\n      const v = this.msg?.payload?.pos1err;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPOS2ERROR() {\n      const v = this.msg?.payload?.pos2err;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isFUSEERROR() {\n      const v = this.msg?.payload?.fuseerror;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPowerON() {\n      const v = this.msg?.payload?.pwrStatus;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    }\n    \n\n  },\n\n  watch: {\n    // Re-map radios whenever new PLC msg arrives\n    msg: {\n      deep: true,\n      immediate: true,\n      handler(n) {\n        // Radios priority: HOMED > POS1 > POS2\n        if (this.isHOMED)      this.selectedRadio = 'three';\n        else if (this.isPOS1)  this.selectedRadio = 'one';\n        else if (this.isPOS2)  this.selectedRadio = 'two';\n        else                   this.selectedRadio = null;\n\n        // Error popup\n        if (this.isERROR) {\n          this.errorText = n?.payload?.errorText || '';\n          //this.showErrorDialog = true;\n        }\n      }\n    }\n  },\n\n  methods: {\n    // UI action that also sends a message (your original behavior)\n    activateHommed() {\n      this.selectedRadio = 'three'; // visually select radio immediately\n      this.send({ topic:'motor/ui', payload:{ hello:'world3', forceHommed:true }});\n    }\n  }\n}\n</script>\n",
-        "storeOutMessages": true,
-        "passthru": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 430,
-        "y": 240,
-        "wires": [
-            [
-                "278fcdc416b3e609"
-            ]
         ]
     },
     {
@@ -4400,11 +3185,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 180,
-        "y": 240,
+        "x": 660,
+        "y": 220,
         "wires": [
             [
-                "3d75fa18882c00e5"
+                "4d9624d7888e2d63"
             ]
         ]
     },
@@ -4416,7 +3201,7 @@
         "page": "",
         "ui": "",
         "name": "BTNS - MOTOR CONTROL M2",
-        "order": 3,
+        "order": 2,
         "width": 0,
         "height": 0,
         "head": "",
@@ -4426,8 +3211,8 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 430,
-        "y": 280,
+        "x": 910,
+        "y": 260,
         "wires": [
             [
                 "7e08db8b10d56089"
@@ -4452,8 +3237,8 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 430,
-        "y": 320,
+        "x": 910,
+        "y": 300,
         "wires": [
             [
                 "986cf72940c912bc"
@@ -4478,8 +3263,8 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 430,
-        "y": 360,
+        "x": 910,
+        "y": 340,
         "wires": [
             [
                 "442b5e2d85da9679"
@@ -4498,14 +3283,14 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": "<template>\n \n  <!--\n    <hr>\n    <h3>PLC Status (latest msg)</h2>\n    <pre>{{ msg }}</pre>\n   -->\n\n  <!-- Quick status chips -->\n    <hr>\n  <h3>Motor status M5</h5>\n\n  <div style=\"display:flex; gap:8px; margin:8px 0;\">\n    \n    <v-chip :color=\"isPowerON ? 'green' : undefined\" variant=\"elevated\">POWER</v-chip>\n    <v-chip :color=\"isPOS1 ? 'green' : undefined\" variant=\"elevated\">POS1</v-chip>\n    <v-chip :color=\"isPOS2 ? 'green' : undefined\" variant=\"elevated\">POS2</v-chip>\n    <v-chip :color=\"isHOMED ? 'green' : undefined\" variant=\"elevated\">IS HOMED</v-chip>\n    <!-- NEW: Error chip (red when true, grey when false) -->\n    <v-chip :color=\"isERROR ? 'red' : 'undefined'\" variant=\"elevated\">ERROR</v-chip>\n    <v-chip :color=\"isPOS1ERROR ? 'red' : 'undefined'\" variant=\"elevated\">POS1 ERR</v-chip>\n    <v-chip :color=\"isPOS2ERROR ? 'red' : 'undefined'\" variant=\"elevated\">POS2 ERR</v-chip>\n    <v-chip :color=\"isFUSEERROR ? 'red' : 'undefined'\" variant=\"elevated\">FUSE ERR</v-chip>\n  </div>\n\n <hr>\n  <div style=\"display:flex; gap:8px; margin:8px 0;\">\n    <!-- Keep existing buttons (don't create duplicates) -->\n    <v-btn @click=\"send({ topic:'motor/cmd', payload:'GO_POS1' })\">GO POS1</v-btn>\n    <v-btn @click=\"send({ topic:'motor/cmd', payload:'GO_POS2' })\">GO POS2</v-btn>\n    <v-btn @click=\"send({ topic:'motor/cmd', payload:'GO_HOME' })\">GO HOME</v-btn>\n\n    <!-- NEW: Hardware reset -->\n    <v-btn color=\"warning\" variant=\"elevated\"\n           @click=\"send({ topic:'motor/cmd', payload:'HARDWARE_RESET' })\">\n      HARDWARE RESET\n    </v-btn>\n  </div>\n <hr>\n  \n\n  <!-- Error popup dialog -->\n  <v-dialog v-model=\"showErrorDialog\" max-width=\"420\">\n    <v-card>\n      <v-card-title class=\"text-error\">Motor Error</v-card-title>\n      <v-card-text>\n        <div style=\"white-space:pre-wrap\">\n          {{ errorText || 'An error condition has been reported by the PLC.' }}\n        </div>\n      </v-card-text>\n      <v-card-actions class=\"justify-end\">\n        <v-btn variant=\"text\" @click=\"showErrorDialog=false\">Close</v-btn>\n        <v-btn color=\"warning\"\n               @click=\"send({ topic:'motor/cmd', payload:'HARDWARE_RESET' }); showErrorDialog=false;\">\n          Hardware Reset\n        </v-btn>\n      </v-card-actions>\n    </v-card>\n  </v-dialog>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      selectedRadio: null,  // 'one' | 'two' | 'three' | null\n      showErrorDialog: false,\n      errorText: ''\n    }\n  },\n\n  computed: {\n    // Robust coercion: accept 1/0, \"1\"/\"0\", \"true\"/\"false\", true/false\n    isPOS1() {\n      const v = this.msg?.payload?.pos1;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPOS2() {\n      const v = this.msg?.payload?.pos2;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isHOMED() {\n      const v = this.msg?.payload?.homed;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isERROR() {\n      const v = this.msg?.payload?.error;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPOS1ERROR() {\n      const v = this.msg?.payload?.pos1err;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPOS2ERROR() {\n      const v = this.msg?.payload?.pos2err;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isFUSEERROR() {\n      const v = this.msg?.payload?.fuseerror;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPowerON() {\n      const v = this.msg?.payload?.pwrStatus;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    }\n    \n\n  },\n\n  watch: {\n    // Re-map radios whenever new PLC msg arrives\n    msg: {\n      deep: true,\n      immediate: true,\n      handler(n) {\n        // Radios priority: HOMED > POS1 > POS2\n        if (this.isHOMED)      this.selectedRadio = 'three';\n        else if (this.isPOS1)  this.selectedRadio = 'one';\n        else if (this.isPOS2)  this.selectedRadio = 'two';\n        else                   this.selectedRadio = null;\n\n        // Error popup\n        if (this.isERROR) {\n          this.errorText = n?.payload?.errorText || '';\n          //this.showErrorDialog = true;\n        }\n      }\n    }\n  },\n\n  methods: {\n    // UI action that also sends a message (your original behavior)\n    activateHommed() {\n      this.selectedRadio = 'three'; // visually select radio immediately\n      this.send({ topic:'motor/ui', payload:{ hello:'world3', forceHommed:true }});\n    }\n  }\n}\n</script>\n",
+        "format": "<template>\n \n  <!--\n    <hr>\n    <h3>PLC Status (latest msg)</h2>\n    <pre>{{ msg }}</pre>\n   -->\n\n  <!-- Quick status chips -->\n    <hr>\n  <h3>Motor status M5</h5>\n\n  <div style=\"display:flex; gap:8px; margin:8px 0;\">\n    \n    <v-chip :color=\"isPowerON ? 'green' : undefined\" variant=\"elevated\">POWER</v-chip>\n    <v-chip :color=\"isPOS1 ? 'green' : undefined\" variant=\"elevated\">POS1</v-chip>\n    <v-chip :color=\"isPOS2 ? 'green' : undefined\" variant=\"elevated\">POS2</v-chip>\n    <v-chip :color=\"isHOMED ? 'green' : undefined\" variant=\"elevated\">IS HOMED</v-chip>\n    <!-- NEW: Error chip (red when true, grey when false) -->\n    <v-chip :color=\"isERROR ? 'red' : 'undefined'\" variant=\"elevated\">ERROR</v-chip>\n    <v-chip :color=\"isPOS1ERROR ? 'red' : 'undefined'\" variant=\"elevated\">POS1 ERR</v-chip>\n    <v-chip :color=\"isPOS2ERROR ? 'red' : 'undefined'\" variant=\"elevated\">POS2 ERR</v-chip>\n    <v-chip :color=\"isFUSEERROR ? 'red' : 'undefined'\" variant=\"elevated\">FUSE ERR</v-chip>\n  </div>\n\n <hr>\n  <div style=\"display:flex; gap:8px; margin:8px 0;\" >\n    <!-- Keep existing buttons (don't create duplicates) -->\n    <v-btn :disabled=\"isPOS1\" @click=\"send({ topic:'motor/cmd', payload:'GO_POS1' })\">GO POS1</v-btn>\n    <v-btn :disabled=\"isPOS2\" @click=\"send({ topic:'motor/cmd', payload:'GO_POS2' })\">GO POS2</v-btn>\n    <v-btn :disabled=\"isHOMED\" @click=\"send({ topic:'motor/cmd', payload:'GO_HOME' })\" >GO HOME</v-btn>\n\n    <!-- NEW: Hardware reset -->\n    <v-btn  color=\"warning\" variant=\"elevated\"\n           @click=\"send({ topic:'motor/cmd', payload:'HARDWARE_RESET' })\">\n      HARDWARE RESET\n    </v-btn>\n  </div>\n <hr>\n  \n\n  <!-- Error popup dialog -->\n  <v-dialog v-model=\"showErrorDialog\" max-width=\"420\">\n    <v-card>\n      <v-card-title class=\"text-error\">Motor Error</v-card-title>\n      <v-card-text>\n        <div style=\"white-space:pre-wrap\">\n          {{ errorText || 'An error condition has been reported by the PLC.' }}\n        </div>\n      </v-card-text>\n      <v-card-actions class=\"justify-end\">\n        <v-btn variant=\"text\" @click=\"showErrorDialog=false\">Close</v-btn>\n        <v-btn color=\"warning\"\n               @click=\"send({ topic:'motor/cmd', payload:'HARDWARE_RESET' }); showErrorDialog=false;\">\n          Hardware Reset\n        </v-btn>\n      </v-card-actions>\n    </v-card>\n  </v-dialog>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      selectedRadio: null,  // 'one' | 'two' | 'three' | null\n      showErrorDialog: false,\n      errorText: ''\n    }\n  },\n\n  computed: {\n    // Robust coercion: accept 1/0, \"1\"/\"0\", \"true\"/\"false\", true/false\n    isPOS1() {\n      const v = this.msg?.payload?.pos1;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPOS2() {\n      const v = this.msg?.payload?.pos2;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isHOMED() {\n      const v = this.msg?.payload?.homed;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isERROR() {\n      const v = this.msg?.payload?.error;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPOS1ERROR() {\n      const v = this.msg?.payload?.pos1err;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPOS2ERROR() {\n      const v = this.msg?.payload?.pos2err;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isFUSEERROR() {\n      const v = this.msg?.payload?.fuseerror;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPowerON() {\n      const v = this.msg?.payload?.pwrStatus;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    }\n    \n\n  },\n\n  watch: {\n    // Re-map radios whenever new PLC msg arrives\n    msg: {\n      deep: true,\n      immediate: true,\n      handler(n) {\n        // Radios priority: HOMED > POS1 > POS2\n        if (this.isHOMED)      this.selectedRadio = 'three';\n        else if (this.isPOS1)  this.selectedRadio = 'one';\n        else if (this.isPOS2)  this.selectedRadio = 'two';\n        else                   this.selectedRadio = null;\n\n        // Error popup\n        if (this.isERROR) {\n          this.errorText = n?.payload?.errorText || '';\n          //this.showErrorDialog = true;\n        }\n      }\n    }\n  },\n\n  methods: {\n    // UI action that also sends a message (your original behavior)\n    activateHommed() {\n      this.selectedRadio = 'three'; // visually select radio immediately\n      this.send({ topic:'motor/ui', payload:{ hello:'world3', forceHommed:true }});\n    }\n  }\n}\n</script>\n",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 430,
-        "y": 400,
+        "x": 910,
+        "y": 380,
         "wires": [
             [
                 "b206b23cf3afee90"
@@ -4524,8 +3309,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 180,
-        "y": 280,
+        "x": 660,
+        "y": 260,
         "wires": [
             [
                 "30e64d7c036f9744"
@@ -4544,8 +3329,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 180,
-        "y": 320,
+        "x": 660,
+        "y": 300,
         "wires": [
             [
                 "53d6d6e1abfc79a3"
@@ -4564,8 +3349,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 180,
-        "y": 360,
+        "x": 660,
+        "y": 340,
         "wires": [
             [
                 "33731ce67d493d69"
@@ -4584,8 +3369,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 180,
-        "y": 400,
+        "x": 660,
+        "y": 380,
         "wires": [
             [
                 "b2b596e4a55b295f"
@@ -4602,7 +3387,7 @@
         "diff": false,
         "name": "",
         "x": 170,
-        "y": 160,
+        "y": 180,
         "wires": [
             [
                 "9e98cb0195be697c",
@@ -4616,7 +3401,13 @@
                 "b26f62dee7226bba",
                 "b3b07d48b2273d1b",
                 "924830db7f575bf5",
-                "524593a60bd902fb"
+                "524593a60bd902fb",
+                "e575040072f5483b",
+                "8fe1fad5bd18d80b",
+                "dc2e64b84fac5c4e",
+                "ddaae5f2c636f147",
+                "f1f8a382aff6f51b",
+                "18f61f9dcdc5b6c2"
             ]
         ]
     },
@@ -4625,7 +3416,7 @@
         "type": "debug",
         "z": "c3ef6562b4dbd1ef",
         "name": "debug 21",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4633,7 +3424,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 400,
+        "x": 640,
         "y": 180,
         "wires": []
     },
@@ -4655,8 +3446,8 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 430,
-        "y": 460,
+        "x": 910,
+        "y": 420,
         "wires": [
             []
         ]
@@ -4673,8 +3464,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 180,
-        "y": 460,
+        "x": 360,
+        "y": 420,
         "wires": [
             [
                 "34d913d923a0054f"
@@ -4693,8 +3484,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 910,
-        "y": 360,
+        "x": 1210,
+        "y": 180,
         "wires": [
             [
                 "0755d304fba6c2cc"
@@ -4738,8 +3529,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 910,
-        "y": 500,
+        "x": 1210,
+        "y": 320,
         "wires": [
             [
                 "116487a03b93e0a3"
@@ -4778,8 +3569,8 @@
         "endpoint": "457a24245a8bd6df",
         "variable": "M1_goPOS1",
         "name": "GO POS1",
-        "x": 1080,
-        "y": 320,
+        "x": 1380,
+        "y": 140,
         "wires": []
     },
     {
@@ -4789,8 +3580,8 @@
         "endpoint": "457a24245a8bd6df",
         "variable": "M1_goPOS2",
         "name": "GOPOS2",
-        "x": 1200,
-        "y": 340,
+        "x": 1500,
+        "y": 160,
         "wires": []
     },
     {
@@ -4800,8 +3591,8 @@
         "endpoint": "457a24245a8bd6df",
         "variable": "M1_goHOME",
         "name": "GO HOME",
-        "x": 1090,
-        "y": 360,
+        "x": 1390,
+        "y": 180,
         "wires": []
     },
     {
@@ -4811,8 +3602,8 @@
         "endpoint": "457a24245a8bd6df",
         "variable": "M1_HW_RESET",
         "name": "HW_RESET",
-        "x": 1210,
-        "y": 380,
+        "x": 1510,
+        "y": 200,
         "wires": []
     },
     {
@@ -4822,8 +3613,8 @@
         "endpoint": "457a24245a8bd6df",
         "variable": "M2_goPOS1",
         "name": "GO POS2",
-        "x": 1080,
-        "y": 460,
+        "x": 1380,
+        "y": 280,
         "wires": []
     },
     {
@@ -4833,8 +3624,8 @@
         "endpoint": "457a24245a8bd6df",
         "variable": "M2_goHOME",
         "name": "GO HOME",
-        "x": 1090,
-        "y": 500,
+        "x": 1390,
+        "y": 320,
         "wires": []
     },
     {
@@ -4844,8 +3635,8 @@
         "endpoint": "457a24245a8bd6df",
         "variable": "M2_goPOS2",
         "name": "GOPOS2",
-        "x": 1200,
-        "y": 480,
+        "x": 1500,
+        "y": 300,
         "wires": []
     },
     {
@@ -4855,8 +3646,8 @@
         "endpoint": "457a24245a8bd6df",
         "variable": "M2_HW_RESET",
         "name": "HW_RESET",
-        "x": 1210,
-        "y": 520,
+        "x": 1510,
+        "y": 340,
         "wires": []
     },
     {
@@ -4871,8 +3662,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 910,
-        "y": 640,
+        "x": 1210,
+        "y": 460,
         "wires": [
             [
                 "1c5560e9668e7a08"
@@ -4911,8 +3702,8 @@
         "endpoint": "457a24245a8bd6df",
         "variable": "M3_goPOS1",
         "name": "GO POS2",
-        "x": 1080,
-        "y": 600,
+        "x": 1380,
+        "y": 420,
         "wires": []
     },
     {
@@ -4922,8 +3713,8 @@
         "endpoint": "457a24245a8bd6df",
         "variable": "M3_goHOME",
         "name": "GO HOME",
-        "x": 1090,
-        "y": 640,
+        "x": 1390,
+        "y": 460,
         "wires": []
     },
     {
@@ -4933,8 +3724,8 @@
         "endpoint": "457a24245a8bd6df",
         "variable": "M3_goPOS2",
         "name": "GOPOS2",
-        "x": 1200,
-        "y": 620,
+        "x": 1500,
+        "y": 440,
         "wires": []
     },
     {
@@ -4944,8 +3735,8 @@
         "endpoint": "457a24245a8bd6df",
         "variable": "M3_HW_RESET",
         "name": "HW_RESET",
-        "x": 1210,
-        "y": 660,
+        "x": 1510,
+        "y": 480,
         "wires": []
     },
     {
@@ -4960,8 +3751,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 910,
-        "y": 780,
+        "x": 1210,
+        "y": 600,
         "wires": [
             [
                 "bc8082e1bb49f095"
@@ -5000,8 +3791,8 @@
         "endpoint": "457a24245a8bd6df",
         "variable": "M4_goPOS1",
         "name": "GO POS2",
-        "x": 1080,
-        "y": 740,
+        "x": 1380,
+        "y": 560,
         "wires": []
     },
     {
@@ -5011,8 +3802,8 @@
         "endpoint": "457a24245a8bd6df",
         "variable": "M4_goHOME",
         "name": "GO HOME",
-        "x": 1090,
-        "y": 780,
+        "x": 1390,
+        "y": 600,
         "wires": []
     },
     {
@@ -5022,8 +3813,8 @@
         "endpoint": "457a24245a8bd6df",
         "variable": "M4_goPOS2",
         "name": "GOPOS2",
-        "x": 1200,
-        "y": 760,
+        "x": 1500,
+        "y": 580,
         "wires": []
     },
     {
@@ -5033,8 +3824,8 @@
         "endpoint": "457a24245a8bd6df",
         "variable": "M4_HW_RESET",
         "name": "HW_RESET",
-        "x": 1210,
-        "y": 800,
+        "x": 1510,
+        "y": 620,
         "wires": []
     },
     {
@@ -5049,8 +3840,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 910,
-        "y": 920,
+        "x": 1210,
+        "y": 740,
         "wires": [
             [
                 "e160a630c15d59d9"
@@ -5089,8 +3880,8 @@
         "endpoint": "457a24245a8bd6df",
         "variable": "M5_goPOS1",
         "name": "GO POS2",
-        "x": 1080,
-        "y": 880,
+        "x": 1380,
+        "y": 700,
         "wires": []
     },
     {
@@ -5100,8 +3891,8 @@
         "endpoint": "457a24245a8bd6df",
         "variable": "M5_goHOME",
         "name": "GO HOME",
-        "x": 1090,
-        "y": 920,
+        "x": 1390,
+        "y": 740,
         "wires": []
     },
     {
@@ -5111,8 +3902,8 @@
         "endpoint": "457a24245a8bd6df",
         "variable": "M5_goPOS2",
         "name": "GOPOS2",
-        "x": 1200,
-        "y": 900,
+        "x": 1500,
+        "y": 720,
         "wires": []
     },
     {
@@ -5122,8 +3913,8 @@
         "endpoint": "457a24245a8bd6df",
         "variable": "M5_HW_RESET",
         "name": "HW_RESET",
-        "x": 1210,
-        "y": 940,
+        "x": 1510,
+        "y": 760,
         "wires": []
     },
     {
@@ -5145,8 +3936,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 360,
-        "y": 500,
+        "x": 800,
+        "y": 460,
         "wires": [
             [
                 "48b9d491af0e1c12"
@@ -5172,8 +3963,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 360,
-        "y": 540,
+        "x": 780,
+        "y": 500,
         "wires": [
             [
                 "f3000b7bbeabdb8d"
@@ -5199,8 +3990,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 360,
-        "y": 580,
+        "x": 780,
+        "y": 540,
         "wires": [
             [
                 "a950f1124fc1823d"
@@ -5226,8 +4017,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 360,
-        "y": 620,
+        "x": 780,
+        "y": 580,
         "wires": [
             [
                 "3806a33dc7544828"
@@ -5253,8 +4044,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 360,
-        "y": 660,
+        "x": 780,
+        "y": 620,
         "wires": [
             [
                 "edfcb64dd7ce6d9b"
@@ -5262,24 +4053,529 @@
         ]
     },
     {
-        "id": "111f48202c04ee13",
-        "type": "mqtt in",
-        "z": "4e56ab8ed630aa30",
-        "name": "encoder/data",
-        "topic": "encoder/data",
-        "qos": "0",
-        "datatype": "auto-detect",
-        "broker": "1b94cc99764f8362",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 150,
-        "y": 60,
+        "id": "f43aabe511184a99",
+        "type": "comment",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "",
+        "info": "",
+        "x": 920,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "5685ea19c36d7c6d",
+        "type": "function",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "function 17",
+        "func": "// Function node: Get image URL for current recipe name (global.recepti.ime)\n\n// Read and normalize the name from global context\nconst raw = (global.get(\"recept.ime\") || \"\").toString();\n\n// Normalize: trim, collapse spaces, uppercase, ensure hyphen form like \"1X2-CELL\"\nconst key = raw\n            .toUpperCase()\n\n// Map recipe name -> image URL\nconst map = {\n  \"1X2-CELL\": \"http://192.168.1.203:8811/1x2%20Cell.PNG\",\n  \"1X4-CELL\": \"http://192.168.1.203:8811/1x4%20Cell.PNG\",\n  \"1X6-CELL\": \"http://192.168.1.203:8811/1x6%20Cell.PNG\",\n  \"1X8-CELL\": \"http://192.168.1.203:8811/1x8%20Cell.PNG\",\n  \"2X2-CELL\": \"http://192.168.1.203:8811/2x2%20Cell.PNG\",\n  \"2X4-CELL\": \"http://192.168.1.203:8811/2x4%20Cell.PNG\",\n  \"2X6-CELL\": \"http://192.168.1.203:8811/2x6%20Cell.PNG\",\n  \"2X8-CELL\": \"http://192.168.1.203:8811/2x8%20Cell.PNG\"\n};\n\n// Fallback image (optional) if name not found\nconst fallback = \"https://iili.io/KFtw0hB.png\";\n\nconst url = map[key] || fallback;\n\n// Output for Template/UI node\nmsg.payload = {\n  imageUrl: url,\n  name: raw,\n  rawname: raw \n};\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 1240,
         "wires": [
             [
-                "6ed6cdb39f1b1bac",
-                "48c396e657d5b2e9"
+                "4bab51ab740f2f94",
+                "431558d31d5a810a"
+            ]
+        ]
+    },
+    {
+        "id": "2c6ef8a9ea61f9cf",
+        "type": "debug",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "debug 22",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "b5b7a6b05468a3bb",
+        "type": "function",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "function 18",
+        "func": "// Function node: Get image URL for current recipe name (global.recepti.ime)\n\n// Read and normalize the name from global context\nconst raw = (global.get(\"recept.ime\") || \"\").toString();\n\n// Normalize: trim, collapse spaces, uppercase, ensure hyphen form like \"1X2-CELL\"\nconst key = raw\n            .toUpperCase()\n\n// Map recipe name -> image URL\nconst map = {\n  \"1X2-CELL\": \"https://iili.io/KFtw0hB.png\",\n  \"1X4-CELL\": \"https://iili.io/KFtwMEF.png\",\n  \"1X6-CELL\": \"https://iili.io/KFtwX2a.png\",\n  \"1X8-CELL\": \"https://iili.io/KFtwVrg.png\",\n  \"2X2-CELL\": \"https://iili.io/KFtwOIp.png\",\n  \"2X4-CELL\": \"https://iili.io/KFtwkQI.png\",\n  \"2X6-CELL\": \"https://iili.io/KFtw8Bt.png\",\n  \"2X8-CELL\": \"https://iili.io/KFtwSEX.png\"\n};\n\n// Fallback image (optional) if name not found\nconst fallback = \"https://iili.io/KFtw0hB.png\";\n\nconst url = map[key] || fallback;\n\n// Output for Template/UI node\nmsg.payload = {\n  imageUrl: url,\n  name: raw,\n  rawname: raw \n};\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 1200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "431558d31d5a810a",
+        "type": "debug",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "debug 23",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1240,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "e575040072f5483b",
+        "type": "debug",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "debug 28",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 340,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "3b61c7373948f577",
+        "type": "debug",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "debug 29",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "8fe1fad5bd18d80b",
+        "type": "change",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "Set GLobal Data M1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "aktuator1.temp",
+                "pt": "global",
+                "to": "payload.M1_rTemperature",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "aktuator1.MaxCurrent",
+                "pt": "global",
+                "to": "payload.M1_rMaxForce",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "aktuator1.MinCurrent",
+                "pt": "global",
+                "to": "payload.M1_rMinForce",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dc2e64b84fac5c4e",
+        "type": "change",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "Set GLobal Data M2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "aktuator2.temp",
+                "pt": "global",
+                "to": "payload.M2_rTemperature",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "aktuator2.MaxCurrent",
+                "pt": "global",
+                "to": "payload.M2_rMaxForce",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "aktuator2.MinCurrent",
+                "pt": "global",
+                "to": "payload.M2_rMinForce",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ae8b5feb3ac30b07",
+        "type": "debug",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "debug 30",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "648f9c9a2762d90a",
+        "type": "change",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "Set global data for actuator - tempe okolice nad POMIK",
+        "rules": [
+            {
+                "t": "set",
+                "p": "aktuator1.tempokolice",
+                "pt": "global",
+                "to": "payload.RTD3",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "aktuator2.tempokolice",
+                "pt": "global",
+                "to": "payload.RTD3",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "aktuator3.tempokolice",
+                "pt": "global",
+                "to": "payload.RTD3",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "aktuator4.tempokolice",
+                "pt": "global",
+                "to": "payload.RTD3",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "aktuator5.tempokolice",
+                "pt": "global",
+                "to": "payload.RTD3",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "cilindri.trenutenpomik",
+                "pt": "global",
+                "to": "payload.TrenutenPomik",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ddaae5f2c636f147",
+        "type": "change",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "Set GLobal Data M3",
+        "rules": [
+            {
+                "t": "set",
+                "p": "aktuator3.temp",
+                "pt": "global",
+                "to": "payload.M3_rTemperature",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "aktuator3.MaxCurrent",
+                "pt": "global",
+                "to": "payload.M3_rMaxForce",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "aktuator3.MinCurrent",
+                "pt": "global",
+                "to": "payload.M3_rMinForce",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "18f61f9dcdc5b6c2",
+        "type": "change",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "Set GLobal Data M4",
+        "rules": [
+            {
+                "t": "set",
+                "p": "aktuator4.temp",
+                "pt": "global",
+                "to": "payload.M4_rTemperature",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "aktuator4.MaxCurrent",
+                "pt": "global",
+                "to": "payload.M4_rMaxForce",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "aktuator4.MinCurrent",
+                "pt": "global",
+                "to": "payload.M4_rMinForce",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f1f8a382aff6f51b",
+        "type": "change",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "Set GLobal Data M5",
+        "rules": [
+            {
+                "t": "set",
+                "p": "aktuator5.temp",
+                "pt": "global",
+                "to": "payload.M5_rTemperature",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "aktuator5.MaxCurrent",
+                "pt": "global",
+                "to": "payload.M5_rMaxForce",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "aktuator5.MinCurrent",
+                "pt": "global",
+                "to": "payload.M5_rMinForce",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3f99c60dde55bae2",
+        "type": "function",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "get Temperature1 -",
+        "func": "msg.payload = global.get('cilindri.trenutenpomik');\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1250,
+        "y": 940,
+        "wires": [
+            [
+                "9314a764cb2060fe"
+            ]
+        ]
+    },
+    {
+        "id": "9314a764cb2060fe",
+        "type": "ui-text",
+        "z": "c3ef6562b4dbd1ef",
+        "group": "cb763d77c58374b7",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Trenuten pomik",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 1460,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "c601ed844055e203",
+        "type": "ui-gauge",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "",
+        "group": "cb763d77c58374b7",
+        "order": 7,
+        "value": "payload",
+        "valueType": "msg",
+        "width": "",
+        "height": "",
+        "gtype": "gauge-34",
+        "gstyle": "rounded",
+        "title": "temp. okolice",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "°C",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "35",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "40",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1470,
+        "y": 1140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c03670332bbcb235",
+        "type": "function",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "get Temperature1 -",
+        "func": "msg.payload = global.get('aktuator5.tempokolice');\nmsg.payload = msg.payload.toFixed(1);\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1290,
+        "y": 1140,
+        "wires": [
+            [
+                "c601ed844055e203"
+            ]
+        ]
+    },
+    {
+        "id": "4d9624d7888e2d63",
+        "type": "ui-template",
+        "z": "c3ef6562b4dbd1ef",
+        "group": "58e9b0c008e334d3",
+        "page": "",
+        "ui": "",
+        "name": "BTNS - MOTOR CONTROL M1",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n \n  <!--\n    <hr>\n    <h3>PLC Status (latest msg)</h2>\n    <pre>{{ msg }}</pre>\n   -->\n\n  <!-- Quick status chips -->\n    <hr>\n  <h3>Motor status M1</h5>\n\n  <div style=\"display:flex; gap:8px; margin:8px 0;\">\n    \n    <v-chip :color=\"isPowerON ? 'green' : undefined\" variant=\"elevated\">POWER</v-chip>\n    <v-chip :color=\"isPOS1 ? 'green' : undefined\" variant=\"elevated\">POS1</v-chip>\n    <v-chip :color=\"isPOS2 ? 'green' : undefined\" variant=\"elevated\">POS2</v-chip>\n    <v-chip :color=\"isHOMED ? 'green' : undefined\" variant=\"elevated\">IS HOMED</v-chip>\n    <!-- NEW: Error chip (red when true, grey when false) -->\n    <v-chip :color=\"isERROR ? 'red' : 'undefined'\" variant=\"elevated\">ERROR</v-chip>\n    <v-chip :color=\"isPOS1ERROR ? 'red' : 'undefined'\" variant=\"elevated\">POS1 ERR</v-chip>\n    <v-chip :color=\"isPOS2ERROR ? 'red' : 'undefined'\" variant=\"elevated\">POS2 ERR</v-chip>\n    <v-chip :color=\"isFUSEERROR ? 'red' : 'undefined'\" variant=\"elevated\">FUSE ERR</v-chip>\n  </div>\n\n <hr>\n  <div style=\"display:flex; gap:8px; margin:8px 0;\" >\n    <!-- Keep existing buttons (don't create duplicates) -->\n    <v-btn :disabled=\"isPOS1\" @click=\"send({ topic:'motor/cmd', payload:'GO_POS1' })\">GO POS1</v-btn>\n    <v-btn :disabled=\"isPOS2\" @click=\"send({ topic:'motor/cmd', payload:'GO_POS2' })\">GO POS2</v-btn>\n    <v-btn :disabled=\"isHOMED\" @click=\"send({ topic:'motor/cmd', payload:'GO_HOME' })\" >GO HOME</v-btn>\n\n    <!-- NEW: Hardware reset -->\n    <v-btn  color=\"warning\" variant=\"elevated\"\n           @click=\"send({ topic:'motor/cmd', payload:'HARDWARE_RESET' })\">\n      HARDWARE RESET\n    </v-btn>\n  </div>\n <hr>\n  \n\n  <!-- Error popup dialog -->\n  <v-dialog v-model=\"showErrorDialog\" max-width=\"420\">\n    <v-card>\n      <v-card-title class=\"text-error\">Motor Error</v-card-title>\n      <v-card-text>\n        <div style=\"white-space:pre-wrap\">\n          {{ errorText || 'An error condition has been reported by the PLC.' }}\n        </div>\n      </v-card-text>\n      <v-card-actions class=\"justify-end\">\n        <v-btn variant=\"text\" @click=\"showErrorDialog=false\">Close</v-btn>\n        <v-btn color=\"warning\"\n               @click=\"send({ topic:'motor/cmd', payload:'HARDWARE_RESET' }); showErrorDialog=false;\">\n          Hardware Reset\n        </v-btn>\n      </v-card-actions>\n    </v-card>\n  </v-dialog>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      selectedRadio: null,  // 'one' | 'two' | 'three' | null\n      showErrorDialog: false,\n      errorText: ''\n    }\n  },\n\n  computed: {\n    // Robust coercion: accept 1/0, \"1\"/\"0\", \"true\"/\"false\", true/false\n    isPOS1() {\n      const v = this.msg?.payload?.pos1;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPOS2() {\n      const v = this.msg?.payload?.pos2;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isHOMED() {\n      const v = this.msg?.payload?.homed;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isERROR() {\n      const v = this.msg?.payload?.error;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPOS1ERROR() {\n      const v = this.msg?.payload?.pos1err;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPOS2ERROR() {\n      const v = this.msg?.payload?.pos2err;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isFUSEERROR() {\n      const v = this.msg?.payload?.fuseerror;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    },\n    isPowerON() {\n      const v = this.msg?.payload?.pwrStatus;\n      return v === true || v === 1 || v === \"1\" || v === \"true\";\n    }\n    \n\n  },\n\n  watch: {\n    // Re-map radios whenever new PLC msg arrives\n    msg: {\n      deep: true,\n      immediate: true,\n      handler(n) {\n        // Radios priority: HOMED > POS1 > POS2\n        if (this.isHOMED)      this.selectedRadio = 'three';\n        else if (this.isPOS1)  this.selectedRadio = 'one';\n        else if (this.isPOS2)  this.selectedRadio = 'two';\n        else                   this.selectedRadio = null;\n\n        // Error popup\n        if (this.isERROR) {\n          this.errorText = n?.payload?.errorText || '';\n          //this.showErrorDialog = true;\n        }\n      }\n    }\n  },\n\n  methods: {\n    // UI action that also sends a message (your original behavior)\n    activateHommed() {\n      this.selectedRadio = 'three'; // visually select radio immediately\n      this.send({ topic:'motor/ui', payload:{ hello:'world3', forceHommed:true }});\n    }\n  }\n}\n</script>\n",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 910,
+        "y": 220,
+        "wires": [
+            [
+                "278fcdc416b3e609"
             ]
         ]
     },
@@ -5481,28 +4777,6 @@
         "wires": []
     },
     {
-        "id": "cbd9d8da7fe24533",
-        "type": "mqtt in",
-        "z": "4e56ab8ed630aa30",
-        "name": "data/s71200",
-        "topic": "data/s71200",
-        "qos": "0",
-        "datatype": "auto-detect",
-        "broker": "1b94cc99764f8362",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 130,
-        "y": 580,
-        "wires": [
-            [
-                "6129923f21efad05",
-                "7a1bd0e6e0c7cb09"
-            ]
-        ]
-    },
-    {
         "id": "7a1bd0e6e0c7cb09",
         "type": "function",
         "z": "4e56ab8ed630aa30",
@@ -5582,28 +4856,6 @@
         "x": 640,
         "y": 520,
         "wires": []
-    },
-    {
-        "id": "3d7f8f842cb99e10",
-        "type": "mqtt in",
-        "z": "4e56ab8ed630aa30",
-        "name": "data/s71200",
-        "topic": "data/s71200/RTDvalues",
-        "qos": "0",
-        "datatype": "auto-detect",
-        "broker": "1b94cc99764f8362",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 110,
-        "y": 900,
-        "wires": [
-            [
-                "355fec34d49964e7",
-                "2e38dfb9aade64e6"
-            ]
-        ]
     },
     {
         "id": "355fec34d49964e7",
@@ -5687,20 +4939,595 @@
         "wires": []
     },
     {
-        "id": "1d8a280962205e8b",
+        "id": "278b9ab475c6359d",
+        "type": "inject",
+        "z": "4e56ab8ed630aa30",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1140,
+        "y": 460,
+        "wires": [
+            [
+                "69a062839c186ddd"
+            ]
+        ]
+    },
+    {
+        "id": "d9d2024eba1de28c",
+        "type": "debug",
+        "z": "4e56ab8ed630aa30",
+        "name": "debug 24",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1500,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "44ca44cf6638cc23",
         "type": "mqtt in",
         "z": "4e56ab8ed630aa30",
-        "name": "encoder/data",
-        "topic": "encoder/data",
-        "qos": "0",
+        "name": "",
+        "topic": "temperatura1",
+        "qos": "2",
         "datatype": "auto-detect",
         "broker": "1b94cc99764f8362",
         "nl": false,
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 910,
-        "y": 60,
+        "x": 1290,
+        "y": 600,
+        "wires": [
+            [
+                "d9d2024eba1de28c"
+            ]
+        ]
+    },
+    {
+        "id": "69a062839c186ddd",
+        "type": "mqtt out",
+        "z": "4e56ab8ed630aa30",
+        "name": "",
+        "topic": "temperatura1",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "1b94cc99764f8362",
+        "x": 1450,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "1aa70f886e4573fa",
+        "type": "mqtt out",
+        "z": "4e56ab8ed630aa30",
+        "name": "",
+        "topic": "/haulick-32t/32777/actuator1",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "1b94cc99764f8362",
+        "x": 780,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "cfbc048e7699d89b",
+        "type": "comment",
+        "z": "4e56ab8ed630aa30",
+        "name": "DD . Digital Twin - EMA",
+        "info": "",
+        "x": 500,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "8f68b62a092d7419",
+        "type": "mqtt out",
+        "z": "4e56ab8ed630aa30",
+        "name": "",
+        "topic": "/haulick-32t/32777/actuator2",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "1b94cc99764f8362",
+        "x": 780,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "8b8a55fb13fe93e0",
+        "type": "mqtt out",
+        "z": "4e56ab8ed630aa30",
+        "name": "",
+        "topic": "/haulick-32t/32777/actuator3",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "1b94cc99764f8362",
+        "x": 780,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "4e02db441910c14d",
+        "type": "mqtt out",
+        "z": "4e56ab8ed630aa30",
+        "name": "",
+        "topic": "/haulick-32t/32777/actuator4",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "1b94cc99764f8362",
+        "x": 780,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "ce49fe8317ada3cd",
+        "type": "function",
+        "z": "4e56ab8ed630aa30",
+        "name": "Generate random data",
+        "func": "// Helper function for random float\nfunction randomFloat(min, max) {\n    return +(Math.random() * (max - min) + min).toFixed(2);\n}\n\nmsg.payload = {\n    \"I1\": randomFloat(1, 2),\n    \"T1\": randomFloat(30, 31),\n    \"T_tool1\": randomFloat(30, 31),\n\n    \"I2\": randomFloat(0, 2),\n    \"T2\": randomFloat(30, 31),\n    \"T_tool2\": randomFloat(30, 31),\n\n    \"I3\": randomFloat(0, 2),\n    \"T3\": randomFloat(30, 31),\n    \"T_tool3\": randomFloat(30, 31),\n\n    \"I4\": randomFloat(0, 2),\n    \"T4\": randomFloat(30, 31),\n    \"T_tool4\": randomFloat(30, 31),\n\n    \"T_env\": randomFloat(30, 31)\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 140,
+        "y": 1200,
+        "wires": [
+            [
+                "8b3a51090ec00623",
+                "e5ada88eacf99b5a",
+                "fe7a109cbd77d8e6",
+                "cb79dabf3ab6e44c",
+                "b71e7463f64d9fac",
+                "f7c6394ab27f24f7",
+                "84ec9de51282f565",
+                "5ca85ada66059044"
+            ]
+        ]
+    },
+    {
+        "id": "8b3a51090ec00623",
+        "type": "function",
+        "z": "4e56ab8ed630aa30",
+        "name": "function 19",
+        "func": "msg.payload = {\n    \"I1\": msg.payload.I1,\n    \"T1\": msg.payload.T1,\n    \"T_tool1\": msg.payload.T_tool1,\n    \"T_env\": msg.payload.T_env\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 1200,
+        "wires": [
+            [
+                "22d14c7e649a550a",
+                "1aa70f886e4573fa"
+            ]
+        ]
+    },
+    {
+        "id": "22d14c7e649a550a",
+        "type": "debug",
+        "z": "4e56ab8ed630aa30",
+        "name": "debug 25",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "9a7ec6b49d87b354",
+        "type": "inject",
+        "z": "4e56ab8ed630aa30",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 1140,
+        "wires": [
+            [
+                "ce49fe8317ada3cd"
+            ]
+        ]
+    },
+    {
+        "id": "e5ada88eacf99b5a",
+        "type": "function",
+        "z": "4e56ab8ed630aa30",
+        "name": "function 20",
+        "func": "msg.payload = {\n    \"I2\": msg.payload.I2,\n    \"T2\": msg.payload.T2,\n    \"T_tool2\": msg.payload.T_tool2,\n    \"T_env\": msg.payload.T_env\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 1240,
+        "wires": [
+            [
+                "8f68b62a092d7419",
+                "22d14c7e649a550a"
+            ]
+        ]
+    },
+    {
+        "id": "fe7a109cbd77d8e6",
+        "type": "function",
+        "z": "4e56ab8ed630aa30",
+        "name": "function 21",
+        "func": "msg.payload = {\n    \"I3\": msg.payload.I3,\n    \"T3\": msg.payload.T3,\n    \"T_tool3\": msg.payload.T_tool3,\n    \"T_env\": msg.payload.T_env\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 1280,
+        "wires": [
+            [
+                "8b8a55fb13fe93e0",
+                "22d14c7e649a550a"
+            ]
+        ]
+    },
+    {
+        "id": "cb79dabf3ab6e44c",
+        "type": "function",
+        "z": "4e56ab8ed630aa30",
+        "name": "function 22",
+        "func": "msg.payload = {\n    \"I4\": msg.payload.I4,\n    \"T4\": msg.payload.T4,\n    \"T_tool4\": msg.payload.T_tool4,\n    \"T_env\": msg.payload.T_env\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 1320,
+        "wires": [
+            [
+                "4e02db441910c14d",
+                "22d14c7e649a550a"
+            ]
+        ]
+    },
+    {
+        "id": "4bedf71153eafec8",
+        "type": "mqtt in",
+        "z": "4e56ab8ed630aa30",
+        "name": "",
+        "topic": "/haulick-32t/32777/actuator1",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "1b94cc99764f8362",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 1540,
+        "wires": [
+            [
+                "2a4635d8669d2590"
+            ]
+        ]
+    },
+    {
+        "id": "2a4635d8669d2590",
+        "type": "debug",
+        "z": "4e56ab8ed630aa30",
+        "name": "debug 26",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "0c7e3242e5bcf423",
+        "type": "mqtt in",
+        "z": "4e56ab8ed630aa30",
+        "name": "",
+        "topic": "/haulick-32t/32777/actuator2",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "1b94cc99764f8362",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 1580,
+        "wires": [
+            [
+                "2a4635d8669d2590"
+            ]
+        ]
+    },
+    {
+        "id": "4b8c133fc884d759",
+        "type": "mqtt in",
+        "z": "4e56ab8ed630aa30",
+        "name": "",
+        "topic": "/haulick-32t/32777/actuator3",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "1b94cc99764f8362",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 1620,
+        "wires": [
+            [
+                "2a4635d8669d2590"
+            ]
+        ]
+    },
+    {
+        "id": "481e1a404976eb06",
+        "type": "mqtt in",
+        "z": "4e56ab8ed630aa30",
+        "name": "",
+        "topic": "/haulick-32t/32777/actuator4",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "1b94cc99764f8362",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 1660,
+        "wires": [
+            [
+                "2a4635d8669d2590"
+            ]
+        ]
+    },
+    {
+        "id": "484cad5ff58dd8f0",
+        "type": "mqtt in",
+        "z": "4e56ab8ed630aa30",
+        "name": "",
+        "topic": "/DT/response/actuator1",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "1b94cc99764f8362",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 1720,
+        "wires": [
+            [
+                "d96b88341dc4f437"
+            ]
+        ]
+    },
+    {
+        "id": "d53ed50117b8fc1f",
+        "type": "mqtt in",
+        "z": "4e56ab8ed630aa30",
+        "name": "",
+        "topic": "/DT/response/actuator2",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "1b94cc99764f8362",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 1760,
+        "wires": [
+            [
+                "d96b88341dc4f437"
+            ]
+        ]
+    },
+    {
+        "id": "2cef3fc328d0fa49",
+        "type": "mqtt in",
+        "z": "4e56ab8ed630aa30",
+        "name": "",
+        "topic": "/DT/response/actuator3",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "1b94cc99764f8362",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 1800,
+        "wires": [
+            [
+                "d96b88341dc4f437"
+            ]
+        ]
+    },
+    {
+        "id": "3fbe2ecb21f6bf5d",
+        "type": "mqtt in",
+        "z": "4e56ab8ed630aa30",
+        "name": "",
+        "topic": "/DT/response/actuator4",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "1b94cc99764f8362",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 1760,
+        "wires": [
+            [
+                "d96b88341dc4f437"
+            ]
+        ]
+    },
+    {
+        "id": "d96b88341dc4f437",
+        "type": "debug",
+        "z": "4e56ab8ed630aa30",
+        "name": "debug 27",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "b71e7463f64d9fac",
+        "type": "function",
+        "z": "4e56ab8ed630aa30",
+        "name": "GET global data",
+        "func": "msg.payload = {\n    \"I1\": global.get('aktuator1.MaxCurrent'),\n    \"T1\": global.get('aktuator1.aktuator1.temp'),\n    \"T_tool1\": global.get('ktuator1.aktuator1.temp'),\n    \"T_env\": global.get('aktuator1.tempokolice')\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 1360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f7c6394ab27f24f7",
+        "type": "function",
+        "z": "4e56ab8ed630aa30",
+        "name": "GET global data",
+        "func": "msg.payload = {\n    \"I2\": global.get('aktuator2.MaxCurrent'),\n    \"T2\": global.get('aktuator2.temp'),\n    \"T_tool2\": global.get('aktuator2.temp'),\n    \"T_env\": global.get('aktuator2.tempokolice')\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 1400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "84ec9de51282f565",
+        "type": "function",
+        "z": "4e56ab8ed630aa30",
+        "name": "GET global data",
+        "func": "msg.payload = {\n    \"I3\": global.get('aktuator3.MaxCurrent'),\n    \"T3\": global.get('aktuator3.temp'),\n    \"T_tool3\": global.get('aktuator3.temp'),\n    \"T_env\": global.get('aktuator3.tempokolice')\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 1440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5ca85ada66059044",
+        "type": "function",
+        "z": "4e56ab8ed630aa30",
+        "name": "GET global data",
+        "func": "msg.payload = {\n    \"I4\": global.get('aktuator4.MaxCurrent'),\n    \"T4\": global.get('aktuator4.temp'),\n    \"T_tool4\": global.get('aktuator4.temp'),\n    \"T_env\": global.get('aktuator4.tempokolice')\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 1480,
         "wires": [
             []
         ]
@@ -5997,8 +5824,7 @@
         "y": 440,
         "wires": [
             [
-                "16626fa69a59bb50",
-                "556a9b3e7e4838e1"
+                "16626fa69a59bb50"
             ]
         ]
     },
@@ -6029,30 +5855,6 @@
             [
                 "0b4864bb112715c2"
             ]
-        ]
-    },
-    {
-        "id": "556a9b3e7e4838e1",
-        "type": "ui-template",
-        "z": "a1c1f1b2d3e4f5a6",
-        "group": "",
-        "page": "1ede0b9feaa4bacd",
-        "ui": "",
-        "name": "WORKING TEMPLATE",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "head": "",
-        "format": "<template>\n    <div>\n        <h2>Counter</h2>\n        <p :style=\"{'color' : (count > 5 ? 'red' : 'green' )}\">Current Count: {{ count }}</p>\n        <p class=\"my-class\">Formatted Count: {{ formattedCount }}</p>\n        <b v-if=\"count > 5\">Too many!</b>\n        <v-btn @click=\"increase()\">Increment</v-btn>\n        <!-- Popup and Overlay -->\n        <div v-if=\"showPopup\" class=\"overlay\">\n            <div class=\"popup\">\n                <h3 class=\"popup-title\">Error Notification</h3>\n                <p class=\"popup-message\">Error Code: MULTIPLE_OF_5</p>\n                <v-btn @click=\"closePopup()\" class=\"cancel-btn\">Cancel</v-btn>\n            </div>\n        </div>\n    </div>\n</template>\n\n<script>\nexport default {\n    data() {\n        return {\n            count: 0,\n            showPopup: false\n        }\n    },\n    watch: {\n        count: function () {\n            if (this.count % 5 === 0 && this.count > 0) {\n                this.showPopup = true;\n                this.send({payload: 'Multiple of 5'});\n            }\n        }\n    },\n    computed: {\n        formattedCount: function () {\n            return this.count + ' Apples';\n        }\n    },\n    methods: {\n        increase: function () {\n            this.count++;\n        },\n        closePopup: function () {\n            this.showPopup = false;\n        }\n    },\n    mounted() {\n    },\n    unmounted() {\n    }\n}\n</script>\n\n<style>\n.my-class {\n    color: red;\n}\n.overlay {\n    position: fixed;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background to disable interaction */\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    z-index: 1000;\n}\n.popup {\n    background-color: white;\n    padding: 20px;\n    border-radius: 8px;\n    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);\n    text-align: center;\n    max-width: 400px;\n    width: 90%;\n}\n.popup-title {\n    margin: 0 0 10px;\n    font-size: 1.5em;\n    color: #d32f2f; /* Red for error title */\n}\n.popup-message {\n    margin: 0 0 20px;\n    font-size: 1.1em;\n}\n.cancel-btn {\n    background-color: #d32f2f;\n    color: white;\n    padding: 8px 16px;\n}\n</style>",
-        "storeOutMessages": true,
-        "passthru": true,
-        "resendOnRefresh": true,
-        "templateScope": "widget:page",
-        "className": "",
-        "x": 230,
-        "y": 580,
-        "wires": [
-            []
         ]
     },
     {
@@ -6136,6 +5938,293 @@
         "name": "",
         "x": 720,
         "y": 240,
+        "wires": []
+    },
+    {
+        "id": "3be848da40df9eb2",
+        "type": "inject",
+        "z": "3128860356bb51f4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 80,
+        "wires": [
+            [
+                "6f6b7dd39e530869"
+            ]
+        ]
+    },
+    {
+        "id": "fc77cb4d637ead4c",
+        "type": "function",
+        "z": "3128860356bb51f4",
+        "name": "Format → UI",
+        "func": "const s = msg.payload;\nreturn [\n  {topic:\"power\", payload: 'ON'},\n  {topic:\"motor\", payload:\"OFF\"},\n  {topic: \"mode\", payload: msg.payload.modeText },\n  {topic:\"pos1\", payload: s.pos1_arrived?\"ARRIVED\":\"-\"},\n  {topic:\"pos2\", payload: s.pos2_arrived?\"ARRIVED\":\"-\"},\n  {topic:\"homed\", payload: s.homed?\"YES\":\"NO\"},\n  {topic:\"position\", payload: s.position},\n  {topic:\"pos1_sp\", payload: s.pos1_setpoint},\n  {topic:\"pos2_sp\", payload: s.pos2_setpoint}\n];",
+        "outputs": 9,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 80,
+        "wires": [
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "6f6b7dd39e530869",
+        "type": "function",
+        "z": "3128860356bb51f4",
+        "name": "DEMO - ARRAY OUTPUT and MAP INPUT",
+        "func": "const s = msg.payload || {};\n\nconst modeMap = {\n    0: \"manual\",\n    1: \"automatic\",\n    2: \"semi-auto\",\n    3: \"jog\"\n};\n\nconst modeText = modeMap[s.mode] ?? String(s.mode); // fallback to raw value\n\nreturn [\n    { topic: \"power\", payload: \"ON\" },\n    { topic: \"motor\", payload: \"OFF\" },\n    { topic: \"mode\", payload: modeText },\n    { topic: \"pos1\", payload: s.pos1_arrived ? \"ARRIVED\" : \"-\" },\n    { topic: \"pos2\", payload: s.pos2_arrived ? \"ARRIVED\" : \"-\" },\n    { topic: \"homed\", payload: s.homed ? \"YES\" : \"NO\" },\n    { topic: \"position\", payload: s.position },\n    { topic: \"pos1_sp\", payload: s.pos1_setpoint },\n    { topic: \"pos2_sp\", payload: s.pos2_setpoint }\n];\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 80,
+        "wires": [
+            [
+                "fc77cb4d637ead4c",
+                "4d4c74737586e5bf"
+            ]
+        ]
+    },
+    {
+        "id": "4d4c74737586e5bf",
+        "type": "debug",
+        "z": "3128860356bb51f4",
+        "name": "debug 15",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "c07880975f97ef0d",
+        "type": "inject",
+        "z": "3128860356bb51f4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 80,
+        "y": 280,
+        "wires": [
+            [
+                "733a61b3d9107d82"
+            ]
+        ]
+    },
+    {
+        "id": "1c420e0550e89506",
+        "type": "influxdb out",
+        "z": "3128860356bb51f4",
+        "influxdb": "72408dfde6e10ad8",
+        "name": "Temp",
+        "measurement": "Temperatura-mesta",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "RRI",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "DAFRA",
+        "bucket": "RRI",
+        "x": 710,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "733a61b3d9107d82",
+        "type": "change",
+        "z": "3128860356bb51f4",
+        "name": "Random with Json",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Temperature1",
+                "pt": "global",
+                "to": "25*$random()",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "timestamp",
+                "pt": "global",
+                "to": "",
+                "tot": "date"
+            },
+            {
+                "t": "set",
+                "p": "Temperature2",
+                "pt": "global",
+                "to": "25*$random()",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 280,
+        "wires": [
+            [
+                "42d2f551b6abf55f"
+            ]
+        ]
+    },
+    {
+        "id": "42d2f551b6abf55f",
+        "type": "function",
+        "z": "3128860356bb51f4",
+        "name": "prepare for msg.payload for influxdb",
+        "func": "msg.topic =\"InfluxData\"\nvar Tempp1 = global.get('Temperature1')\nvar Tempp2 = global.get('Temperature2')\nvar Timestam = global.get('timestamp')\nvar tempCelje = global.get('weaterCelje.temp')\nvar tempBerlin = global.get('weaterBerlin.temp')\nmsg.payload =  {\n    \"timestamp\": Timestam,\n    \"Temperature-Celje\": tempCelje,\n    \"Temperature-Berlin\": tempBerlin\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c20f08a38f2bd513",
+        "type": "function",
+        "z": "3128860356bb51f4",
+        "name": "get global data, set payload for influxdv and payload, parseFloat",
+        "func": "msg.topic =\"InfluxDataFromPLC\"\n\nvar Temp1 = msg.payload[\"temp1\"]; //temp orodja 1- na egasi ohišje\nvar Temp2 = msg.payload[\"temp2\"];\nvar Temp3 = msg.payload[\"temp3\"]; //temp. okolice\nvar Temp4 = msg.payload[\"temp4\"];\n\n//temperature aktuatorjev\nvar M1_temp = parseFloat(global.get('motorji.temp_M1'));\nvar M2_temp = parseFloat(global.get('motorji.temp_M2'));\nvar M3_temp = parseFloat(global.get('motorji.temp_M3'));\nvar M4_temp = parseFloat(global.get('motorji.temp_M4'));\nvar M5_temp = parseFloat(global.get('motorji.temp_M5'));\n\nvar PresaHitrost = global.get('Haulick32T.speed');\n//var PresaHitrost = msg.payload[\"PresaHitrost\"];\nvar PresaStevec = msg.payload[\"PresaStevec\"]\nvar PresaDeluje = msg.payload[\"PresaDeluje\"]\nvar RTD1 = msg.payload[\"RTD1\"]\nvar RTD2 = msg.payload[\"RTD2\"];\nvar RTD3 = msg.payload[\"RTD3\"]; //temp. okolice\nvar RTD4 = msg.payload[\"RTD4\"];\nvar Egasi1_Max = msg.payload[\"MaxForce\"]; //Max sila - aktuator 1\nvar Egasi1_Min = msg.payload[\"MinForce\"]; //min sila - aktuator 1\nvar EgasiTemp = msg.payload[\"EgasiTempAktuator\"];\n\nvar Timestam = global.get('timestamp')\nmsg.payload =  {\n    \"timestamp\": Timestam,\n    \"Temperatura orodja 1\": Temp1,\n    \"Temperatura orodja 2\": Temp2,\n    \"Temperatura okolice\": Temp3,\n    \"Rezerva\": Temp4,\n    \"PresaHitrost\" :   PresaHitrost,\n    \"PresaStevec\"  : PresaStevec,\n    \"PresaDelujeINT\"      : PresaDeluje,\n    \"Temperatura ohisje aktuator RTD\" : RTD1,\n    \"Temperatura orodja RTD\": RTD2,\n    \"Temperatura okolice RTD\" : RTD3,\n    \"Egasi1_maxForce\": Egasi1_Max,\n    \"Egasi1_minForce\": Egasi1_Min,\n    \"Egasi_Temperatura\": EgasiTemp,\n    \"M1_temp\" :M1_temp,\n    \"M2_temp\" :M2_temp,\n    \"M3_temp\": M3_temp,\n    \"M4_temp\": M4_temp,\n    \"M5_temp\" :M5_temp\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "25c4dc6fb205f728",
+        "type": "function",
+        "z": "3128860356bb51f4",
+        "name": "DEMO - payload influx",
+        "func": "msg.topic =\"InfluxDataFromPLC\"\n\nmsg.payload =  {\n    \"timestamp\": 24,\n    \"Temperatura orodja 1\": 23,\n    \"Temperatura orodja 2\": 24,\n    \"Temperatura okolice\": 23,\n    \"Št preklopov\":24        \n\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "98d142278cd311ca",
+        "type": "inject",
+        "z": "3128860356bb51f4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 290,
+        "y": 440,
+        "wires": [
+            [
+                "25c4dc6fb205f728"
+            ]
+        ]
+    },
+    {
+        "id": "2003456518382d53",
+        "type": "ui-iframe",
+        "z": "f0e20bb36738a696",
+        "name": "http://192.168.1.203:8501/",
+        "group": "9c33b0fe971665f3",
+        "order": 1,
+        "src": "http://192.168.1.203:8501/",
+        "width": "12",
+        "height": "26",
+        "x": 490,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "69b784179f3df878",
+        "type": "comment",
+        "z": "f0e20bb36738a696",
+        "name": "RRI_dafra_digitalni_dvojcek",
+        "info": "",
+        "x": 500,
+        "y": 60,
         "wires": []
     }
 ]
