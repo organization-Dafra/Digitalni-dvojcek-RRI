@@ -504,7 +504,7 @@
         "name": "Egasi kontrola aktuatorjev",
         "ui": "47a6c454bea5d1c6",
         "path": "/page100",
-        "icon": "home",
+        "icon": "balena-cloud.svg",
         "layout": "grid",
         "theme": "b06e263ae016d710",
         "breakpoints": [
@@ -529,7 +529,7 @@
                 "cols": "15"
             }
         ],
-        "order": 1,
+        "order": 3,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -585,7 +585,7 @@
         "id": "c18c0e9eb893c9ad",
         "type": "ui-group",
         "name": "Grafana",
-        "page": "f143a0cbca30f65d",
+        "page": "",
         "width": "12",
         "height": "1",
         "order": 1,
@@ -594,42 +594,6 @@
         "visible": "true",
         "disabled": "false",
         "groupType": "default"
-    },
-    {
-        "id": "f143a0cbca30f65d",
-        "type": "ui-page",
-        "name": "Grafana2",
-        "ui": "47a6c454bea5d1c6",
-        "path": "/grafana",
-        "icon": "dashboard",
-        "layout": "grid",
-        "theme": "c37e39f41c88c121",
-        "breakpoints": [
-            {
-                "name": "Default",
-                "px": "0",
-                "cols": "3"
-            },
-            {
-                "name": "Tablet",
-                "px": "576",
-                "cols": "6"
-            },
-            {
-                "name": "Small Desktop",
-                "px": "768",
-                "cols": "9"
-            },
-            {
-                "name": "Desktop",
-                "px": "1024",
-                "cols": "12"
-            }
-        ],
-        "order": 9,
-        "className": "",
-        "visible": "true",
-        "disabled": "false"
     },
     {
         "id": "c37e39f41c88c121",
@@ -658,22 +622,10 @@
         }
     },
     {
-        "id": "page-01",
-        "type": "ui-page",
-        "name": "Errors",
-        "ui": "47a6c454bea5d1c6",
-        "path": "/errors",
-        "icon": "error",
-        "layout": "grid",
-        "theme": "theme-01",
-        "order": 8,
-        "className": ""
-    },
-    {
         "id": "group-01",
         "type": "ui-group",
         "name": "Popups",
-        "page": "page-01",
+        "page": "",
         "width": "6",
         "height": "1",
         "order": 1,
@@ -718,24 +670,10 @@
         }
     },
     {
-        "id": "5faddce37920c798",
-        "type": "ui-group",
-        "name": "Motor POWER",
-        "page": "1ede0b9feaa4bacd",
-        "width": 1,
-        "height": "1",
-        "order": 3,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false",
-        "groupType": "default"
-    },
-    {
         "id": "b130c2d10267c09a",
         "type": "ui-group",
         "name": "Reset Motor",
-        "page": "page-01",
+        "page": "",
         "width": "3",
         "height": "1",
         "order": 2,
@@ -825,51 +763,15 @@
         "id": "58e9b0c008e334d3",
         "type": "ui-group",
         "name": "STATUS",
-        "page": "b8454629e10ceac0",
-        "width": "6",
+        "page": "d63f6d836f711e66",
+        "width": "12",
         "height": "1",
-        "order": 1,
+        "order": 2,
         "showTitle": true,
         "className": "",
         "visible": "true",
         "disabled": "false",
         "groupType": "default"
-    },
-    {
-        "id": "153dd01a5a9322e9",
-        "type": "ui-page",
-        "name": "Grafana",
-        "ui": "47a6c454bea5d1c6",
-        "path": "/page25",
-        "icon": "home",
-        "layout": "grid",
-        "theme": "theme-01",
-        "breakpoints": [
-            {
-                "name": "Default",
-                "px": "0",
-                "cols": "3"
-            },
-            {
-                "name": "Tablet",
-                "px": "576",
-                "cols": "6"
-            },
-            {
-                "name": "Small Desktop",
-                "px": "768",
-                "cols": "9"
-            },
-            {
-                "name": "Desktop",
-                "px": "1024",
-                "cols": "12"
-            }
-        ],
-        "order": 7,
-        "className": "",
-        "visible": "false",
-        "disabled": "false"
     },
     {
         "id": "2cbf8337bcde63a6",
@@ -947,7 +849,7 @@
         "group": "35792cf1e5d30f6c",
         "name": "spacer",
         "tooltip": "",
-        "order": 5,
+        "order": 2,
         "width": 1,
         "height": 1,
         "className": ""
@@ -958,118 +860,10 @@
         "group": "35792cf1e5d30f6c",
         "name": "spacer",
         "tooltip": "",
-        "order": 9,
+        "order": 3,
         "width": 1,
         "height": 1,
         "className": ""
-    },
-    {
-        "id": "f11898011f115479",
-        "type": "ui-page",
-        "name": "Page 5",
-        "ui": "47a6c454bea5d1c6",
-        "path": "/page500",
-        "icon": "home",
-        "layout": "grid",
-        "theme": "b06e263ae016d710",
-        "breakpoints": [
-            {
-                "name": "Default",
-                "px": "0",
-                "cols": "3"
-            },
-            {
-                "name": "Tablet",
-                "px": "576",
-                "cols": "6"
-            },
-            {
-                "name": "Small Desktop",
-                "px": "768",
-                "cols": "9"
-            },
-            {
-                "name": "Desktop",
-                "px": "1024",
-                "cols": "12"
-            }
-        ],
-        "order": 10,
-        "className": "",
-        "visible": "true",
-        "disabled": "false"
-    },
-    {
-        "id": "114668a8e4c713e1",
-        "type": "ui-page",
-        "name": "Motor status M1",
-        "ui": "47a6c454bea5d1c6",
-        "path": "/page23",
-        "icon": "",
-        "layout": "grid",
-        "theme": "theme-01",
-        "breakpoints": [
-            {
-                "name": "Default",
-                "px": "0",
-                "cols": "3"
-            },
-            {
-                "name": "Tablet",
-                "px": "576",
-                "cols": "6"
-            },
-            {
-                "name": "Small Desktop",
-                "px": "768",
-                "cols": "9"
-            },
-            {
-                "name": "Desktop",
-                "px": "1024",
-                "cols": "12"
-            }
-        ],
-        "order": 6,
-        "className": "",
-        "visible": true,
-        "disabled": "false"
-    },
-    {
-        "id": "b8454629e10ceac0",
-        "type": "ui-page",
-        "name": "Motor status",
-        "ui": "47a6c454bea5d1c6",
-        "path": "/page110",
-        "icon": "home",
-        "layout": "grid",
-        "theme": "theme-01",
-        "breakpoints": [
-            {
-                "name": "Default",
-                "px": "0",
-                "cols": "3"
-            },
-            {
-                "name": "Tablet",
-                "px": "576",
-                "cols": "6"
-            },
-            {
-                "name": "Small Desktop",
-                "px": "768",
-                "cols": "9"
-            },
-            {
-                "name": "Desktop",
-                "px": "1024",
-                "cols": "12"
-            }
-        ],
-        "order": 2,
-        "className": "",
-        "visible": "true",
-        "disabled": "false"
     },
     {
         "id": "23e0960124121c06",
@@ -1465,47 +1259,10 @@
         }
     },
     {
-        "id": "d033de49d3badc8c",
-        "type": "ui-page",
-        "d": true,
-        "name": "Page 1",
-        "ui": "47a6c454bea5d1c6",
-        "path": "/page20",
-        "icon": "home",
-        "layout": "grid",
-        "theme": "7fe3ab9ea250acf7",
-        "breakpoints": [
-            {
-                "name": "Default",
-                "px": "0",
-                "cols": "3"
-            },
-            {
-                "name": "Tablet",
-                "px": "576",
-                "cols": "6"
-            },
-            {
-                "name": "Small Desktop",
-                "px": "768",
-                "cols": "9"
-            },
-            {
-                "name": "Desktop",
-                "px": "1024",
-                "cols": "12"
-            }
-        ],
-        "order": 3,
-        "className": "",
-        "visible": "true",
-        "disabled": "false"
-    },
-    {
         "id": "5075265405c0de82",
         "type": "ui-group",
         "name": "Group 1",
-        "page": "abf29bc6795e0a88",
+        "page": "",
         "width": "6",
         "height": "1",
         "order": 1,
@@ -1518,10 +1275,10 @@
     {
         "id": "0f3676c5e68f7df2",
         "type": "ui-page",
-        "name": "DD - Digitalni Dvojcek",
+        "name": "AUTO_MANUAL",
         "ui": "47a6c454bea5d1c6",
         "path": "/page22",
-        "icon": "home",
+        "icon": "balena-cloud.svg",
         "layout": "grid",
         "theme": "7fe3ab9ea250acf7",
         "breakpoints": [
@@ -1546,7 +1303,7 @@
                 "cols": "12"
             }
         ],
-        "order": 5,
+        "order": 2,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -1554,7 +1311,7 @@
     {
         "id": "9c33b0fe971665f3",
         "type": "ui-group",
-        "name": "DD - IFRAME - Digitalni Dvojcek",
+        "name": "Select operation mode:",
         "page": "0f3676c5e68f7df2",
         "width": "12",
         "height": "1",
@@ -1566,46 +1323,10 @@
         "groupType": "default"
     },
     {
-        "id": "df1e43d798ee354c",
-        "type": "ui-page",
-        "name": "Page Name",
-        "ui": "47a6c454bea5d1c6",
-        "path": "/page33",
-        "icon": "home",
-        "layout": "grid",
-        "theme": "7fe3ab9ea250acf7",
-        "breakpoints": [
-            {
-                "name": "Default",
-                "px": "0",
-                "cols": "3"
-            },
-            {
-                "name": "Tablet",
-                "px": "576",
-                "cols": "6"
-            },
-            {
-                "name": "Small Desktop",
-                "px": "768",
-                "cols": "9"
-            },
-            {
-                "name": "Desktop",
-                "px": "1024",
-                "cols": "12"
-            }
-        ],
-        "order": 13,
-        "className": "",
-        "visible": "true",
-        "disabled": "false"
-    },
-    {
         "id": "8bb50b0e8b6f4383",
         "type": "ui-group",
         "name": "Group Name",
-        "page": "df1e43d798ee354c",
+        "page": "",
         "width": "6",
         "height": "1",
         "order": 1,
@@ -1614,48 +1335,12 @@
         "visible": "true",
         "disabled": "false",
         "groupType": "default"
-    },
-    {
-        "id": "3c6cff97b0580c2a",
-        "type": "ui-page",
-        "name": "Page Name",
-        "ui": "47a6c454bea5d1c6",
-        "path": "/page4",
-        "icon": "home",
-        "layout": "grid",
-        "theme": "7fe3ab9ea250acf7",
-        "breakpoints": [
-            {
-                "name": "Default",
-                "px": "0",
-                "cols": "3"
-            },
-            {
-                "name": "Tablet",
-                "px": "576",
-                "cols": "6"
-            },
-            {
-                "name": "Small Desktop",
-                "px": "768",
-                "cols": "9"
-            },
-            {
-                "name": "Desktop",
-                "px": "1024",
-                "cols": "12"
-            }
-        ],
-        "order": 12,
-        "className": "",
-        "visible": true,
-        "disabled": false
     },
     {
         "id": "43754586a874fb77",
         "type": "ui-group",
         "name": "Group Name",
-        "page": "3c6cff97b0580c2a",
+        "page": "",
         "width": "6",
         "height": "1",
         "order": 1,
@@ -1664,48 +1349,12 @@
         "visible": "true",
         "disabled": "false",
         "groupType": "default"
-    },
-    {
-        "id": "1694259e5b9b0e3d",
-        "type": "ui-page",
-        "name": "Page Name3",
-        "ui": "47a6c454bea5d1c6",
-        "path": "/page5",
-        "icon": "home",
-        "layout": "grid",
-        "theme": "7fe3ab9ea250acf7",
-        "breakpoints": [
-            {
-                "name": "Default",
-                "px": "0",
-                "cols": "3"
-            },
-            {
-                "name": "Tablet",
-                "px": "576",
-                "cols": "6"
-            },
-            {
-                "name": "Small Desktop",
-                "px": "768",
-                "cols": "9"
-            },
-            {
-                "name": "Desktop",
-                "px": "1024",
-                "cols": "12"
-            }
-        ],
-        "order": 11,
-        "className": "",
-        "visible": "true",
-        "disabled": "false"
     },
     {
         "id": "c120319f9d9c7fb4",
         "type": "ui-group",
         "name": "Group Name",
-        "page": "1694259e5b9b0e3d",
+        "page": "",
         "width": "6",
         "height": "1",
         "order": 1,
@@ -1714,42 +1363,6 @@
         "visible": "true",
         "disabled": "false",
         "groupType": "default"
-    },
-    {
-        "id": "abf29bc6795e0a88",
-        "type": "ui-page",
-        "name": "Page Name2",
-        "ui": "47a6c454bea5d1c6",
-        "path": "/page7",
-        "icon": "home",
-        "layout": "grid",
-        "theme": "7fe3ab9ea250acf7",
-        "breakpoints": [
-            {
-                "name": "Default",
-                "px": "0",
-                "cols": "3"
-            },
-            {
-                "name": "Tablet",
-                "px": "576",
-                "cols": "6"
-            },
-            {
-                "name": "Small Desktop",
-                "px": "768",
-                "cols": "9"
-            },
-            {
-                "name": "Desktop",
-                "px": "1024",
-                "cols": "12"
-            }
-        ],
-        "order": 4,
-        "className": "",
-        "visible": true,
-        "disabled": false
     },
     {
         "id": "4dd4fe22cd17faab",
@@ -1784,59 +1397,23 @@
         "sessionExpiry": ""
     },
     {
-        "id": "a88aa5a4ca9f4a86",
-        "type": "ui-page",
-        "name": "Page 14",
-        "ui": "47a6c454bea5d1c6",
-        "path": "/page14",
-        "icon": "home",
-        "layout": "grid",
-        "theme": "b06e263ae016d710",
-        "breakpoints": [
-            {
-                "name": "Default",
-                "px": "0",
-                "cols": "3"
-            },
-            {
-                "name": "Tablet",
-                "px": "576",
-                "cols": "6"
-            },
-            {
-                "name": "Small Desktop",
-                "px": "768",
-                "cols": "9"
-            },
-            {
-                "name": "Desktop",
-                "px": "1024",
-                "cols": "12"
-            }
-        ],
-        "order": 14,
-        "className": "",
-        "visible": true,
-        "disabled": false
-    },
-    {
         "id": "573dd7a29407d2ed",
         "type": "ui-link",
         "name": "Link 1",
         "ui": "47a6c454bea5d1c6",
         "path": "/page1100",
         "icon": "home",
-        "order": 15,
+        "order": 4,
         "visible": "true",
         "disabled": "false"
     },
     {
         "id": "9d2347970356a939",
         "type": "ui-page",
-        "name": "Page ",
+        "name": "Production",
         "ui": "47a6c454bea5d1c6",
         "path": "/page1",
-        "icon": "home",
+        "icon": "stuff",
         "layout": "grid",
         "theme": "b06e263ae016d710",
         "breakpoints": [
@@ -1861,10 +1438,102 @@
                 "cols": "12"
             }
         ],
-        "order": 16,
+        "order": 5,
         "className": "",
         "visible": "true",
         "disabled": "false"
+    },
+    {
+        "id": "af98e4a21ff6d34d",
+        "type": "ui-group",
+        "name": "Production Quie",
+        "page": "1ede0b9feaa4bacd",
+        "width": "4",
+        "height": "1",
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "f1d8dba665177110",
+        "type": "ui-group",
+        "name": "Hand/Manual Control",
+        "page": "0f3676c5e68f7df2",
+        "width": "6",
+        "height": "1",
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "13739af9cd1ebf05",
+        "type": "ui-group",
+        "name": "Automatic mode production",
+        "page": "0f3676c5e68f7df2",
+        "width": "6",
+        "height": "1",
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "d63f6d836f711e66",
+        "type": "ui-page",
+        "name": "Motor Status",
+        "ui": "47a6c454bea5d1c6",
+        "path": "/page16",
+        "icon": "balena-cloud.svg",
+        "layout": "grid",
+        "theme": "theme-01",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "9795805c73a19d72",
+        "type": "ui-group",
+        "name": "Control mode",
+        "page": "d63f6d836f711e66",
+        "width": "12",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
     },
     {
         "id": "3cc11d24.ff01a2",
@@ -2879,11 +2548,11 @@
         "id": "34cf74f7bdc63c70",
         "type": "ui-dropdown",
         "z": "c3ef6562b4dbd1ef",
-        "group": "35792cf1e5d30f6c",
+        "group": "f1d8dba665177110",
         "name": "RRI - izbira recepta proizvodnje",
         "label": "Select Option:",
         "tooltip": "",
-        "order": 2,
+        "order": 1,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -2948,44 +2617,13 @@
         ]
     },
     {
-        "id": "2bf4a04fc15bc1c8",
-        "type": "ui-text-input",
-        "z": "c3ef6562b4dbd1ef",
-        "group": "35792cf1e5d30f6c",
-        "name": "ST-KOSOV",
-        "label": "St. zeljenih kosov",
-        "order": 6,
-        "width": 0,
-        "height": 0,
-        "topic": "topic",
-        "topicType": "msg",
-        "mode": "text",
-        "tooltip": "",
-        "delay": 300,
-        "passthru": true,
-        "sendOnDelay": false,
-        "sendOnBlur": true,
-        "sendOnEnter": true,
-        "className": "",
-        "clearable": false,
-        "sendOnClear": false,
-        "icon": "",
-        "iconPosition": "left",
-        "iconInnerPosition": "inside",
-        "x": 570,
-        "y": 1280,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "5f66cd337031c26f",
         "type": "ui-button",
         "z": "c3ef6562b4dbd1ef",
-        "group": "35792cf1e5d30f6c",
+        "group": "f1d8dba665177110",
         "name": "",
         "label": "AKTIVIRAJ",
-        "order": 4,
+        "order": 2,
         "width": "3",
         "height": "1",
         "emulateClick": false,
@@ -3021,52 +2659,15 @@
         ]
     },
     {
-        "id": "c45b44476772c513",
-        "type": "ui-button",
-        "z": "c3ef6562b4dbd1ef",
-        "group": "35792cf1e5d30f6c",
-        "name": "",
-        "label": "DODAJ V PLAN",
-        "order": 7,
-        "width": "3",
-        "height": "1",
-        "emulateClick": false,
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "iconPosition": "left",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "buttonColor": "",
-        "textColor": "",
-        "iconColor": "",
-        "enableClick": true,
-        "enablePointerdown": false,
-        "pointerdownPayload": "",
-        "pointerdownPayloadType": "str",
-        "enablePointerup": false,
-        "pointerupPayload": "",
-        "pointerupPayloadType": "str",
-        "x": 580,
-        "y": 1240,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "8628d55917e28729",
         "type": "ui-text",
         "z": "c3ef6562b4dbd1ef",
-        "group": "35792cf1e5d30f6c",
+        "group": "f1d8dba665177110",
         "order": 3,
         "width": 0,
         "height": 0,
         "name": "Trenutni recept",
-        "label": "Trenutno aktiven recept",
+        "label": "Currently active part:",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "style": false,
@@ -3087,7 +2688,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "recept.ime",
+                "p": "#:(file)::recept.ime",
                 "pt": "global",
                 "to": "payload",
                 "tot": "msg"
@@ -3110,11 +2711,11 @@
         "id": "4bab51ab740f2f94",
         "type": "ui-template",
         "z": "c3ef6562b4dbd1ef",
-        "group": "35792cf1e5d30f6c",
+        "group": "f1d8dba665177110",
         "page": "",
         "ui": "",
         "name": "Show Image of THE PART",
-        "order": 8,
+        "order": 4,
         "width": 0,
         "height": 0,
         "head": "",
@@ -3201,7 +2802,7 @@
         "page": "",
         "ui": "",
         "name": "BTNS - MOTOR CONTROL M2",
-        "order": 2,
+        "order": 3,
         "width": 0,
         "height": 0,
         "head": "",
@@ -4122,7 +3723,7 @@
         "type": "debug",
         "z": "c3ef6562b4dbd1ef",
         "name": "debug 23",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4561,7 +4162,7 @@
         "page": "",
         "ui": "",
         "name": "BTNS - MOTOR CONTROL M1",
-        "order": 3,
+        "order": 2,
         "width": 0,
         "height": 0,
         "head": "",
@@ -4577,6 +4178,799 @@
             [
                 "278fcdc416b3e609"
             ]
+        ]
+    },
+    {
+        "id": "b2b18d8a2ef1d26e",
+        "type": "ui-template",
+        "z": "c3ef6562b4dbd1ef",
+        "group": "",
+        "page": "9d2347970356a939",
+        "ui": "",
+        "name": "Prodiuction add header",
+        "order": 1,
+        "width": "1",
+        "height": "1",
+        "head": "",
+        "format": "<template>\n  <div class=\"pro-container\">\n    <h2 class=\"pro-title\">Add parts to production</h2>\n\n    <form class=\"pro-form\" aria-label=\"Add PCS form\" @submit.prevent=\"addToQueue\">\n      <label class=\"pro-label\" for=\"pcs\">Part Name</label>\n      <label class=\"pro-label\" for=\"qty\">Quantity</label>\n      <label class=\"pro-label\" for=\"qty\"></label>\n      <select id=\"pcs\" name=\"pcs\" class=\"pro-select\" v-model=\"pcs\">\n        <option value=\"\" selected disabled>Select part name....</option>\n        <option value=\"1x2-CELL\">1x2-CELL</option>\n        <option value=\"1x4-CELL\">1x4-CELL</option>\n        <option value=\"1x6-CELL\">1x6-CELL</option>\n        <option value=\"1x8-CELL\">1x8-CELL</option>\n        <option value=\"2x2-CELL\">2x2-CELL</option>\n        <option value=\"2x4-CELL\">2x4-CELL</option>\n        <option value=\"2x6-CELL\">2x6-CELL</option>\n        <option value=\"2x8-CELL\">2x8-CELL</option>\n      </select>\n\n      \n      <input id=\"qty\" name=\"qty\" class=\"pro-input\" type=\"number\" min=\"1\" step=\"1\"\n             v-model=\"qty\" placeholder=\"e.g. 500\" />\n      \n      <button type=\"submit\" class=\"pro-btn\">Add to production</button>\n      <p class=\"pro-hint\" v-if=\"error\">{{ error }}</p>\n    </form>\n\n    <hr class=\"pro-divider\" />\n\n    <section class=\"pro-queue\">\n      <h3 class=\"pro-subtitle\">Production Queue</h3>\n      <div class=\"pro-table-wrap\">\n        <table class=\"pro-table\" aria-label=\"Production queue\">\n          <thead>\n            <tr>\n              <th>#</th>\n              <th>PCS</th>\n              <th>Quantity</th>\n              <th>Status</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr v-if=\"queue.length === 0\">\n              <td colspan=\"4\" style=\"opacity:.6;\">No items yet.</td>\n            </tr>\n            <tr v-for=\"(item, i) in queue\" :key=\"item.id ?? i\">\n              <td>{{ i + 1 }}</td>\n              <td>{{ item.pcs }}</td>\n              <td>{{ item.qty }}</td>\n              <td><span class=\"badge badge-pending\">Pending</span></td>\n            </tr>\n          </tbody>\n        </table>\n      </div>\n    </section>\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      pcs: \"\",\n      qty: \"\",\n      queue: [],\n      error: \"\"\n    };\n  },\n\n  methods: {\n    addToQueue() {\n      this.error = \"\";\n      if (!this.pcs) { this.error = \"Please select PCS.\"; return; }\n      const qtyNum = Number(this.qty);\n      if (!Number.isFinite(qtyNum) || qtyNum <= 0 || !Number.isInteger(qtyNum)) {\n        this.error = \"Quantity must be a positive integer.\";\n        return;\n      }\n      // Send to flow\n      this.send({ topic: \"production/add\", payload: { pcs: this.pcs, qty: qtyNum } });\n      // Reset\n      this.pcs = \"\"; this.qty = \"\";\n    },\n\n    processMsg(m) {\n      if (!m) return;\n      if (m.topic && m.topic !== \"production/queue\") return;\n\n      let arr = [];\n      if (Array.isArray(m.payload)) arr = m.payload;\n      else if (typeof m.payload === \"string\") {\n        try { arr = JSON.parse(m.payload); } catch (e) { arr = []; }\n      }\n\n      arr.sort((a,b) => (a.id ?? 0) - (b.id ?? 0));\n      this.queue = arr.map(x => ({\n        id: x.id ?? 0,\n        pcs: String(x.pcs ?? \"\"),\n        qty: Number(x.qty ?? 0),\n        ts: Number(x.ts ?? Date.now())\n      }));\n    }\n  },\n\n  // Option 1: watch the built-in `msg` variable (runs on load & on each input)\n  watch: {\n    msg() {\n      this.processMsg(this.msg);\n    }\n  },\n\n  // Option 2: listen to the socket only when messages arrive (not on initial load)\n  mounted() {\n    // If the node already has a last msg when the component mounts:\n    if (this.msg) this.processMsg(this.msg);\n\n    // Listen for new inputs\n    this.$socket.on('msg-input:' + this.id, (m) => {\n      this.processMsg(m);\n    });\n  },\n\n  unmounted() {\n    // Optional: remove listener to avoid leaks if you navigate away\n    this.$socket.off && this.$socket.off('msg-input:' + this.id);\n  }\n};\n</script>\n\n<style>\n  .pro-container { max-width: 860px; margin: 0 auto; padding: 16px 18px; background: #fff; border: 1px solid #e9edf2; border-radius: 14px; box-shadow: 0 1px 2px rgba(20,20,20,.04); font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; }\n  .pro-title { margin: 0 0 10px 0; font-size: 1.25rem; font-weight: 700; }\n  .pro-form { display: grid; grid-template-columns: 1fr 1fr auto; gap: 12px 14px; align-items: end; }\n  .pro-label { font-size: .85rem; color: #4b5563; grid-column: span 1; }\n  .pro-select, .pro-input { width: 100%; padding: 10px 12px; border: 1px solid #d8dde5; border-radius: 10px; background: #fafbfc; font-size: .95rem; outline: none; }\n  .pro-select:focus, .pro-input:focus { border-color: #3b82f6; background: #fff; }\n  .pro-btn { padding: 11px 16px; border: 0; border-radius: 10px; background: #111827; color: #fff; font-weight: 600; cursor: pointer; }\n  .pro-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(0,0,0,.08); }\n  .pro-hint { grid-column: 1 / -1; margin: 4px 2px 0; font-size: .85rem; color: #b91c1c; }\n  .pro-divider { margin: 18px 0; border: none; height: 1px; background: #eef2f7; }\n  .pro-subtitle { margin: 0 0 10px 0; font-size: 1.05rem; font-weight: 700; }\n  .pro-table-wrap { overflow: auto; border: 1px solid #edf0f5; border-radius: 10px; }\n  .pro-table { width: 100%; border-collapse: collapse; font-size: .95rem; }\n  .pro-table th, .pro-table td { padding: 10px 12px; border-bottom: 1px solid #eef2f7; text-align: left; }\n  .pro-table thead th { background: #f8fafc; font-weight: 700; }\n  .badge { display: inline-block; padding: 4px 10px; border-radius: 999px; font-size: .8rem; font-weight: 700; }\n  .badge-pending { background: #e9f2ff; color: #184b9b; }\n</style>\n",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "widget:page",
+        "className": "",
+        "x": 610,
+        "y": 1360,
+        "wires": [
+            [
+                "fec603633d428cb4",
+                "619d3a92dd98934b",
+                "fad1eed00d66d474"
+            ]
+        ]
+    },
+    {
+        "id": "fec603633d428cb4",
+        "type": "debug",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "debug 31",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "619d3a92dd98934b",
+        "type": "change",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "proizvodnja",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 780,
+        "y": 1440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1978f7af4ce2a91d",
+        "type": "switch",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 750,
+        "y": 1480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fad1eed00d66d474",
+        "type": "function",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "SAVE DATA AND CONFIGURE QUE",
+        "func": "// Function name suggestion: Production FIFO — Add\n\nconst QUEUE_KEY = \"production.queue\";\nconst NEXT_ID_KEY = \"production.nextId\";\n\n// Only handle add messages\nif (msg.topic !== \"production/add\") {\n    // silently ignore or forward; your call\n    return null;\n}\n\nconst p = msg.payload || {};\nconst pcs = (p.pcs ?? \"\").toString().trim();\nconst qtyNum = Number(p.qty);\n\n// Basic validation\nif (!pcs) {\n    node.warn(\"Missing 'pcs' in payload.\");\n    return null;\n}\nif (!Number.isFinite(qtyNum) || qtyNum <= 0 || !Number.isInteger(qtyNum)) {\n    node.warn(\"Invalid 'qty' in payload. Must be positive integer.\");\n    return null;\n}\n\n// Load queue and nextId\nlet queue = global.get(QUEUE_KEY) || [];\nlet nextId = global.get(NEXT_ID_KEY) || 1;\n\n// Build item\nconst item = {\n    id: nextId,\n    pcs,\n    qty: qtyNum,\n    ts: Date.now()\n};\n\n// Push FIFO (append at end)\nqueue.push(item);\n\n// Persist\nglobal.set(QUEUE_KEY, queue);\nglobal.set(NEXT_ID_KEY, nextId + 1);\n\n// Outputs:\n// 1) ack of just-added item\n// 2) whole queue snapshot (useful for UI refresh)\nreturn [\n    { topic: \"production/queued\", payload: item },\n    { topic: \"production/queue\", payload: queue }\n];\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 1520,
+        "wires": [
+            [
+                "b7e86c35c8b2381c"
+            ]
+        ]
+    },
+    {
+        "id": "b7e86c35c8b2381c",
+        "type": "debug",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "debug 32",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "2e2387f527b75c98",
+        "type": "function",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "FIFO - PEEK",
+        "func": "// Function name suggestion: Production FIFO — Peek\n\nconst QUEUE_KEY = \"production.queue\";\n\nif (msg.topic !== \"production/peek\") {\n    return null;\n}\n\nconst queue = global.get(QUEUE_KEY) || [];\nconst head = queue.length ? queue[0] : null;\n\nreturn { topic: \"production/peeked\", payload: head };",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 1580,
+        "wires": [
+            [
+                "1ba69686ca02183c"
+            ]
+        ]
+    },
+    {
+        "id": "1ba69686ca02183c",
+        "type": "debug",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "debug 33",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "d01e7779311f2834",
+        "type": "function",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "FIFO - POP",
+        "func": "// Function name suggestion: Production FIFO — Pop\n\nconst QUEUE_KEY = \"production.queue\";\n\nif (msg.topic !== \"production/pop\") {\n    return null;\n}\n\nlet queue = global.get(QUEUE_KEY) || [];\nlet item = null;\n\nif (queue.length > 0) {\n    item = queue.shift();  // remove first\n    global.set(QUEUE_KEY, queue);\n}\n\n// 1) popped item (null if none)\n// 2) new queue snapshot\nreturn [\n    { topic: \"production/popped\", payload: item },\n    { topic: \"production/queue\", payload: queue }\n];\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 1640,
+        "wires": [
+            [
+                "d0585d155e1ab3b3"
+            ]
+        ]
+    },
+    {
+        "id": "83928e1fcd390190",
+        "type": "inject",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "production/peek",
+        "payload": "",
+        "payloadType": "date",
+        "x": 550,
+        "y": 1580,
+        "wires": [
+            [
+                "2e2387f527b75c98"
+            ]
+        ]
+    },
+    {
+        "id": "5420e9f2f830ee27",
+        "type": "inject",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "production/pop",
+        "payload": "",
+        "payloadType": "date",
+        "x": 550,
+        "y": 1640,
+        "wires": [
+            [
+                "d01e7779311f2834"
+            ]
+        ]
+    },
+    {
+        "id": "d0585d155e1ab3b3",
+        "type": "debug",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "debug 34",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 1640,
+        "wires": []
+    },
+    {
+        "id": "d92976f418700113",
+        "type": "inject",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "production/queue",
+        "payload": "",
+        "payloadType": "date",
+        "x": 290,
+        "y": 1400,
+        "wires": [
+            [
+                "7fb5366302e91735",
+                "d77588746c72e913",
+                "8092952b0419cca7"
+            ]
+        ]
+    },
+    {
+        "id": "7fb5366302e91735",
+        "type": "change",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "production.queue",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 1360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d77588746c72e913",
+        "type": "function",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "function 23",
+        "func": "msg.payload = global.get(\"production.queue\") || [];\nmsg.topic = \"production/queue\";\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 1460,
+        "wires": [
+            [
+                "b2b18d8a2ef1d26e",
+                "c578a46b37fc506f",
+                "733f5994293c6131"
+            ]
+        ]
+    },
+    {
+        "id": "c578a46b37fc506f",
+        "type": "debug",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "debug 35",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "733f5994293c6131",
+        "type": "ui-template",
+        "z": "c3ef6562b4dbd1ef",
+        "group": "13739af9cd1ebf05",
+        "page": "",
+        "ui": "",
+        "name": "Production Queue",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n  <div class=\"pro-container\">\n    <h2 class=\"pro-title\">Production Queue</h2>\n\n    <div class=\"pro-table-wrap\">\n      <table class=\"pro-table\" aria-label=\"Production queue\">\n        <thead>\n          <tr>\n            <th>#</th>\n            <th>PCS</th>\n            <th>Quantity</th>\n            <th>Status</th>\n            <th style=\"width:120px;\">Actions</th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr v-if=\"queue.length === 0\">\n            <td colspan=\"5\" style=\"opacity:.6;\">No items yet.</td>\n          </tr>\n\n          <tr v-for=\"(item, i) in queue\" :key=\"item.id ?? i\">\n            <td>{{ i + 1 }}</td>\n            <td>{{ item.pcs }}</td>\n            <td>{{ item.qty }}</td>\n            <td><span class=\"badge badge-pending\">Pending</span></td>\n            <td>\n              <button class=\"btn-danger\"\n                      :disabled=\"removingIds.has(item.id)\"\n                      @click=\"removeItem(item)\">\n                {{ removingIds.has(item.id) ? 'Removing…' : 'Delete' }}\n              </button>\n            </td>\n          </tr>\n        </tbody>\n      </table>\n    </div>\n\n    <!-- optional small hint -->\n    <p class=\"pro-hint\" v-if=\"error\">{{ error }}</p>\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      queue: [],\n      error: \"\",\n      // track rows currently being removed to disable their buttons\n      removingIds: new Set()\n    };\n  },\n\n  methods: {\n    /** Ask backend to remove one item by id */\n    removeItem(item) {\n      if (!item?.id && item?.id !== 0) return;\n      // optimistic: disable button immediately\n      this.removingIds.add(item.id);\n\n      // send remove request to the flow\n      this.send({\n        topic: \"production/remove\",\n        payload: { id: item.id }\n      });\n\n      // We do NOT mutate local queue here. We wait for the backend to\n      // emit a fresh \"production/queue\" snapshot (see watch(msg) below).\n      // If you want to re-enable after a timeout as a fallback:\n      setTimeout(() => this.removingIds.delete(item.id), 5000);\n    },\n\n    /** Normalize incoming queue snapshots into local state */\n    applyQueueMessage(m) {\n      if (!m) return;\n      if (m.topic && m.topic !== \"production/queue\") return;\n\n      let arr = [];\n      if (Array.isArray(m.payload)) {\n        arr = m.payload;\n      } else if (typeof m.payload === \"string\") {\n        try { arr = JSON.parse(m.payload); } catch (e) { arr = []; }\n      }\n\n      // sort by id for stable view\n      arr.sort((a, b) => (a.id ?? 0) - (b.id ?? 0));\n\n      // replace queue\n      this.queue = arr.map(x => ({\n        id: x.id ?? 0,\n        pcs: String(x.pcs ?? \"\"),\n        qty: Number(x.qty ?? 0),\n        ts: Number(x.ts ?? Date.now())\n      }));\n\n      // clear removing flags for any id that no longer exists\n      for (const id of Array.from(this.removingIds)) {\n        if (!this.queue.some(q => q.id === id)) this.removingIds.delete(id);\n      }\n    }\n  },\n\n  // Watch the built-in `msg` for inbound messages (docs “Option 1: watch”)\n  watch: {\n    msg: {\n      handler(newMsg) { this.applyQueueMessage(newMsg); },\n      deep: true,\n      immediate: true\n    }\n  },\n\n  // Also listen via socket to get messages strictly when received (docs “Option 2”)\n  mounted() {\n    if (this.msg) this.applyQueueMessage(this.msg);\n    this.$socket.on('msg-input:' + this.id, (m) => this.applyQueueMessage(m));\n  },\n  unmounted() {\n    this.$socket.off && this.$socket.off('msg-input:' + this.id);\n  }\n};\n</script>\n\n<style>\n  .pro-container {\n    max-width: 860px; margin: 0 auto; padding: 16px 18px;\n    background: #fff; border: 1px solid #e9edf2; border-radius: 14px;\n    box-shadow: 0 1px 2px rgba(20,20,20,.04);\n    font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;\n  }\n  .pro-title { margin: 0 0 12px 0; font-size: 1.25rem; font-weight: 700; }\n  .pro-table-wrap { overflow: auto; border: 1px solid #edf0f5; border-radius: 10px; }\n  .pro-table { width: 100%; border-collapse: collapse; font-size: .95rem; }\n  .pro-table th, .pro-table td {\n    padding: 10px 12px; border-bottom: 1px solid #eef2f7; text-align: left;\n  }\n  .pro-table thead th { background: #f8fafc; font-weight: 700; font-size: .9rem; }\n  .badge { display:inline-block; padding:4px 10px; border-radius:999px; font-size:.8rem; font-weight:700; }\n  .badge-pending { background:#e9f2ff; color:#184b9b; }\n  .btn-danger {\n    padding: 8px 12px; border: 0; border-radius: 8px;\n    background: #b91c1c; color: #fff; font-weight: 600; cursor: pointer;\n  }\n  .btn-danger[disabled] { opacity: .6; cursor: not-allowed; }\n  .pro-hint { margin-top: 8px; font-size: .85rem; color: #b91c1c; }\n</style>\n",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 430,
+        "y": 1760,
+        "wires": [
+            [
+                "8392b139b580942e",
+                "c2cd41e7b408746f"
+            ]
+        ]
+    },
+    {
+        "id": "514bd5350944a46f",
+        "type": "ui-template",
+        "z": "c3ef6562b4dbd1ef",
+        "group": "13739af9cd1ebf05",
+        "page": "",
+        "ui": "",
+        "name": "Show Image of THE PART",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n  <div>\n    <p></p>\n    \n  <hr style=\"width:90%; margin:auto;\">\n    <img :src=\"msg.payload.imageUrl\" alt=\"\" style=\"max-width:95%; height:auto;\">\n  <!-- optional: <div>{{ msg.payload.name }}</div> \n    \n    <img\n      :src=imageSrc\n      alt=\"Recipe Image\"\n      style=\"width:100%; height:75%; object-fit:contain;\"\n    >\n    \n    <!-- Show current value (for debugging/visibility) \n    <div style=\"margin-top:.5rem; font-family:monospace;\">-->\n    </div>\n  </div>\n</template>\n\n<script>\n  \n  \nexport default {\n  data() {\n    return {\n      receptIme: \"\", // local copy of globals.recept.ime\n    }\n  },\n  computed: {\n    normalizedKey() {\n      // Make the key robust: trim, uppercase, collapse spaces/underscores to hyphens\n      const k = (this.receptIme || \"\")\n        .trim()\n        .replace(/\\s+/g, \"-\")\n        .replace(/_/g, \"-\")\n        .toUpperCase();\n      return k;\n    },\n    imageSrc() {\n      const map = {\n        \"1X2-CELL\": \"https://iili.io/KFtw0hB.png\",\n        \"1X4-CELL\": \"https://iili.io/KFtwMEF.png\",\n        \"1X6-CELL\": \"https://iili.io/KFtwX2a.png\",\n      };\n      // Fallback to 1x2 if unknown\n      return map[this.normalizedKey] || map[\"1X2-CELL\"];\n    }\n  },\n  methods: {\n    updateFromGlobal() {\n      // Safely read the dashboard 2.0 reactive globals\n      this.receptIme = this.globals?.recept?.ime || \"\";\n    }\n  },\n  mounted() {\n    // Initial sync\n    this.updateFromGlobal();\n\n    // React to future changes of the global\n    this.$watch(\n      () => this.globals?.recept?.ime,\n      () => this.updateFromGlobal()\n    );\n  }\n}\n</script>\n\n<style>\n.my-class { color: red; }\n</style>\n",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 700,
+        "y": 1860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8392b139b580942e",
+        "type": "debug",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "debug 36",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "c2cd41e7b408746f",
+        "type": "function",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "remove part from QUUE",
+        "func": "// ---- Settings ----\n// If you use persistent context, set STORE = \"file\" and use that in ALL queue functions.\nconst STORE = null;                  // or \"file\"\nconst KEY = \"production.queue\";    // global context key\n\n// Only handle remove requests\nif (msg.topic !== \"production/remove\") {\n    return null;\n}\n\n// Extract id: support payload {id: 123}, payload = 123, or payload = \"123\"\nlet id = (msg.payload && typeof msg.payload === \"object\") ? msg.payload.id : msg.payload;\n\n// Normalize id for comparison\nconst idNum = Number(id);\nconst useNumeric = Number.isFinite(idNum);\n\n// Load queue\nlet queue = global.get(KEY, STORE) || [];\n\n// Find the item by id\nlet idx = -1;\nif (useNumeric) {\n    idx = queue.findIndex(x => Number(x?.id) === idNum);\n} else if (id != null) {\n    idx = queue.findIndex(x => String(x?.id) === String(id));\n}\n\n// Remove it if found\nlet removed = null;\nif (idx !== -1) {\n    removed = queue.splice(idx, 1)[0];   // remove exactly one\n    global.set(KEY, queue, STORE);       // persist updated queue\n} else {\n    node.warn(`production/remove: id ${id} not found`);\n}\n\n// Outputs:\n// 1) Ack: the removed item (null if not found)\n// 2) Fresh queue snapshot (so UI can refresh immediately)\nreturn [\n    { topic: \"production/removed\", payload: removed },\n    { topic: \"production/queue\", payload: queue }\n];\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 1800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8092952b0419cca7",
+        "type": "function",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "function 24",
+        "func": "// Function node: Get image URL for current recipe name (global.recepti.ime)\n\n// Read and normalize the name from global context\nconst raw = (global.get(\"production.queue[0].pcs\") || \"\").toString();\n\n// Normalize: trim, collapse spaces, uppercase, ensure hyphen form like \"1X2-CELL\"\nconst key = raw\n    .toUpperCase()\n\n// Map recipe name -> image URL\nconst map = {\n    \"1X2-CELL\": \"http://192.168.1.203:8811/1x2%20Cell.PNG\",\n    \"1X4-CELL\": \"http://192.168.1.203:8811/1x4%20Cell.PNG\",\n    \"1X6-CELL\": \"http://192.168.1.203:8811/1x6%20Cell.PNG\",\n    \"1X8-CELL\": \"http://192.168.1.203:8811/1x8%20Cell.PNG\",\n    \"2X2-CELL\": \"http://192.168.1.203:8811/2x2%20Cell.PNG\",\n    \"2X4-CELL\": \"http://192.168.1.203:8811/2x4%20Cell.PNG\",\n    \"2X6-CELL\": \"http://192.168.1.203:8811/2x6%20Cell.PNG\",\n    \"2X8-CELL\": \"http://192.168.1.203:8811/2x8%20Cell.PNG\"\n};\n\n// Fallback image (optional) if name not found\nconst fallback = \"https://iili.io/KFtw0hB.png\";\n\nconst url = map[key] || fallback;\n\n// Output for Template/UI node\nmsg.payload = {\n    imageUrl: url,\n    name: raw,\n    rawname: raw\n};\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 1860,
+        "wires": [
+            [
+                "514bd5350944a46f"
+            ]
+        ]
+    },
+    {
+        "id": "31c2ccaf11dc1465",
+        "type": "ui-button-group",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "",
+        "group": "9c33b0fe971665f3",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "label": "Operation mode",
+        "className": "",
+        "rounded": true,
+        "useThemeColors": true,
+        "passthru": false,
+        "options": [
+            {
+                "label": "MANUAL",
+                "icon": "",
+                "value": "true",
+                "valueType": "bool",
+                "color": "#009933"
+            },
+            {
+                "label": "AUTO",
+                "icon": "",
+                "value": "false",
+                "valueType": "bool",
+                "color": "#999999"
+            }
+        ],
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 220,
+        "y": 1140,
+        "wires": [
+            [
+                "9041fa56d6c81de6",
+                "979ea32a4a503f6c",
+                "6a16d72f56eea937"
+            ]
+        ]
+    },
+    {
+        "id": "67bb568db2533580",
+        "type": "ui-control",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "",
+        "ui": "47a6c454bea5d1c6",
+        "events": "all",
+        "x": 660,
+        "y": 1140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9041fa56d6c81de6",
+        "type": "function",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "function 25",
+        "func": "\nlet manualMode = msg.payload;\n\nif (msg.payload === false) {\n    msg.payload = {\n        groups: {\n            disable: ['Hand/Manual Control'],\n            enable: ['Automatic mode production']\n        }\n    };\n    return msg;\n} else {\n    msg.payload = {\n        groups: {\n            enable: ['Hand/Manual Control'],\n            disable: ['Automatic mode production']\n        }\n    };\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 1140,
+        "wires": [
+            [
+                "67bb568db2533580"
+            ]
+        ]
+    },
+    {
+        "id": "979ea32a4a503f6c",
+        "type": "debug",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "debug 37",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "6a16d72f56eea937",
+        "type": "change",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "vodenje.rocno",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 1220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "df10610d3f537ab6",
+        "type": "inject",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 1080,
+        "wires": [
+            [
+                "5449bbfb50c09c96"
+            ]
+        ]
+    },
+    {
+        "id": "5449bbfb50c09c96",
+        "type": "function",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "function 26",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 1060,
+        "wires": [
+            [
+                "31c2ccaf11dc1465"
+            ]
+        ]
+    },
+    {
+        "id": "48b7fb0f64d6eece",
+        "type": "ui-button-group",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "",
+        "group": "f1d8dba665177110",
+        "order": 5,
+        "width": 6,
+        "height": 1,
+        "label": "Seperated Actuator Control",
+        "className": "",
+        "rounded": true,
+        "useThemeColors": true,
+        "passthru": false,
+        "options": [
+            {
+                "label": "ON",
+                "icon": "",
+                "value": "true",
+                "valueType": "bool",
+                "color": "#009933"
+            },
+            {
+                "label": "OFF",
+                "icon": "",
+                "value": "false",
+                "valueType": "bool",
+                "color": "#999999"
+            }
+        ],
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 160,
+        "y": 1280,
+        "wires": [
+            [
+                "3c8c6eba6babb487"
+            ]
+        ]
+    },
+    {
+        "id": "3c8c6eba6babb487",
+        "type": "change",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "vodenje.cilinderPosamezno",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 1280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f11a97af1cf4df67",
+        "type": "ui-button-group",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "Select control mode",
+        "group": "9795805c73a19d72",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "label": "CONTROL:",
+        "className": "",
+        "rounded": true,
+        "useThemeColors": true,
+        "passthru": false,
+        "options": [
+            {
+                "label": "PLC",
+                "icon": "",
+                "value": "PLC",
+                "valueType": "str",
+                "color": "#009933"
+            },
+            {
+                "label": "HMI",
+                "icon": "",
+                "value": "HMI",
+                "valueType": "str",
+                "color": "#999999"
+            }
+        ],
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 720,
+        "y": 660,
+        "wires": [
+            [
+                "3b9a7bf087e31739"
+            ]
+        ]
+    },
+    {
+        "id": "3b9a7bf087e31739",
+        "type": "change",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "#:(file)::HMIvodenje",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 800,
+        "y": 720,
+        "wires": [
+            [
+                "21370c31c05efe9e"
+            ]
+        ]
+    },
+    {
+        "id": "21370c31c05efe9e",
+        "type": "function",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "Disable screens",
+        "func": "\nlet mode = msg.payload;\n\nif (msg.payload === \"PLC\") {\n    msg.payload = {\n        pages: {\n            show: ['AUTO_MANUAL']\n        },\n        groups: {\n            disable: ['STATUS']\n           \n        }\n    };\n    return msg;\n} else {\n    msg.payload = {\n        pages: {\n            hide: ['AUTO_MANUAL']\n        },\n\n        groups: {\n            enable: ['STATUS']\n            \n        }\n    };\n    return msg;\n}\n\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 780,
+        "wires": [
+            [
+                "5b1279896bfe59cd"
+            ]
+        ]
+    },
+    {
+        "id": "5b1279896bfe59cd",
+        "type": "ui-control",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "",
+        "ui": "47a6c454bea5d1c6",
+        "events": "all",
+        "x": 1060,
+        "y": 840,
+        "wires": [
+            []
         ]
     },
     {
@@ -5533,6 +5927,27 @@
         ]
     },
     {
+        "id": "3140178aad044fe1",
+        "type": "mqtt in",
+        "z": "4e56ab8ed630aa30",
+        "name": "",
+        "topic": "production/add",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "1b94cc99764f8362",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 1920,
+        "wires": [
+            [
+                "d96b88341dc4f437"
+            ]
+        ]
+    },
+    {
         "id": "0b6ed5e5e6c44d6b",
         "type": "inject",
         "z": "9c6f2f9b2c2f6d1a",
@@ -6202,29 +6617,5 @@
                 "25c4dc6fb205f728"
             ]
         ]
-    },
-    {
-        "id": "2003456518382d53",
-        "type": "ui-iframe",
-        "z": "f0e20bb36738a696",
-        "name": "http://192.168.1.203:8501/",
-        "group": "9c33b0fe971665f3",
-        "order": 1,
-        "src": "http://192.168.1.203:8501/",
-        "width": "12",
-        "height": "26",
-        "x": 490,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "69b784179f3df878",
-        "type": "comment",
-        "z": "f0e20bb36738a696",
-        "name": "RRI_dafra_digitalni_dvojcek",
-        "info": "",
-        "x": 500,
-        "y": 60,
-        "wires": []
     }
 ]
