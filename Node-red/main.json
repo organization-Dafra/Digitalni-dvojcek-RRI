@@ -283,6 +283,14 @@
             {
                 "addr": "DB1,INT92",
                 "name": "TrenutenPomik"
+            },
+            {
+                "addr": "DB1,I94",
+                "name": "test"
+            },
+            {
+                "addr": "DB1,I96",
+                "name": "iHMIPartNumber"
             }
         ]
     },
@@ -555,7 +563,7 @@
         "page": "1ede0b9feaa4bacd",
         "width": 5,
         "height": "1",
-        "order": 6,
+        "order": 2,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -774,34 +782,6 @@
         "groupType": "default"
     },
     {
-        "id": "2cbf8337bcde63a6",
-        "type": "ui-group",
-        "name": "Egasi pozija",
-        "page": "1ede0b9feaa4bacd",
-        "width": 1,
-        "height": "1",
-        "order": 5,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false",
-        "groupType": "default"
-    },
-    {
-        "id": "363ce6a952c91fa6",
-        "type": "ui-group",
-        "name": "Egasi Position Button Cotrol",
-        "page": "1ede0b9feaa4bacd",
-        "width": 1,
-        "height": "1",
-        "order": 4,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false",
-        "groupType": "default"
-    },
-    {
         "id": "grp1",
         "type": "ui_group",
         "name": "Buttons",
@@ -830,23 +810,9 @@
         "hidden": false
     },
     {
-        "id": "35792cf1e5d30f6c",
-        "type": "ui-group",
-        "name": "Izbira recepta proizvodnje",
-        "page": "1ede0b9feaa4bacd",
-        "width": 7,
-        "height": "1",
-        "order": 2,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false",
-        "groupType": "default"
-    },
-    {
         "id": "bffacacf982e701a",
         "type": "ui-spacer",
-        "group": "35792cf1e5d30f6c",
+        "group": "",
         "name": "spacer",
         "tooltip": "",
         "order": 2,
@@ -857,7 +823,7 @@
     {
         "id": "38f7d713205d7052",
         "type": "ui-spacer",
-        "group": "35792cf1e5d30f6c",
+        "group": "",
         "name": "spacer",
         "tooltip": "",
         "order": 3,
@@ -1204,6 +1170,18 @@
             {
                 "addr": "DB46,X8.3",
                 "name": "M5_HW_RESET"
+            },
+            {
+                "addr": "DB46,X10.0",
+                "name": "xOverRideControl"
+            },
+            {
+                "addr": "DB46,X10.1",
+                "name": "xManualMode"
+            },
+            {
+                "addr": "DB46,X10.2",
+                "name": "xDemo_or_AutomaticMode"
             }
         ]
     },
@@ -1313,7 +1291,7 @@
         "type": "ui-group",
         "name": "Select operation mode:",
         "page": "0f3676c5e68f7df2",
-        "width": "12",
+        "width": 12,
         "height": "1",
         "order": 1,
         "showTitle": true,
@@ -1444,41 +1422,13 @@
         "disabled": "false"
     },
     {
-        "id": "af98e4a21ff6d34d",
-        "type": "ui-group",
-        "name": "Production Quie",
-        "page": "1ede0b9feaa4bacd",
-        "width": "4",
-        "height": "1",
-        "order": 3,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false",
-        "groupType": "default"
-    },
-    {
         "id": "f1d8dba665177110",
         "type": "ui-group",
-        "name": "Hand/Manual Control",
-        "page": "0f3676c5e68f7df2",
+        "name": "Auto Control",
+        "page": "",
         "width": "6",
         "height": "1",
-        "order": 2,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false",
-        "groupType": "default"
-    },
-    {
-        "id": "13739af9cd1ebf05",
-        "type": "ui-group",
-        "name": "Automatic mode production",
-        "page": "0f3676c5e68f7df2",
-        "width": "6",
-        "height": "1",
-        "order": 3,
+        "order": 1,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -1529,6 +1479,45 @@
         "width": "12",
         "height": "1",
         "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "1cd3734a6d17448f",
+        "type": "ui-spacer",
+        "group": "f1d8dba665177110",
+        "name": "spacer",
+        "tooltip": "",
+        "order": 1,
+        "width": 1,
+        "height": 1,
+        "className": ""
+    },
+    {
+        "id": "65207aa2056aaff9",
+        "type": "ui-group",
+        "name": "AUTO",
+        "page": "0f3676c5e68f7df2",
+        "width": "6",
+        "height": "1",
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "db370c286874a83c",
+        "type": "ui-group",
+        "name": "Manual",
+        "page": "0f3676c5e68f7df2",
+        "width": "6",
+        "height": "1",
+        "order": 2,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -2017,7 +2006,7 @@
         "type": "function",
         "z": "c3ef6562b4dbd1ef",
         "name": "get Temperature1 -",
-        "func": "msg.payload = global.get('Temperature1');\nmsg.payload = msg.payload.toFixed(1);\nreturn msg;\n\n",
+        "func": "msg.payload = global.get('Temperature1');\nmsg.payload = msg.payload.toFixed(1);\nmsg.payload = 28;\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2373,7 +2362,6 @@
         "y": 460,
         "wires": [
             [
-                "3b61c7373948f577",
                 "eccda3afeac56151"
             ]
         ]
@@ -2548,7 +2536,7 @@
         "id": "34cf74f7bdc63c70",
         "type": "ui-dropdown",
         "z": "c3ef6562b4dbd1ef",
-        "group": "f1d8dba665177110",
+        "group": "db370c286874a83c",
         "name": "RRI - izbira recepta proizvodnje",
         "label": "Select Option:",
         "tooltip": "",
@@ -2620,10 +2608,10 @@
         "id": "5f66cd337031c26f",
         "type": "ui-button",
         "z": "c3ef6562b4dbd1ef",
-        "group": "f1d8dba665177110",
+        "group": "db370c286874a83c",
         "name": "",
         "label": "AKTIVIRAJ",
-        "order": 2,
+        "order": 4,
         "width": "3",
         "height": "1",
         "emulateClick": false,
@@ -2662,7 +2650,7 @@
         "id": "8628d55917e28729",
         "type": "ui-text",
         "z": "c3ef6562b4dbd1ef",
-        "group": "f1d8dba665177110",
+        "group": "db370c286874a83c",
         "order": 3,
         "width": 0,
         "height": 0,
@@ -2688,7 +2676,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "#:(file)::recept.ime",
+                "p": "recept.ime",
                 "pt": "global",
                 "to": "payload",
                 "tot": "msg"
@@ -2711,11 +2699,11 @@
         "id": "4bab51ab740f2f94",
         "type": "ui-template",
         "z": "c3ef6562b4dbd1ef",
-        "group": "f1d8dba665177110",
+        "group": "db370c286874a83c",
         "page": "",
         "ui": "",
         "name": "Show Image of THE PART",
-        "order": 4,
+        "order": 5,
         "width": 0,
         "height": 0,
         "head": "",
@@ -2736,11 +2724,11 @@
         "type": "ui-template",
         "z": "c3ef6562b4dbd1ef",
         "d": true,
-        "group": "35792cf1e5d30f6c",
+        "group": "db370c286874a83c",
         "page": "",
         "ui": "",
         "name": "",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "head": "",
@@ -2761,7 +2749,7 @@
         "type": "function",
         "z": "c3ef6562b4dbd1ef",
         "name": "Global set recept.ime",
-        "func": "global.set(\"recepti.ime\", \"1x6-CELL\");\nreturn msg;",
+        "func": "//global.set(\"recepti.ime\", \"1x6-CELL\");\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2771,7 +2759,9 @@
         "x": 960,
         "y": 1360,
         "wires": [
-            []
+            [
+                "a71d650d73e537e7"
+            ]
         ]
     },
     {
@@ -3668,7 +3658,7 @@
         "type": "function",
         "z": "c3ef6562b4dbd1ef",
         "name": "function 17",
-        "func": "// Function node: Get image URL for current recipe name (global.recepti.ime)\n\n// Read and normalize the name from global context\nconst raw = (global.get(\"recept.ime\") || \"\").toString();\n\n// Normalize: trim, collapse spaces, uppercase, ensure hyphen form like \"1X2-CELL\"\nconst key = raw\n            .toUpperCase()\n\n// Map recipe name -> image URL\nconst map = {\n  \"1X2-CELL\": \"http://192.168.1.203:8811/1x2%20Cell.PNG\",\n  \"1X4-CELL\": \"http://192.168.1.203:8811/1x4%20Cell.PNG\",\n  \"1X6-CELL\": \"http://192.168.1.203:8811/1x6%20Cell.PNG\",\n  \"1X8-CELL\": \"http://192.168.1.203:8811/1x8%20Cell.PNG\",\n  \"2X2-CELL\": \"http://192.168.1.203:8811/2x2%20Cell.PNG\",\n  \"2X4-CELL\": \"http://192.168.1.203:8811/2x4%20Cell.PNG\",\n  \"2X6-CELL\": \"http://192.168.1.203:8811/2x6%20Cell.PNG\",\n  \"2X8-CELL\": \"http://192.168.1.203:8811/2x8%20Cell.PNG\"\n};\n\n// Fallback image (optional) if name not found\nconst fallback = \"https://iili.io/KFtw0hB.png\";\n\nconst url = map[key] || fallback;\n\n// Output for Template/UI node\nmsg.payload = {\n  imageUrl: url,\n  name: raw,\n  rawname: raw \n};\nreturn msg;\n",
+        "func": "// Function node: Get image URL for current recipe name (global.recepti.ime)\n\n// Read and normalize the name from global context\nconst raw = (global.get(\"recept.ime\") || \"\").toString();\n\n// Normalize: trim, collapse spaces, uppercase, ensure hyphen form like \"1X2-CELL\"\nconst key = raw\n  .trim()\n  .toUpperCase();\n\n// Map recipe name -> image URL\nconst map = {\n  \"1X2-CELL\": \"http://192.168.1.203:8811/1x2%20Cell.PNG\",\n  \"1X4-CELL\": \"http://192.168.1.203:8811/1x4%20Cell.PNG\",\n  \"1X6-CELL\": \"http://192.168.1.203:8811/1x6%20Cell.PNG\",\n  \"1X8-CELL\": \"http://192.168.1.203:8811/1x8%20Cell.PNG\",\n  \"2X2-CELL\": \"http://192.168.1.203:8811/2x2%20Cell.PNG\",\n  \"2X4-CELL\": \"http://192.168.1.203:8811/2x4%20Cell.PNG\",\n  \"2X6-CELL\": \"http://192.168.1.203:8811/2x6%20Cell.PNG\",\n  \"2X8-CELL\": \"http://192.168.1.203:8811/2x8%20Cell.PNG\"\n};\n\n// Map recipe name -> numeric value (like 12, 14, 26, etc.)\nconst numberMap = {\n  \"1X2-CELL\": 12,\n  \"1X4-CELL\": 14,\n  \"1X6-CELL\": 16,\n  \"1X8-CELL\": 18,\n  \"2X2-CELL\": 22,\n  \"2X4-CELL\": 24,\n  \"2X6-CELL\": 26,\n  \"2X8-CELL\": 28\n};\n\n// Fallbacks\nconst fallbackUrl = \"https://iili.io/KFtw0hB.png\";\nconst fallbackNumber = 0;\n\nconst url = map[key] || fallbackUrl;\nconst number = numberMap[key] || fallbackNumber;\n\n// Output for Template/UI node\nmsg.payload = {\n  imageUrl: url,\n  name: raw,\n  rawname: raw,\n  number: number\n};\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3679,8 +3669,9 @@
         "y": 1240,
         "wires": [
             [
+                "431558d31d5a810a",
                 "4bab51ab740f2f94",
-                "431558d31d5a810a"
+                "cb8f1dee9a11b6fd"
             ]
         ]
     },
@@ -3715,7 +3706,9 @@
         "x": 1130,
         "y": 1200,
         "wires": [
-            []
+            [
+                "e35817bbedfd10f4"
+            ]
         ]
     },
     {
@@ -3731,7 +3724,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1240,
-        "y": 1300,
+        "y": 1280,
         "wires": []
     },
     {
@@ -3762,8 +3755,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 540,
-        "y": 700,
+        "x": 1000,
+        "y": 840,
         "wires": []
     },
     {
@@ -4054,7 +4047,8 @@
         "y": 940,
         "wires": [
             [
-                "9314a764cb2060fe"
+                "9314a764cb2060fe",
+                "ea65b9b645371292"
             ]
         ]
     },
@@ -4541,7 +4535,7 @@
         "id": "733f5994293c6131",
         "type": "ui-template",
         "z": "c3ef6562b4dbd1ef",
-        "group": "13739af9cd1ebf05",
+        "group": "65207aa2056aaff9",
         "page": "",
         "ui": "",
         "name": "Production Queue",
@@ -4568,7 +4562,7 @@
         "id": "514bd5350944a46f",
         "type": "ui-template",
         "z": "c3ef6562b4dbd1ef",
-        "group": "13739af9cd1ebf05",
+        "group": "65207aa2056aaff9",
         "page": "",
         "ui": "",
         "name": "Show Image of THE PART",
@@ -4703,7 +4697,7 @@
         "type": "function",
         "z": "c3ef6562b4dbd1ef",
         "name": "function 25",
-        "func": "\nlet manualMode = msg.payload;\n\nif (msg.payload === false) {\n    msg.payload = {\n        groups: {\n            disable: ['Hand/Manual Control'],\n            enable: ['Automatic mode production']\n        }\n    };\n    return msg;\n} else {\n    msg.payload = {\n        groups: {\n            enable: ['Hand/Manual Control'],\n            disable: ['Automatic mode production']\n        }\n    };\n    return msg;\n}\n",
+        "func": "\nlet manualMode = msg.payload;\n\nif (msg.payload === true) {\n    msg.payload = {\n        groups: {\n            disable: ['AUTO'],\n            enable: ['Manual']\n        }\n    };\n    return msg;\n} else {\n    msg.payload = {\n        groups: {\n            enable: ['AUTO'],\n            disable: ['Manual']\n        }\n    };\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4813,25 +4807,25 @@
         "type": "ui-button-group",
         "z": "c3ef6562b4dbd1ef",
         "name": "",
-        "group": "f1d8dba665177110",
-        "order": 5,
+        "group": "db370c286874a83c",
+        "order": 6,
         "width": 6,
         "height": 1,
-        "label": "Seperated Actuator Control",
+        "label": "DEMO OR AUTOMATIC MODE:",
         "className": "",
         "rounded": true,
         "useThemeColors": true,
         "passthru": false,
         "options": [
             {
-                "label": "ON",
+                "label": "DEMOCLOCK:1.25Hz",
                 "icon": "",
                 "value": "true",
                 "valueType": "bool",
                 "color": "#009933"
             },
             {
-                "label": "OFF",
+                "label": "AUTOMATIC_MODE",
                 "icon": "",
                 "value": "false",
                 "valueType": "bool",
@@ -4840,7 +4834,7 @@
         ],
         "topic": "topic",
         "topicType": "msg",
-        "x": 160,
+        "x": 170,
         "y": 1280,
         "wires": [
             [
@@ -4867,10 +4861,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 450,
+        "x": 470,
         "y": 1280,
         "wires": [
-            []
+            [
+                "c091fa6762af29db"
+            ]
         ]
     },
     {
@@ -4921,7 +4917,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "#:(file)::HMIvodenje",
+                "p": "HMIvodenje",
                 "pt": "global",
                 "to": "payload",
                 "tot": "msg"
@@ -4936,7 +4932,8 @@
         "y": 720,
         "wires": [
             [
-                "21370c31c05efe9e"
+                "21370c31c05efe9e",
+                "7ba9f81b7dd38b58"
             ]
         ]
     },
@@ -4968,10 +4965,204 @@
         "ui": "47a6c454bea5d1c6",
         "events": "all",
         "x": 1060,
-        "y": 840,
+        "y": 800,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "a71d650d73e537e7",
+        "type": "debug",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "debug 38",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1200,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "e35817bbedfd10f4",
+        "type": "debug",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "debug 39",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1280,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "584b97f983c3d572",
+        "type": "s7 out",
+        "z": "c3ef6562b4dbd1ef",
+        "endpoint": "457a24245a8bd6df",
+        "variable": "xOverRideControl",
+        "name": "xManualMode",
+        "x": 880,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "7ba9f81b7dd38b58",
+        "type": "function",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "function 27",
+        "func": "// Read the global variable\nconst raw = (global.get(\"HMIvodenje\") || \"\").toString();\n\n// Normalize: trim, collapse internal spaces, replace spaces with hyphens, uppercase\nconst normalized = raw\n  .trim()\n  .replace(/\\s+/g, ' ')   // collapse multiple spaces\n  .replace(/ /g, '-')     // convert spaces to hyphens\n  .toUpperCase();\n\n// Compare and return Boolean\nmsg.payload = (normalized === \"HMI\");  // true if HMI, false if PLC\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 820,
+        "wires": [
+            [
+                "3b61c7373948f577",
+                "584b97f983c3d572"
+            ]
+        ]
+    },
+    {
+        "id": "5c97c10d9dc4cd2f",
+        "type": "inject",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 570,
+        "y": 720,
+        "wires": [
+            [
+                "7ba9f81b7dd38b58"
+            ]
+        ]
+    },
+    {
+        "id": "c091fa6762af29db",
+        "type": "s7 out",
+        "z": "c3ef6562b4dbd1ef",
+        "endpoint": "457a24245a8bd6df",
+        "variable": "xDemo_or_AutomaticMode",
+        "name": "",
+        "x": 760,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "86a65dae46e17fe0",
+        "type": "s7 out",
+        "z": "c3ef6562b4dbd1ef",
+        "endpoint": "edd4b3a91b062270",
+        "variable": "iHMIPartNumber",
+        "name": "",
+        "x": 1610,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "cb8f1dee9a11b6fd",
+        "type": "function",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "function 28",
+        "func": "// Function node: Get image URL for current recipe name (global.recepti.ime)\n\n// Read and normalize the name from global context\nconst raw = (global.get(\"recept.ime\") || \"\").toString();\n\n// Normalize: trim, collapse spaces, uppercase, ensure hyphen form like \"1X2-CELL\"\nconst key = raw\n  .trim()\n  .toUpperCase();\n\n// Map recipe name -> image URL\nconst map = {\n  \"1X2-CELL\": \"http://192.168.1.203:8811/1x2%20Cell.PNG\",\n  \"1X4-CELL\": \"http://192.168.1.203:8811/1x4%20Cell.PNG\",\n  \"1X6-CELL\": \"http://192.168.1.203:8811/1x6%20Cell.PNG\",\n  \"1X8-CELL\": \"http://192.168.1.203:8811/1x8%20Cell.PNG\",\n  \"2X2-CELL\": \"http://192.168.1.203:8811/2x2%20Cell.PNG\",\n  \"2X4-CELL\": \"http://192.168.1.203:8811/2x4%20Cell.PNG\",\n  \"2X6-CELL\": \"http://192.168.1.203:8811/2x6%20Cell.PNG\",\n  \"2X8-CELL\": \"http://192.168.1.203:8811/2x8%20Cell.PNG\"\n};\n\n// Map recipe name -> numeric value (like 12, 14, 26, etc.)\nconst numberMap = {\n  \"1X2-CELL\": 12,\n  \"1X4-CELL\": 14,\n  \"1X6-CELL\": 16,\n  \"1X8-CELL\": 18,\n  \"2X2-CELL\": 22,\n  \"2X4-CELL\": 24,\n  \"2X6-CELL\": 26,\n  \"2X8-CELL\": 28\n};\n\n// Fallbacks\nconst fallbackUrl = \"https://iili.io/KFtw0hB.png\";\nconst fallbackNumber = 0;\n\nconst url = map[key] || fallbackUrl;\nconst number = numberMap[key] || fallbackNumber;\n\n// Output for Template/UI node\nmsg.payload = {\n  imageUrl: url,\n  name: raw,\n  rawname: raw,\n  number: number\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1250,
+        "y": 1320,
+        "wires": [
+            [
+                "46911f2e4581d056"
+            ]
+        ]
+    },
+    {
+        "id": "46911f2e4581d056",
+        "type": "function",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "function 29",
+        "func": "\n\n// Output for Template/UI node\nmsg.payload = msg.payload.number;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1410,
+        "y": 1320,
+        "wires": [
+            [
+                "86a65dae46e17fe0",
+                "4f7d95ddf41e8eb5"
+            ]
+        ]
+    },
+    {
+        "id": "4f7d95ddf41e8eb5",
+        "type": "debug",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "debug 40",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1580,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "ea65b9b645371292",
+        "type": "ui-text",
+        "z": "c3ef6562b4dbd1ef",
+        "group": "9c33b0fe971665f3",
+        "order": 2,
+        "width": 6,
+        "height": 0,
+        "name": "",
+        "label": "Trenuten pomik",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 1460,
+        "y": 1000,
+        "wires": []
     },
     {
         "id": "6ed6cdb39f1b1bac",
