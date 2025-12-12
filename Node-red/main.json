@@ -1182,6 +1182,14 @@
             {
                 "addr": "DB46,X10.2",
                 "name": "xDemo_or_AutomaticMode"
+            },
+            {
+                "addr": "DB46,X10.3",
+                "name": "xHMI_resetPomikna0"
+            },
+            {
+                "addr": "DB46,X10.4",
+                "name": "xManual_Automatic"
             }
         ]
     },
@@ -4329,7 +4337,7 @@
         "type": "debug",
         "z": "c3ef6562b4dbd1ef",
         "name": "debug 33",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4457,7 +4465,7 @@
         "topic": "production/queue",
         "payload": "",
         "payloadType": "date",
-        "x": 290,
+        "x": 250,
         "y": 1400,
         "wires": [
             [
@@ -4747,10 +4755,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 330,
-        "y": 1220,
+        "x": 190,
+        "y": 1200,
         "wires": [
-            []
+            [
+                "97e05c75d5822fb9"
+            ]
         ]
     },
     {
@@ -5162,6 +5172,133 @@
         "className": "",
         "x": 1460,
         "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "5b083b4391abf77a",
+        "type": "ui-button",
+        "z": "c3ef6562b4dbd1ef",
+        "group": "db370c286874a83c",
+        "name": "Reset pomik",
+        "label": "RESET POMIKA",
+        "order": 7,
+        "width": "3",
+        "height": "1",
+        "emulateClick": true,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 330,
+        "y": 2060,
+        "wires": [
+            [
+                "7937ee9e93c3bc29"
+            ]
+        ]
+    },
+    {
+        "id": "7937ee9e93c3bc29",
+        "type": "s7 out",
+        "z": "c3ef6562b4dbd1ef",
+        "endpoint": "457a24245a8bd6df",
+        "variable": "xHMI_resetPomikna0",
+        "name": "ResetPomikaNa0",
+        "x": 530,
+        "y": 2060,
+        "wires": []
+    },
+    {
+        "id": "97e05c75d5822fb9",
+        "type": "s7 out",
+        "z": "c3ef6562b4dbd1ef",
+        "endpoint": "457a24245a8bd6df",
+        "variable": "xManual_Automatic",
+        "name": "PRODUCTION_MAN_OR_AUTO",
+        "x": 460,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "4dfccb87bcaab678",
+        "type": "function",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "ConverToPLCTime()",
+        "func": "function GetDataFromQuue() {\n    const QUEUE_KEY = \"production.queue\";\n\n    // Debug: Log global context retrieval\n    const queue = global.get(QUEUE_KEY);\n\n    // Extensive logging\n    node.warn(`Queue retrieval debug:\n        - QUEUE_KEY: ${QUEUE_KEY}\n        - Queue exists: ${queue !== undefined}\n        - Queue type: ${typeof queue}\n        - Queue length: ${queue ? queue.length : 'N/A'}\n    `);\n\n    // Ensure queue is an array\n    const safeQueue = Array.isArray(queue) ? queue : [];\n\n    if (safeQueue.length === 0) {\n        node.warn(\"Queue is empty\");\n        return null;\n    }\n\n    const firstItem = safeQueue[0];\n\n    // Validate timestamp and id\n    if (firstItem.ts === null || firstItem.ts === undefined) {\n        node.warn(\"Invalid or missing timestamp\");\n        return null;\n    }\n\n    // ✅ Return all needed fields\n    return {\n        ts: firstItem.ts,\n        id: firstItem.id,\n        qty: firstItem.qty,\n        pcs: firstItem.pcs\n    };\n}\n\nfunction convertToPLCTime() {\n    let queueData = GetDataFromQuue();\n\n    node.warn(`Timestamp conversion:\n        - Raw timestamp: ${queueData?.ts}\n        - Timestamp type: ${typeof queueData?.ts}\n        - ID: ${queueData?.id}\n        - QTY: ${queueData?.qty}\n        - PCS: ${queueData?.pcs}\n    `);\n\n    if (!queueData) {\n        node.warn(\"No valid queue data found\");\n        return {\n            seconds: 0,\n            milliseconds: 0,\n            id: null,\n            qty: 0,\n            pcs: null\n        };\n    }\n\n    return {\n        seconds: Math.floor(queueData.ts / 1000),\n        milliseconds: queueData.ts % 1000,\n        id: queueData.id,\n        qty: queueData.qty,\n        pcs: queueData.pcs\n    };\n}\n\nlet timeData = convertToPLCTime();\n\n// ✅ Add qty to payload\nmsg.payload = {\n    seconds: timeData.seconds,\n    milliseconds: timeData.milliseconds,\n    id: timeData.id,\n    qty: timeData.qty,\n    pcs: timeData.pcs\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 2180,
+        "wires": [
+            [
+                "c0f89c37194b4637"
+            ]
+        ]
+    },
+    {
+        "id": "d1791933f3a87844",
+        "type": "inject",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 340,
+        "y": 2180,
+        "wires": [
+            [
+                "4dfccb87bcaab678"
+            ]
+        ]
+    },
+    {
+        "id": "c0f89c37194b4637",
+        "type": "debug",
+        "z": "c3ef6562b4dbd1ef",
+        "name": "debug 41",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 2180,
         "wires": []
     },
     {
